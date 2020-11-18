@@ -1,8 +1,15 @@
 .App {
+  font-family: 'Operator Pro';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   
+  }
+.container{
   text-align: center;
-font-family: 'Operator Pro';
+  min-width: 80%;
+   background-color: rgba(135, 222, 210, 0.5);
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
