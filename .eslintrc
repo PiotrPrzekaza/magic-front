@@ -1,7 +1,18 @@
 {
-  "extends": ["airbnb", "prettier", "prettier/react"],
-  "env": {
-    "jest": true
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react",
+    "react-app",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
   },
   "globals": {
     "document": true

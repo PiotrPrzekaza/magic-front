@@ -1,14 +1,18 @@
-import './App.css';
-import logo from '../assets/images/Magiczna.png';
+import Button from 'components/atoms/Button/Button';
+import GlobalStyle from 'assets/styles/GlobalStyle';
+import logo from 'assets/images/Magiczna.png';
 
-const App = () => (
+const Root = () => (
   <div className="App">
+    <GlobalStyle />
     <div className="container">
       <header>
         <nav>
           <div>
             <img src={logo} alt="" />
           </div>
+          <Button> Sprawdź</Button>
+          <Button small> Zamów</Button>
           <ul>
             <li>o mnie</li>
             <li>szydelko</li>
@@ -20,10 +24,18 @@ const App = () => (
         <h1> magia szydełka</h1>
       </header>
       <main>
-        <div>jakiscontent</div>
-        <div>jakiscontent</div>
-        <div>jakiscontent</div>
-        <div>jakiscontent</div>
+        <div>
+          <h2>jakiscontent</h2>
+        </div>
+        <div>
+          <h2>jakiscontent</h2>
+        </div>
+        <div>
+          <h2>jakiscontent</h2>
+        </div>
+        <div>
+          <h2>jakiscontent</h2>
+        </div>
       </main>
       <footer>
         <div>
@@ -42,4 +54,4 @@ const App = () => (
   </div>
 );
 
-export default App;
+export default Root;
