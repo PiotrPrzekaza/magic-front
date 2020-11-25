@@ -1,4 +1,8 @@
 import Button from 'components/atoms/Button/Button';
+import Heading from 'components/atoms/Heading/Heading';
+import ListItem from 'components/atoms/ListItem/ListItem';
+import MenuBar from 'components/organizms/MenuBar/MenuBar';
+import NavBar from 'components/molecules/NavBar/NavBar';
 import GlobalStyle from 'assets/styles/GlobalStyle';
 import logo from 'assets/images/Magiczna.png';
 
@@ -7,35 +11,34 @@ const Root = () => (
     <GlobalStyle />
     <div className="container">
       <header>
-        <nav>
+        <MenuBar>
           <div>
             <img src={logo} alt="" />
           </div>
           <Button> Sprawdź</Button>
-          <Button small> Zamów</Button>
-          <ul>
-            <li>o mnie</li>
-            <li>szydelko</li>
-            <li>druty</li>
-            <li>projecty</li>
-            <li>kontakt</li>
-          </ul>
-        </nav>
-        <h1> magia szydełka</h1>
+          <NavBar>
+            <ListItem>o mnie</ListItem>
+            <ListItem>szydelko</ListItem>
+            <ListItem>druty</ListItem>
+            <ListItem>projecty</ListItem>
+            <ListItem>kontakt</ListItem>
+          </NavBar>
+        </MenuBar>
+        <Heading> magia szydełka</Heading>
       </header>
       <main>
-        <div>
-          <h2>jakiscontent</h2>
-        </div>
-        <div>
-          <h2>jakiscontent</h2>
-        </div>
-        <div>
-          <h2>jakiscontent</h2>
-        </div>
-        <div>
-          <h2>jakiscontent</h2>
-        </div>
+        <section>
+          <Heading>nagłówek</Heading>
+        </section>
+        <section>
+          <Heading>jakiscontent</Heading>
+        </section>
+        <section>
+          <Heading>jakiscontent</Heading>
+        </section>
+        <section>
+          <Heading>jakiscontent</Heading>
+        </section>
       </main>
       <footer>
         <div>

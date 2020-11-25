@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,200;0,300;0,400;1,100;1,500&family=Quicksand:wght@300;400;500&display=swap');
   html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    font-family:'Open Sans Condensed';
+    font-family:'Quicksand', 'Libre Franklin', sans-serif;
     font-size: 1.6rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
