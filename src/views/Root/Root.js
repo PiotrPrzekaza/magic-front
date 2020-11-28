@@ -5,7 +5,7 @@ import ListItem from 'components/atoms/ListItem/ListItem';
 import MenuBar from 'components/organizms/MenuBar/MenuBar';
 import ImageItem from 'components/atoms/ImageItem/ImageItem';
 import GlobalStyle from 'assets/styles/GlobalStyle';
-import { theme } from 'assets/styles/theme';
+import theme from 'assets/styles/theme';
 import logo from 'assets/images/Magiczna.png';
 import { ThemeProvider } from 'styled-components';
 
