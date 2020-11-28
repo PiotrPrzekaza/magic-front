@@ -1,13 +1,16 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-const ListItem = styled.li`
-  display: block;
+const ListItem = styled.a`
   display: flex;
-  height: 50px;
-  width: 80%;
+  max-width: 100%;
   justify-content: space-between;
   text-align: center;
   flex-direction: row;
+  font-size: 2rem;
+  :hover {
+    text-decoration: underline 2px solid red;
+    transition: ease 0.5s;
+  }
 `;
 export default ListItem;

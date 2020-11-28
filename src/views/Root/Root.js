@@ -1,8 +1,9 @@
-import Button from 'components/atoms/Button/Button';
+import React from 'react';
+import Card from 'components/molecules/Card/Card';
 import Heading from 'components/atoms/Heading/Heading';
 import ListItem from 'components/atoms/ListItem/ListItem';
 import MenuBar from 'components/organizms/MenuBar/MenuBar';
-import NavBar from 'components/molecules/NavBar/NavBar';
+import ImageItem from 'components/atoms/ImageItem/ImageItem';
 import GlobalStyle from 'assets/styles/GlobalStyle';
 import logo from 'assets/images/Magiczna.png';
 
@@ -12,32 +13,29 @@ const Root = () => (
     <div className="container">
       <header>
         <MenuBar>
-          <div>
-            <img src={logo} alt="" />
-          </div>
-          <Button> Sprawdź</Button>
-          <NavBar>
+          <ImageItem src={logo} alt="" />
+          <nav>
             <ListItem>o mnie</ListItem>
             <ListItem>szydelko</ListItem>
             <ListItem>druty</ListItem>
             <ListItem>projecty</ListItem>
             <ListItem>kontakt</ListItem>
-          </NavBar>
+          </nav>
         </MenuBar>
         <Heading> magia szydełka</Heading>
       </header>
       <main>
         <section>
-          <Heading>nagłówek</Heading>
+          <Card />
         </section>
         <section>
-          <Heading>jakiscontent</Heading>
+          <Card />
         </section>
         <section>
-          <Heading>jakiscontent</Heading>
+          <Card />
         </section>
         <section>
-          <Heading>jakiscontent</Heading>
+          <Card />
         </section>
       </main>
       <footer>
