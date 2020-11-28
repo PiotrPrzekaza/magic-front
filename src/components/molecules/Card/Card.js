@@ -2,38 +2,48 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import Heading from 'components/atoms/Heading/Heading';
 import Button from 'components/atoms/Button/Button';
-import ImageItem from 'components/atoms/ImageItem/ImageItem';
 import image from 'assets/icon/jednorozec.png';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 
 const Wrapper = styled.div`
-  transform-style: preserve-3d;
+  margin: 20px;
   min-height: 400px;
-  box-shadow: 0 20px 20px hsla(0, 0%, 0%, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
+  background-color: ${({ theme }) => theme.secondaryBg};
+  box-shadow: -11px 14px 22px -1px rgba(0, 0, 0, 0.76);
+  position: relative;
   overflow: hidden;
   display: grid;
-  grid-template-rows: 0.5fr 1fr;
 `;
 
 const InnerWrapper = styled.div`
-  padding: 15px 30px;
-  background-color: ${({ theme }) => theme.secondaryBg};
-
+  position: relative;
+  justify-content: space-around;
+  padding: 17px 30px;
   ${({ flex }) =>
     flex &&
     css`
+      align-items: center;
+      margin: 30px 0 0 0;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     `}
 `;
 
-const Card = () => {
+const StyledImage = styled.img`
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 5%;
+  top: 2%;
+`;
+
+const Card = () => (
   <Wrapper>
     <InnerWrapper>
-      <Heading>Maskotka</Heading>
-      <ImageItem src={image} alt="jednorożec" />
+      <StyledImage src={image} alt="jednorożec" />
+      <Heading smallHead>Maskotka</Heading>
     </InnerWrapper>
     <InnerWrapper flex>
       <Paragraph>
@@ -42,7 +52,7 @@ const Card = () => {
       </Paragraph>
       <Button>Zamów</Button>
     </InnerWrapper>
-  </Wrapper>;
-};
+  </Wrapper>
+);
 
 export default Card;

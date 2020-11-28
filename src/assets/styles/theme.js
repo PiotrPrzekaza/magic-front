@@ -1,4 +1,4 @@
-export const colors = {
+export const theme = {
   white: 'hsl(0, 0%, 100%)',
   black: 'hsl(0, 0%, 0%)',
   grey100: 'hsl(0, 0%, 35%)',
@@ -11,3 +11,5 @@ export const colors = {
   secondary: 'hsl(0, 70%, 60%)',
   secondaryBg: 'hsl(193, 62%, 92%)',
 };
+
+export default theme;
