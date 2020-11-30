@@ -1,9 +1,11 @@
 import React from 'react';
+import Heading from 'components/atoms/Heading/Heading';
+import Paragraph from 'components/atoms/Paragraph/Paragraph';
 
 const Contact = () => (
   <>
-    <h1>Strona o mnie</h1>
-    <p>Prezentacja mojej osoby</p>
+    <Heading>Strona o mnie</Heading>
+    <Paragraph>Prezentacja mojej osoby</Paragraph>
   </>
 );
 export default Contact;

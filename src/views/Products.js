@@ -1,9 +1,11 @@
 import React from 'react';
+import Heading from 'components/atoms/Heading/Heading';
+import Paragraph from 'components/atoms/Paragraph/Paragraph';
 
 const Products = () => (
   <>
-    <h1>Producty</h1>
-    <p>strona prezentująca przykładowe projekty</p>
+    <Heading>Producty</Heading>
+    <Paragraph>strona prezentująca przykładowe projekty</Paragraph>
   </>
 );
 

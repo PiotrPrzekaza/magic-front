@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 const ListItem = styled.a`
+  display: block;
   display: flex;
   max-width: 100%;
   justify-content: space-between;

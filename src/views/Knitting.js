@@ -1,9 +1,11 @@
 import React from 'react';
+import Heading from 'components/atoms/Heading/Heading';
+import Paragraph from 'components/atoms/Paragraph/Paragraph';
 
 const Knitting = () => (
   <>
-    <h1>Druty</h1>
-    <p>Propozycje projektów na drutach</p>
+    <Heading>Druty</Heading>
+    <Paragraph>Propozycje projektów na drutach</Paragraph>
   </>
 );
 export default Knitting;
