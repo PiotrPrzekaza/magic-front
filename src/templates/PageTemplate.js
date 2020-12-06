@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import MenuBar from 'components/organisms/MenuBar/MenuBar';
 import Heading from 'components/atoms/Heading/Heading';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
+import Input from 'components/atoms/Input/Input';
 
 const Wrapper = styled.div`
   padding: 150px 25px 70px 25px;
@@ -24,6 +25,7 @@ const PageTemplate = ({ children }) => (
     <MenuBar />
     <Wrapper>
       <StyledHeader>
+        <Input search />
         <Heading>Produkty</Heading>
         <Paragraph> 6 produktów</Paragraph>
       </StyledHeader>
