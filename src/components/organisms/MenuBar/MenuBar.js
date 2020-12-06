@@ -8,8 +8,7 @@ import { NavLink } from 'react-router-dom';
 const Wrapper = styled.nav`
   position: absolute;
   top: 0;
-  padding: 10px 0;
-  width: 100vw;
+  width: 100%;
   height: 200px;
   /* background-color: ${({ theme }) => theme.secondaryBg}; */
   background: rgba(179, 220, 237, 1);
@@ -55,9 +54,7 @@ const Wrapper = styled.nav`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  z-index: 9999;
-  box-shadow: -8px 14px 64px 8px rgba(155, 161, 168, 1);
-  margin-bottom: 50px;
+  box-shadow: -8px 14px 64px 8px hsl(212, 7%, 63%);
 `;
 
 const StyledListItem = styled.ul`

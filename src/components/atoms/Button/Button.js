@@ -8,7 +8,7 @@ const Button = styled.button`
   border: none;
   height: 50px;
   color: #fff;
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.fontSize.s};
   text-transform: lowercase;
   border-radius: 30px;
 
@@ -18,7 +18,7 @@ const Button = styled.button`
       background-color: #dd7783;
       width: 100px;
       height: 20px;
-      font-size: 10px;
+      font-size: ${({ theme }) => theme.fontSize.xxs};
     `}
 `;
 export default Button;

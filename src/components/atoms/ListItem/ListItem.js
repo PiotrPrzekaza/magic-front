@@ -2,11 +2,9 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 const ListItem = styled.a`
-  color: black;
-  font-size: 2rem;
+  color: ${({ theme }) => theme.black};
+  font-size: ${({ theme }) => theme.fontSize.l};
   text-decoration: none;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
   display: inline-block;
   padding: 15px 50px;
   position: relative;
@@ -19,7 +17,7 @@ const ListItem = styled.a`
     height: 2px;
     left: 50%;
     position: absolute;
-    background: black;
+    background: ${({ theme }) => theme.black};
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }

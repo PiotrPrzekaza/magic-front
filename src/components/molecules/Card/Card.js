@@ -40,13 +40,14 @@ const StyledImage = styled.img`
 
 const StyledHeading = styled(Heading)`
   text-align: center;
+  font-size: ${({ theme }) => theme.fontSize.l};
 `;
 
 const Card = () => (
   <Wrapper>
     <InnerWrapper>
       <StyledImage src={image} alt="jednorożec" />
-      <StyledHeading smallHead>Maskotka</StyledHeading>
+      <StyledHeading>Maskotka</StyledHeading>
     </InnerWrapper>
     <InnerWrapper flex>
       <Paragraph>

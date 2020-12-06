@@ -7,7 +7,7 @@ import Paragraph from 'components/atoms/Paragraph/Paragraph';
 import Input from 'components/atoms/Input/Input';
 
 const Wrapper = styled.div`
-  padding: 150px 25px 70px 25px;
+  padding: 70px 30px;
 `;
 
 const StyledGrid = styled.div`
@@ -20,14 +20,23 @@ const StyledHeader = styled.div`
   margin: 25px 0 30px 0;
 `;
 
+const StyledHeading = styled(Heading)`
+  font-size: ${({ theme }) => theme.fontSize.xxl};
+`;
+
+const StyledParagraph = styled(Paragraph)`
+  font-size: ${({ theme }) => theme.fontSize.s};
+  font-weight: ${({ theme }) => theme.bold};
+`;
+
 const PageTemplate = ({ children }) => (
   <>
     <MenuBar />
     <Wrapper>
       <StyledHeader>
-        <Input search />
-        <Heading>Produkty</Heading>
-        <Paragraph> 6 produktów</Paragraph>
+        <Input search placeholder="Szukaj" />
+        <StyledHeading as="h1">Produkty</StyledHeading>
+        <StyledParagraph> 6 produktów</StyledParagraph>
       </StyledHeader>
       <StyledGrid>{children}</StyledGrid>
     </Wrapper>
