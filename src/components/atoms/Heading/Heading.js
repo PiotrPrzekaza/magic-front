@@ -2,9 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 const Heading = styled.h1`
-  margin: 20px 0 0 0;
   font-size: 5rem;
-  text-align: center;
   font-weight: 500;
   font-family: 'Libre Franklin';
 

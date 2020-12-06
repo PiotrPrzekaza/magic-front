@@ -8,7 +8,6 @@ const GlobalStyle = createGlobalStyle`
     padding-top:200px;
     font-size: 62.5%;
     box-sizing: border-box;
-    height:300vh;
   }
   
   *,

@@ -6,16 +6,58 @@ import logo from 'assets/icon/Magiczna.png';
 import { NavLink } from 'react-router-dom';
 
 const Wrapper = styled.nav`
-  position: fixed;
+  position: absolute;
   top: 0;
   padding: 10px 0;
   width: 100vw;
   height: 200px;
-  background-color: ${({ theme }) => theme.secondaryBg};
+  /* background-color: ${({ theme }) => theme.secondaryBg}; */
+  background: rgba(179, 220, 237, 1);
+  background: -moz-linear-gradient(
+    top,
+    rgba(179, 220, 237, 1) 0%,
+    rgba(41, 184, 229, 1) 50%,
+    rgba(188, 224, 238, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(179, 220, 237, 1)),
+    color-stop(50%, rgba(41, 184, 229, 1)),
+    color-stop(100%, rgba(188, 224, 238, 1))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(179, 220, 237, 1) 0%,
+    rgba(41, 184, 229, 1) 50%,
+    rgba(188, 224, 238, 1) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(179, 220, 237, 1) 0%,
+    rgba(41, 184, 229, 1) 50%,
+    rgba(188, 224, 238, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(179, 220, 237, 1) 0%,
+    rgba(41, 184, 229, 1) 50%,
+    rgba(188, 224, 238, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(179, 220, 237, 1) 0%,
+    rgba(41, 184, 229, 1) 50%,
+    rgba(188, 224, 238, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=0 );
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  z-index: 9999;
+  box-shadow: -8px 14px 64px 8px rgba(155, 161, 168, 1);
+  margin-bottom: 50px;
 `;
 
 const StyledListItem = styled.ul`

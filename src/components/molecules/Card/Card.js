@@ -2,15 +2,14 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import Heading from 'components/atoms/Heading/Heading';
 import Button from 'components/atoms/Button/Button';
-import image from 'assets/icon/jednorozec.png';
+import image from 'assets/images/jednorozec.png';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 
 const Wrapper = styled.div`
-  margin: 20px;
   min-height: 400px;
   border-radius: 30px;
   background-color: ${({ theme }) => theme.secondaryBg};
-  box-shadow: -11px 14px 22px -1px rgba(0, 0, 0, 0.76);
+  box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
   position: relative;
   overflow: hidden;
   display: grid;
@@ -39,11 +38,15 @@ const StyledImage = styled.img`
   top: 2%;
 `;
 
+const StyledHeading = styled(Heading)`
+  text-align: center;
+`;
+
 const Card = () => (
   <Wrapper>
     <InnerWrapper>
       <StyledImage src={image} alt="jednorożec" />
-      <Heading smallHead>Maskotka</Heading>
+      <StyledHeading smallHead>Maskotka</StyledHeading>
     </InnerWrapper>
     <InnerWrapper flex>
       <Paragraph>
