@@ -1,12 +1,10 @@
 import React from 'react';
-import Heading from 'components/atoms/Heading/Heading';
-import Paragraph from 'components/atoms/Paragraph/Paragraph';
-import PageTemplate from 'templates/PageTemplate';
+import AboutPageTemplate from 'templates/AboutPageTemplate';
+import Card from 'components/molecules/Card/Card';
 
 const Contact = () => (
-  <PageTemplate>
-    <Heading>Strona o mnie</Heading>
-    <Paragraph>Prezentacja mojej osoby</Paragraph>
-  </PageTemplate>
+  <AboutPageTemplate pageType="contact">
+    <Card typeOfCard="contact" />
+  </AboutPageTemplate>
 );
 export default Contact;

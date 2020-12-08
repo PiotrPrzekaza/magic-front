@@ -2,7 +2,9 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import Heading from 'components/atoms/Heading/Heading';
 import Button from 'components/atoms/Button/Button';
-import image from 'assets/images/jednorozec.png';
+import unicorn from 'assets/images/jednorozec.png';
+import unBlank from 'assets/images/unBlank.png';
+import ImageItem from 'components/atoms/ImageItem/ImageItem';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 
 const Wrapper = styled.div`
@@ -43,20 +45,59 @@ const StyledHeading = styled(Heading)`
   font-size: ${({ theme }) => theme.fontSize.l};
 `;
 
-const Card = () => (
-  <Wrapper>
-    <InnerWrapper>
-      <StyledImage src={image} alt="jednorożec" />
-      <StyledHeading>Maskotka</StyledHeading>
-    </InnerWrapper>
-    <InnerWrapper flex>
-      <Paragraph>
-        Pluszowa maskota wykonana starannie z jawyszej jakości włuczki przeznaczonej do wykonywania
-        zabawek.
-      </Paragraph>
-      <Button>Zamów</Button>
-    </InnerWrapper>
-  </Wrapper>
-);
+// eslint-disable-next-line consistent-return
+const Card = ({ typeOfCard }) => {
+  // eslint-disable-next-line no-lone-blocks
+  {
+    if (typeOfCard === 'products') {
+      return (
+        <Wrapper>
+          <InnerWrapper>
+            <StyledImage src={unicorn} alt="jednorożec" />
+            <StyledHeading>Maskotka</StyledHeading>
+          </InnerWrapper>
+          <InnerWrapper flex>
+            <Paragraph>
+              Pluszowa maskota wykonana starannie z jawyszej jakości włuczki przeznaczonej do
+              wykonywania zabawek.
+            </Paragraph>
+            <Button>Zamów</Button>
+          </InnerWrapper>
+        </Wrapper>
+      );
+    }
+    if (typeOfCard === 'knitting') {
+      return (
+        <Wrapper>
+          <InnerWrapper>
+            <StyledImage src={unBlank} alt="me" />
+            <StyledHeading>Druty</StyledHeading>
+          </InnerWrapper>
+          <InnerWrapper flex>
+            <Paragraph>druty</Paragraph>
+          </InnerWrapper>
+        </Wrapper>
+      );
+    }
+    if (typeOfCard === 'contact') {
+      return (
+        <Wrapper>
+          <InnerWrapper>
+            <ImageItem src="" />
+            <Heading>O Mnie</Heading>
+            <Paragraph>
+              Szydełko to maja pasja. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Explicabo facere fuga harum minus? Eum vel, autem aliquam temporibus, eius natus in
+              voluptas provident laudantium placeat rem sunt quam nostrum at? Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Explicabo facere fuga harum minus? Eum vel, autem
+              aliquam temporibus, eius natus in voluptas provident laudantium placeat rem sunt quam
+              nostrum at?
+            </Paragraph>
+          </InnerWrapper>
+        </Wrapper>
+      );
+    }
+  }
+};
 
 export default Card;

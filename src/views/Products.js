@@ -4,12 +4,12 @@ import Card from 'components/molecules/Card/Card';
 
 const Products = () => (
   <PageTemplate>
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
+    <Card typeOfCard="products" />
+    <Card typeOfCard="products" />
+    <Card typeOfCard="products" />
+    <Card typeOfCard="products" />
+    <Card typeOfCard="products" />
+    <Card typeOfCard="products" />
   </PageTemplate>
 );
 

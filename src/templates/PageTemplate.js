@@ -29,21 +29,27 @@ const StyledParagraph = styled(Paragraph)`
   font-weight: ${({ theme }) => theme.bold};
 `;
 
-const PageTemplate = ({ children }) => (
+const PageTemplate = ({ children, pageType }) => (
   <>
     <MenuBar />
-    <Wrapper>
+    <Wrapper pageType={pageType}>
       <StyledHeader>
         <Input search placeholder="Szukaj" />
-        <StyledHeading as="h1">Produkty</StyledHeading>
+        <StyledHeading as="h1">{pageType}</StyledHeading>
         <StyledParagraph> 6 produktów</StyledParagraph>
       </StyledHeader>
       <StyledGrid>{children}</StyledGrid>
     </Wrapper>
   </>
 );
+
 PageTemplate.propTypes = {
   children: PropTypes.element.isRequired,
+  pageType: PropTypes.oneOf(['products', 'knitting']),
+};
+
+PageTemplate.defaultProps = {
+  pageType: 'product',
 };
 
 export default PageTemplate;
