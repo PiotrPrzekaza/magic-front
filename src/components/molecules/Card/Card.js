@@ -3,8 +3,6 @@ import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import Heading from 'components/atoms/Heading/Heading';
 import Button from 'components/atoms/Button/Button';
-import unicorn from 'assets/images/jednorozec.png';
-import unBlank from 'assets/images/unBlank.png';
 import ImageItem from 'components/atoms/ImageItem/ImageItem';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 
@@ -75,19 +73,19 @@ const StyledHeading = styled(Heading)`
   font-size: ${({ theme }) => theme.fontSize.l};
 `;
 
-const Card = ({ typeOfCard }) => (
+const Card = ({ typeOfCard, title, price, desc, imageUrl, color, createdTime }) => (
   <>
     {typeOfCard === 'products' && (
       <Wrapper typeOfCard={typeOfCard}>
         <InnerWrapper>
-          <StyledImage src={unicorn} alt="jednorożec" />
-          <StyledHeading>Maskotka</StyledHeading>
+          <StyledImage src={imageUrl} alt="" />
+          <StyledHeading>{title}</StyledHeading>
         </InnerWrapper>
         <InnerWrapper flex>
-          <Paragraph>
-            Pluszowa maskota wykonana starannie z jawyszej jakości włuczki przeznaczonej do
-            wykonywania zabawek.
-          </Paragraph>
+          <Paragraph>{price}</Paragraph>
+          <Paragraph>{desc}</Paragraph>
+          <Paragraph>{color}</Paragraph>
+          <Paragraph>{createdTime}</Paragraph>
           <Button>Zamów</Button>
         </InnerWrapper>
       </Wrapper>
@@ -95,11 +93,14 @@ const Card = ({ typeOfCard }) => (
     {typeOfCard === 'knitting' && (
       <Wrapper typeOfCard={typeOfCard}>
         <InnerWrapper>
-          <StyledImage src={unBlank} alt="me" />
-          <StyledHeading>Druty</StyledHeading>
+          <StyledImage src={imageUrl} alt="me" />
+          <StyledHeading>{title}</StyledHeading>
         </InnerWrapper>
         <InnerWrapper flex>
-          <Paragraph>druty</Paragraph>
+          <Paragraph>{price}</Paragraph>
+          <Paragraph>{desc}</Paragraph>
+          <Paragraph>{color}</Paragraph>
+          <Paragraph>{createdTime}</Paragraph>
         </InnerWrapper>
       </Wrapper>
     )}
@@ -121,9 +122,21 @@ const Card = ({ typeOfCard }) => (
     )}
   </>
 );
-
 Card.propTypes = {
-  typeOfCard: PropTypes.string.isRequired,
+  typeOfCard: PropTypes.oneOf(['products', 'knitting', 'about']),
+  title: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string,
+  color: PropTypes.string,
+  createdTime: PropTypes.string,
+};
+
+Card.defaultProps = {
+  typeOfCard: 'products',
+  imageUrl: null,
+  color: null,
+  createdTime: null,
 };
 
 export default Card;
