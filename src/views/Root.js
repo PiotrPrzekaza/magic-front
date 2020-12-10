@@ -5,6 +5,7 @@ import Home from 'views/Home';
 import Contact from 'views/Contact';
 import Products from 'views/Products';
 import Knitting from 'views/Knitting';
+import About from './About';
 
 const Root = () => (
   <BasicTemplate>
@@ -14,6 +15,7 @@ const Root = () => (
         <Route path="/contact" component={Contact} />
         <Route path="/products" component={Products} />
         <Route path="/knitting" component={Knitting} />
+        <Route path="/about" component={About} />
       </Switch>
     </BrowserRouter>
   </BasicTemplate>

@@ -1,10 +1,11 @@
 import React from 'react';
 import AboutPageTemplate from 'templates/AboutPageTemplate';
-import Card from 'components/molecules/Card/Card';
+
+import ContactForm from 'components/organisms/ContactForm/ConatctForm';
 
 const Contact = () => (
-  <AboutPageTemplate pageType="contact">
-    <Card typeOfCard="contact" />
+  <AboutPageTemplate>
+    <ContactForm typeOfCard="contact" />
   </AboutPageTemplate>
 );
 export default Contact;

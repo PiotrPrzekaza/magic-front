@@ -9,7 +9,8 @@ export const theme = {
   primaryBg: 'hsl(34,56%,87%)',
   primary: 'hsl(165, 81%, 53%)',
   secondary: 'hsl(0, 70%, 60%)',
-  secondaryBg: 'hsl(193, 62%, 92%)',
+  thirdColor: 'hsl(46, 79%, 64%)',
+  secondaryBg: '#ec7666',
   light: 300,
   bold: 600,
   fontSize: {

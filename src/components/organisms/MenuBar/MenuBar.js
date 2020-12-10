@@ -100,6 +100,11 @@ const MenuBar = () => (
           Kontakt
         </ListItem>
       </li>
+      <li>
+        <ListItem as={NavLink} to="/about" activeclass="active">
+          O Mnie
+        </ListItem>
+      </li>
     </StyledListItem>
   </Wrapper>
 );
