@@ -9,6 +9,7 @@ const Wrapper = styled.div`
 
 const StyledGrid = styled.div`
   display: flex;
+  justify-content: center;
 `;
 
 const AboutPageTemplate = ({ children }) => (

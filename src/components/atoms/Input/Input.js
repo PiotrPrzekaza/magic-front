@@ -16,6 +16,13 @@ const Input = styled.input`
     color: ${({ theme }) => theme.grey300};
   }
 
+  ${({ submit }) =>
+    submit &&
+    css`
+      background-color: #fff;
+      border-radius: 0;
+    `}
+
   ${({ search }) =>
     search &&
     css`

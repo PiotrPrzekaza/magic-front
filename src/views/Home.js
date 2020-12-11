@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Heading from 'components/atoms/Heading/Heading';
 import hero from 'assets/images/szydelko2.jpg';
 import Button from 'components/atoms/Button/Button';
+import { NavLink } from 'react-router-dom';
 
 const ImgWrapper = styled.div`
   position: absolute;
@@ -57,7 +58,9 @@ const Home = () => (
   <>
     <HeroWrapper>
       <StyledHeading>Magiczna Pętelka</StyledHeading>
-      <HeroButton>Zobacz Moje projecty</HeroButton>
+      <HeroButton as={NavLink} to="/products">
+        Zobacz Moje projecty
+      </HeroButton>
     </HeroWrapper>
     <ImgWrapper />
   </>

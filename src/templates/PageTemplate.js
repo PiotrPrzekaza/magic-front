@@ -45,7 +45,7 @@ const PageTemplate = ({ children, pageType }) => (
 
 PageTemplate.propTypes = {
   children: PropTypes.element.isRequired,
-  pageType: PropTypes.oneOf(['products', 'knitting']),
+  pageType: PropTypes.oneOf(['products', 'knitting', 'about']),
 };
 
 PageTemplate.defaultProps = {

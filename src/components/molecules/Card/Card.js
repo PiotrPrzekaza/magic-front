@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import imgIcon from 'assets/images/chusta_bg.png';
 import PropTypes from 'prop-types';
 import Heading from 'components/atoms/Heading/Heading';
 import Button from 'components/atoms/Button/Button';
@@ -16,28 +17,25 @@ const Wrapper = styled.div`
   display: grid;
 `;
 
-const StyledWrapper = styled.div`
-  min-height: 400px;
+const AboutStyledWrapper = styled.div`
+  min-height: 50vh;
+  max-width: 50vw;
   border-radius: 20px;
+  display: flex;
   background-color: ${({ theme }) => theme.thirdColor};
   box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
-  position: relative;
-  overflow: hidden;
-  display: flex;
 `;
 
 const AboutInnerWrapper = styled.div`
   position: relative;
+
   justify-content: space-around;
   padding: 17px 30px;
 `;
 
 const AboutStyledImage = styled(ImageItem)`
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  left: 5%;
-  top: 2%;
+  width: 200px;
+  height: 200px;
 `;
 
 const AboutStyledHeading = styled(Heading)`
@@ -105,9 +103,9 @@ const Card = ({ typeOfCard, title, price, desc, imageUrl, color, createdTime }) 
       </Wrapper>
     )}
     {typeOfCard === 'about' && (
-      <StyledWrapper typeOfCard={typeOfCard}>
+      <AboutStyledWrapper typeOfCard={typeOfCard}>
         <AboutInnerWrapper>
-          <AboutStyledImage src="" />
+          <AboutStyledImage src={imgIcon} />
           <AboutStyledHeading>O Mnie</AboutStyledHeading>
           <Paragraph>
             Szydełko to maja pasja. Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -118,7 +116,7 @@ const Card = ({ typeOfCard, title, price, desc, imageUrl, color, createdTime }) 
             nostrum at?
           </Paragraph>
         </AboutInnerWrapper>
-      </StyledWrapper>
+      </AboutStyledWrapper>
     )}
   </>
 );

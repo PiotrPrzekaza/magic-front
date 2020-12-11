@@ -10,7 +10,23 @@ const Button = styled.button`
   color: #fff;
   font-size: ${({ theme }) => theme.fontSize.s};
   text-transform: lowercase;
-  border-radius: 30px;
+
+  ${({ submit }) =>
+    submit &&
+    css`
+      text-transform: uppercase;
+      margin: 20px 0 0 0;
+      font-weight: ${({ theme }) => theme.bold};
+      background-color: #5afa82;
+      letter-spacing: 2px;
+      border-radius: 20px;
+      color: hsl(0, 0%, 0%);
+      :hover {
+        cursor: pointer;
+        background-color: #2f7c43;
+        color: #fff;
+      }
+    `}
 
   ${({ small }) =>
     small &&
