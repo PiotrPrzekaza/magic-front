@@ -42,27 +42,27 @@ const MenuBar = () => (
     <StyledImageItem src={logo} alt="Logo magiczna pętelka" />
     <StyledListItem>
       <li>
-        <ListItem as={NavLink} to="/" activeclass="active">
+        <ListItem navigation as={NavLink} to="/" activeclass="active">
           Strona Domowa
         </ListItem>
       </li>
       <li>
-        <ListItem as={NavLink} to="/products" activeclass="active">
+        <ListItem navigation as={NavLink} to="/products" activeclass="active">
           Produkty
         </ListItem>
       </li>
       <li>
-        <ListItem as={NavLink} to="/knitting" activeclass="active">
+        <ListItem navigation as={NavLink} to="/knitting" activeclass="active">
           Druty
         </ListItem>
       </li>
       <li>
-        <ListItem as={NavLink} to="/contact" activeclass="active">
+        <ListItem navigation as={NavLink} to="/contact" activeclass="active">
           Kontakt
         </ListItem>
       </li>
       <li>
-        <ListItem as={NavLink} to="/about" activeclass="active">
+        <ListItem navigation as={NavLink} to="/about" activeclass="active">
           O Mnie
         </ListItem>
       </li>
