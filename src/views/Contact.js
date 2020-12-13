@@ -1,10 +1,9 @@
 import React from 'react';
 import AboutPageTemplate from 'templates/AboutPageTemplate';
-
 import ContactForm from 'components/organisms/ContactForm/ConatctForm';
 
 const Contact = () => (
-  <AboutPageTemplate>
+  <AboutPageTemplate pageType="contact">
     <ContactForm typeOfCard="contact" />
   </AboutPageTemplate>
 );

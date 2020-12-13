@@ -17,18 +17,30 @@ const Wrapper = styled.div`
   display: grid;
 `;
 
+const StyledButton = styled(Button)`
+  border-radius: 30px;
+  width: 50%;
+  background-color: ${({ theme }) => theme.primaryButton};
+  :hover {
+    background-color: ${({ theme }) => theme.secondary};
+  }
+`;
+
+const StyledParagraph = styled(Paragraph)`
+  font-size: ${({ theme }) => theme.fontSize.s};
+`;
+
 const AboutStyledWrapper = styled.div`
   min-height: 50vh;
   max-width: 50vw;
   border-radius: 20px;
   display: flex;
-  background-color: ${({ theme }) => theme.thirdColor};
+  background-color: ${({ theme }) => theme.secondary};
   box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
 `;
 
 const AboutInnerWrapper = styled.div`
   position: relative;
-
   justify-content: space-around;
   padding: 17px 30px;
 `;
@@ -38,9 +50,13 @@ const AboutStyledImage = styled(ImageItem)`
   height: 200px;
 `;
 
+const AboutStyledParagraph = styled(Paragraph)`
+  font-size: ${({ theme }) => theme.fontSize.s};
+`;
+
 const AboutStyledHeading = styled(Heading)`
   text-align: center;
-  font-size: ${({ theme }) => theme.fontSize.l};
+  font-size: ${({ theme }) => theme.fontSize.xl};
 `;
 
 const InnerWrapper = styled.div`
@@ -60,6 +76,8 @@ const InnerWrapper = styled.div`
 
 const StyledImage = styled.img`
   position: absolute;
+  border-radius: 10px;
+  margin-top: 20px;
   width: 150px;
   height: 150px;
   left: 5%;
@@ -80,11 +98,11 @@ const Card = ({ typeOfCard, title, price, desc, imageUrl, color, createdTime }) 
           <StyledHeading>{title}</StyledHeading>
         </InnerWrapper>
         <InnerWrapper flex>
-          <Paragraph>{price}</Paragraph>
-          <Paragraph>{desc}</Paragraph>
-          <Paragraph>{color}</Paragraph>
-          <Paragraph>{createdTime}</Paragraph>
-          <Button>Zamów</Button>
+          <StyledParagraph>Cena: {price}</StyledParagraph>
+          <StyledParagraph>{desc}</StyledParagraph>
+          <StyledParagraph>Kolor: {color}</StyledParagraph>
+          <StyledParagraph>Czas realizacji: {createdTime}</StyledParagraph>
+          <StyledButton>Zamów</StyledButton>
         </InnerWrapper>
       </Wrapper>
     )}
@@ -95,26 +113,27 @@ const Card = ({ typeOfCard, title, price, desc, imageUrl, color, createdTime }) 
           <StyledHeading>{title}</StyledHeading>
         </InnerWrapper>
         <InnerWrapper flex>
-          <Paragraph>{price}</Paragraph>
-          <Paragraph>{desc}</Paragraph>
-          <Paragraph>{color}</Paragraph>
-          <Paragraph>{createdTime}</Paragraph>
+          <AboutStyledParagraph>Cena {price}</AboutStyledParagraph>
+          <AboutStyledParagraph>{desc}</AboutStyledParagraph>
+          <AboutStyledParagraph>{color}</AboutStyledParagraph>
+          <AboutStyledParagraph>{createdTime}</AboutStyledParagraph>
+          <StyledButton>Zamów</StyledButton>
         </InnerWrapper>
       </Wrapper>
     )}
     {typeOfCard === 'about' && (
       <AboutStyledWrapper typeOfCard={typeOfCard}>
         <AboutInnerWrapper>
-          <AboutStyledImage src={imgIcon} />
+          {/* <AboutStyledImage src={imgIcon} /> */}
           <AboutStyledHeading>O Mnie</AboutStyledHeading>
-          <Paragraph>
+          <StyledParagraph>
             Szydełko to maja pasja. Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Explicabo facere fuga harum minus? Eum vel, autem aliquam temporibus, eius natus in
             voluptas provident laudantium placeat rem sunt quam nostrum at? Lorem ipsum dolor sit
             amet consectetur adipisicing elit. Explicabo facere fuga harum minus? Eum vel, autem
             aliquam temporibus, eius natus in voluptas provident laudantium placeat rem sunt quam
             nostrum at?
-          </Paragraph>
+          </StyledParagraph>
         </AboutInnerWrapper>
       </AboutStyledWrapper>
     )}

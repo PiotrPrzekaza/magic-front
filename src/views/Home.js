@@ -2,14 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import Heading from 'components/atoms/Heading/Heading';
 import hero from 'assets/images/szydelko2.jpg';
+import logo from 'assets/icon/Magiczna.png';
 import Button from 'components/atoms/Button/Button';
 import { NavLink } from 'react-router-dom';
+import ImageItem from 'components/atoms/ImageItem/ImageItem';
 
 const ImgWrapper = styled.div`
   position: absolute;
   top: 0;
   /* box-shadow: -8px 1px 42px -16px rgba(0, 0, 0, 1); */
-  box-shadow: -18px 2px 64px -20px rgba(122, 115, 33, 1);
+  box-shadow: -18px 2px 64px -20px #242422;
   right: 0;
   background-image: url(${hero});
   background-position: 100%;
@@ -28,36 +30,37 @@ const HeroWrapper = styled.div`
   width: 50vw;
   height: 100vh;
   flex-direction: column;
-  background-color: #f7f0d8;
+  background-color: ${({ theme }) => theme.primaryBg};
   justify-content: space-around;
-  align-items: stretch;
+  align-items: center;
 `;
 
 const HeroButton = styled(Button)`
-  border-radius: 20px;
+  border-radius: 30px;
   padding: 10px 20px;
   color: #1b1515;
-  background-color: #f5a9dc;
+  background-color: ${({ theme }) => theme.primaryButton};
   text-align: center;
   cursor: pointer;
   font-size: 1.6rem;
   font-weight: bold;
+  text-decoration: none;
   margin: 0 auto 100px;
+  transition: ease 0.3s;
   :hover {
-    background-color: #f82f72;
-    color: white;
+    background-color: ${({ theme }) => theme.secondary};
   }
 `;
 
-const StyledHeading = styled(Heading)`
-  text-align: center;
-  text-transform: uppercase;
+const StyledImageItem = styled(ImageItem)`
+  width: 61%;
+  height: 61%;
 `;
 
 const Home = () => (
   <>
     <HeroWrapper>
-      <StyledHeading>Magiczna Pętelka</StyledHeading>
+      <StyledImageItem src={logo} />
       <HeroButton as={NavLink} to="/products">
         Zobacz Moje projecty
       </HeroButton>

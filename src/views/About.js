@@ -3,7 +3,7 @@ import React from 'react';
 import AboutPageTemplate from 'templates/AboutPageTemplate';
 
 const About = () => (
-  <AboutPageTemplate>
+  <AboutPageTemplate pageType="about">
     <Card typeOfCard="about" />
   </AboutPageTemplate>
 );

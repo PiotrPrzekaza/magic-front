@@ -7,7 +7,7 @@ import Paragraph from 'components/atoms/Paragraph/Paragraph';
 import Input from 'components/atoms/Input/Input';
 
 const Wrapper = styled.div`
-  padding: 70px 30px;
+  padding: 10px 30px 20px 30px;
 `;
 
 const StyledGrid = styled.div`
@@ -35,7 +35,8 @@ const PageTemplate = ({ children, pageType }) => (
     <Wrapper pageType={pageType}>
       <StyledHeader>
         <Input search placeholder="Szukaj" />
-        <StyledHeading as="h1">{pageType}</StyledHeading>
+        {pageType === 'products' && <StyledHeading as="h1">Projekty zrealizowane</StyledHeading>}
+        {pageType === 'knitting' && <StyledHeading as="h1">Druty</StyledHeading>}
         <StyledParagraph> 6 produktów</StyledParagraph>
       </StyledHeader>
       <StyledGrid>{children}</StyledGrid>
@@ -49,7 +50,7 @@ PageTemplate.propTypes = {
 };
 
 PageTemplate.defaultProps = {
-  pageType: 'product',
+  pageType: 'products',
 };
 
 export default PageTemplate;

@@ -6,10 +6,10 @@ import { Form } from 'components/molecules/Form/Form';
 
 const StyledWrapper = styled.div`
   min-width: 50%;
-  min-height: 50vh;
+  min-height: 40vh;
   text-align: center;
   border-radius: 20px;
-  background-color: #abcaca;
+  background-color: ${({ theme }) => theme.thirdColorBg};
   box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
   display: flex;
   justify-content: center;

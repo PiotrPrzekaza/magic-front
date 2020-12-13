@@ -4,7 +4,7 @@ import PageTemplate from 'templates/PageTemplate';
 import Card from 'components/molecules/Card/Card';
 
 const Products = () => (
-  <PageTemplate>
+  <PageTemplate pageType="products">
     {productsData.map((item) => (
       <Card
         typeOfCard="products"
