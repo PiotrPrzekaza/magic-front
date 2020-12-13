@@ -1,10 +1,9 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import imgIcon from 'assets/images/chusta_bg.png';
 import PropTypes from 'prop-types';
 import Heading from 'components/atoms/Heading/Heading';
 import Button from 'components/atoms/Button/Button';
-import unicorn from 'assets/images/jednorozec.png';
-import unBlank from 'assets/images/unBlank.png';
 import ImageItem from 'components/atoms/ImageItem/ImageItem';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 
@@ -18,14 +17,26 @@ const Wrapper = styled.div`
   display: grid;
 `;
 
-const StyledWrapper = styled.div`
-  min-height: 400px;
+const StyledButton = styled(Button)`
+  border-radius: 30px;
+  width: 50%;
+  background-color: ${({ theme }) => theme.primaryButton};
+  :hover {
+    background-color: ${({ theme }) => theme.secondary};
+  }
+`;
+
+const StyledParagraph = styled(Paragraph)`
+  font-size: ${({ theme }) => theme.fontSize.s};
+`;
+
+const AboutStyledWrapper = styled.div`
+  min-height: 50vh;
+  max-width: 50vw;
   border-radius: 20px;
-  background-color: ${({ theme }) => theme.thirdColor};
-  box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
-  position: relative;
-  overflow: hidden;
   display: flex;
+  background-color: ${({ theme }) => theme.secondary};
+  box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
 `;
 
 const AboutInnerWrapper = styled.div`
@@ -35,16 +46,17 @@ const AboutInnerWrapper = styled.div`
 `;
 
 const AboutStyledImage = styled(ImageItem)`
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  left: 5%;
-  top: 2%;
+  width: 200px;
+  height: 200px;
+`;
+
+const AboutStyledParagraph = styled(Paragraph)`
+  font-size: ${({ theme }) => theme.fontSize.s};
 `;
 
 const AboutStyledHeading = styled(Heading)`
   text-align: center;
-  font-size: ${({ theme }) => theme.fontSize.l};
+  font-size: ${({ theme }) => theme.fontSize.xl};
 `;
 
 const InnerWrapper = styled.div`
@@ -64,6 +76,8 @@ const InnerWrapper = styled.div`
 
 const StyledImage = styled.img`
   position: absolute;
+  border-radius: 10px;
+  margin-top: 20px;
   width: 150px;
   height: 150px;
   left: 5%;
@@ -75,55 +89,71 @@ const StyledHeading = styled(Heading)`
   font-size: ${({ theme }) => theme.fontSize.l};
 `;
 
-const Card = ({ typeOfCard }) => (
+const Card = ({ typeOfCard, title, price, desc, imageUrl, color, createdTime }) => (
   <>
     {typeOfCard === 'products' && (
       <Wrapper typeOfCard={typeOfCard}>
         <InnerWrapper>
-          <StyledImage src={unicorn} alt="jednorożec" />
-          <StyledHeading>Maskotka</StyledHeading>
+          <StyledImage src={imageUrl} alt="" />
+          <StyledHeading>{title}</StyledHeading>
         </InnerWrapper>
         <InnerWrapper flex>
-          <Paragraph>
-            Pluszowa maskota wykonana starannie z jawyszej jakości włuczki przeznaczonej do
-            wykonywania zabawek.
-          </Paragraph>
-          <Button>Zamów</Button>
+          <StyledParagraph>Cena: {price}</StyledParagraph>
+          <StyledParagraph>{desc}</StyledParagraph>
+          <StyledParagraph>Kolor: {color}</StyledParagraph>
+          <StyledParagraph>Czas realizacji: {createdTime}</StyledParagraph>
+          <StyledButton>Zamów</StyledButton>
         </InnerWrapper>
       </Wrapper>
     )}
     {typeOfCard === 'knitting' && (
       <Wrapper typeOfCard={typeOfCard}>
         <InnerWrapper>
-          <StyledImage src={unBlank} alt="me" />
-          <StyledHeading>Druty</StyledHeading>
+          <StyledImage src={imageUrl} alt="me" />
+          <StyledHeading>{title}</StyledHeading>
         </InnerWrapper>
         <InnerWrapper flex>
-          <Paragraph>druty</Paragraph>
+          <AboutStyledParagraph>Cena {price}</AboutStyledParagraph>
+          <AboutStyledParagraph>{desc}</AboutStyledParagraph>
+          <AboutStyledParagraph>{color}</AboutStyledParagraph>
+          <AboutStyledParagraph>{createdTime}</AboutStyledParagraph>
+          <StyledButton>Zamów</StyledButton>
         </InnerWrapper>
       </Wrapper>
     )}
     {typeOfCard === 'about' && (
-      <StyledWrapper typeOfCard={typeOfCard}>
+      <AboutStyledWrapper typeOfCard={typeOfCard}>
         <AboutInnerWrapper>
-          <AboutStyledImage src="" />
+          {/* <AboutStyledImage src={imgIcon} /> */}
           <AboutStyledHeading>O Mnie</AboutStyledHeading>
-          <Paragraph>
+          <StyledParagraph>
             Szydełko to maja pasja. Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Explicabo facere fuga harum minus? Eum vel, autem aliquam temporibus, eius natus in
             voluptas provident laudantium placeat rem sunt quam nostrum at? Lorem ipsum dolor sit
             amet consectetur adipisicing elit. Explicabo facere fuga harum minus? Eum vel, autem
             aliquam temporibus, eius natus in voluptas provident laudantium placeat rem sunt quam
             nostrum at?
-          </Paragraph>
+          </StyledParagraph>
         </AboutInnerWrapper>
-      </StyledWrapper>
+      </AboutStyledWrapper>
     )}
   </>
 );
-
 Card.propTypes = {
-  typeOfCard: PropTypes.string.isRequired,
+  typeOfCard: PropTypes.oneOf(['products', 'knitting', 'about']),
+  title: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string,
+  color: PropTypes.string,
+  createdTime: PropTypes.string,
+};
+
+Card.defaultProps = {
+  typeOfCard: 'products',
+  imageUrl: null,
+  color: null,
+  createdTime: null,
 };
 
 export default Card;

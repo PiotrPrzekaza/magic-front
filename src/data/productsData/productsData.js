@@ -1,10 +1,16 @@
+import jednorozec from 'assets/images/jednorozec.png';
+import kocyk from 'assets/images/kocyk.jpg';
+import plecak from 'assets/images/plecak.jpg';
+import torebkaRoz from 'assets/images/torebka-roz.jpg';
+import kocyknos from 'assets/images/kocyknos.jpg';
+
 const productsData = [
   {
     title: 'Kocyk ',
     price: '220 zł',
     desc: 'Kocyk kolorowy dla maluszka',
     color: 'mieszane',
-    imageUrl: '/assets/images/kocyk.jpg',
+    imageUrl: kocyk,
     createdTime: '10 dni',
   },
   {
@@ -12,7 +18,7 @@ const productsData = [
     price: '40 zł',
     desc: ' Plecak na wakacyjne wypady',
     color: 'Niebieski',
-    imageUrl: '/assets/images/plecak.jpg',
+    imageUrl: plecak,
     createdTime: '10 dni',
   },
   {
@@ -20,7 +26,7 @@ const productsData = [
     price: '30 zł',
     desc: ' Kolorowy jednorożec - dziewczynka',
     color: 'Róż',
-    imageUrl: '/assets/images/jednorozec.jpg',
+    imageUrl: jednorozec,
     createdTime: '6 dni',
   },
   {
@@ -28,7 +34,7 @@ const productsData = [
     price: '225 zł',
     desc: ' Różowa torebka stylowa',
     color: 'Róż',
-    imageUrl: '/assets/images/torebka-roz.jpg',
+    imageUrl: torebkaRoz,
     createdTime: '5 dni',
   },
   {
@@ -36,7 +42,7 @@ const productsData = [
     price: '220 zł',
     desc: 'Kocyk dla maluszka',
     color: 'Róż',
-    imageUrl: '/assets/images/kocyknos.jpg',
+    imageUrl: kocyknos,
     createdTime: '7 dni',
   },
 ];

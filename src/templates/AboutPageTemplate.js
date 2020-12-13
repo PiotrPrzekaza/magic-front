@@ -9,9 +9,10 @@ const Wrapper = styled.div`
 
 const StyledGrid = styled.div`
   display: flex;
+  justify-content: center;
 `;
 
-const AboutPageTemplate = ({ children }) => (
+const AboutPageTemplate = ({ children, pageType }) => (
   <>
     <MenuBar />
     <Wrapper>
@@ -22,6 +23,11 @@ const AboutPageTemplate = ({ children }) => (
 
 AboutPageTemplate.propTypes = {
   children: PropTypes.element.isRequired,
+  pageType: PropTypes.oneOf(['about', 'contact']),
+};
+
+AboutPageTemplate.defaultProps = {
+  pageType: 'about',
 };
 
 export default AboutPageTemplate;

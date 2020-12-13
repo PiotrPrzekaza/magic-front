@@ -11,10 +11,17 @@ const Input = styled.input`
   border-radius: 30px;
 
   ::placeholder {
-    text-transform: uppercase;
+    text-transform: lowercase;
     letter-spacing: 1px;
     color: ${({ theme }) => theme.grey300};
   }
+
+  ${({ submit }) =>
+    submit &&
+    css`
+      background-color: #fff;
+      border-radius: 0;
+    `}
 
   ${({ search }) =>
     search &&

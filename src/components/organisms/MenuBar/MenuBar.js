@@ -9,52 +9,13 @@ const Wrapper = styled.nav`
   position: absolute;
   top: 0;
   width: 100%;
-  height: 200px;
-  /* background-color: ${({ theme }) => theme.secondaryBg}; */
-  background: rgba(179, 220, 237, 1);
-  background: -moz-linear-gradient(
-    top,
-    rgba(179, 220, 237, 1) 0%,
-    rgba(41, 184, 229, 1) 50%,
-    rgba(188, 224, 238, 1) 100%
-  );
-  background: -webkit-gradient(
-    left top,
-    left bottom,
-    color-stop(0%, rgba(179, 220, 237, 1)),
-    color-stop(50%, rgba(41, 184, 229, 1)),
-    color-stop(100%, rgba(188, 224, 238, 1))
-  );
-  background: -webkit-linear-gradient(
-    top,
-    rgba(179, 220, 237, 1) 0%,
-    rgba(41, 184, 229, 1) 50%,
-    rgba(188, 224, 238, 1) 100%
-  );
-  background: -o-linear-gradient(
-    top,
-    rgba(179, 220, 237, 1) 0%,
-    rgba(41, 184, 229, 1) 50%,
-    rgba(188, 224, 238, 1) 100%
-  );
-  background: -ms-linear-gradient(
-    top,
-    rgba(179, 220, 237, 1) 0%,
-    rgba(41, 184, 229, 1) 50%,
-    rgba(188, 224, 238, 1) 100%
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(179, 220, 237, 1) 0%,
-    rgba(41, 184, 229, 1) 50%,
-    rgba(188, 224, 238, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=0 );
+  height: 130px;
+  background-color: ${({ theme }) => theme.primaryBg};
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  box-shadow: -8px 14px 64px 8px hsl(212, 7%, 63%);
+  box-shadow: -8px 14px 64px 8px #838586;
 `;
 
 const StyledListItem = styled.ul`
@@ -71,8 +32,8 @@ const StyledImageItem = styled(ImageItem)`
   position: relative;
   top: 30px;
   left: 0;
-  width: 350px;
-  height: 350px;
+  width: 250px;
+  height: 250px;
   overflow: visible;
 `;
 
