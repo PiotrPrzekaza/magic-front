@@ -5,6 +5,7 @@ import MenuBar from 'components/organisms/MenuBar/MenuBar';
 import Heading from 'components/atoms/Heading/Heading';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 import Input from 'components/atoms/Input/Input';
+import { Footer } from 'components/organisms/Footer/Footer';
 
 const Wrapper = styled.div`
   padding: 10px 30px 20px 30px;
@@ -41,6 +42,7 @@ const PageTemplate = ({ children, pageType }) => (
       </StyledHeader>
       <StyledGrid>{children}</StyledGrid>
     </Wrapper>
+    <Footer />
   </>
 );
 

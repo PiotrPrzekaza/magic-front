@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import MenuBar from 'components/organisms/MenuBar/MenuBar';
+import { Footer } from 'components/organisms/Footer/Footer';
 
 const Wrapper = styled.div`
   padding: 70px 30px;
@@ -18,6 +19,7 @@ const AboutPageTemplate = ({ children, pageType }) => (
     <Wrapper>
       <StyledGrid>{children}</StyledGrid>
     </Wrapper>
+    <Footer />
   </>
 );
 
