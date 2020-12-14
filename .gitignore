@@ -4,6 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
+<<<<<<< HEAD
+=======
+/cypress
+>>>>>>> a7257b5d4983af419f8a0eebaccdb521e2fd9d7d
 # testing
 /coverage
 
