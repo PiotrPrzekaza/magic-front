@@ -1,14 +1,13 @@
-/* eslint-disable linebreak-style */
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,200;0,300;0,400;1,100;1,500&family=Quicksand:wght@300;400;500&display=swap');
+  
   html {
-    padding-top:180px;
+    padding-top: 180px;
     font-size: 62.5%;
     box-sizing: border-box;
-    height:100%;
   }
   
   *,
@@ -38,6 +37,10 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
   }
-`;
 
-export default GlobalStyle;
+  ${({ home }) =>
+    home &&
+    css`
+      padding-top: 0;
+    `}
+`;

@@ -26,5 +26,3 @@ export const theme = {
     xll: '5rem',
   },
 };
-
-export default theme;

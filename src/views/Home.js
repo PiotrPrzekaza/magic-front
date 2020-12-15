@@ -4,66 +4,77 @@ import hero from 'assets/images/szydelko2.jpg';
 import logo from 'assets/icon/Magiczna.png';
 import { Button } from 'components/atoms/Button/Button';
 import { NavLink } from 'react-router-dom';
+import { Heading } from 'components/atoms/Heading/Heading';
+import { Paragraph } from 'components/atoms/Paragraph/Paragraph';
 import { ImageItem } from 'components/atoms/ImageItem/ImageItem';
 
-const ImgWrapper = styled.div`
+const StyledWrapper = styled.div`
   position: absolute;
-  top: 0;
-  /* box-shadow: -8px 1px 42px -16px rgba(0, 0, 0, 1); */
-  box-shadow: -18px 2px 64px -20px #242422;
-  right: 0;
-  background-image: url(${hero});
-  background-position: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 50%;
-  height: 100vh;
-  padding: 50px;
-`;
-
-const HeroWrapper = styled.div`
-  position: absolute;
-  top: 0;
   left: 0;
-  display: flex;
-  width: 50vw;
+  top: 0;
+  width: 100vw;
   height: 100vh;
-  flex-direction: column;
-  background-color: ${({ theme }) => theme.primaryBg};
-  justify-content: space-around;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  color: white;
+  overflow: hidden;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${hero});
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 `;
 
-const HeroButton = styled(Button)`
-  border-radius: 30px;
-  padding: 10px 20px;
-  color: #1b1515;
-  background-color: ${({ theme }) => theme.primaryButton};
+const HeroButton = styled.button`
+  width: 300px;
+  margin: 200px 100px 0 0;
+  padding: 20px 50px;
+  color: white;
   text-align: center;
-  cursor: pointer;
-  font-size: 1.6rem;
-  font-weight: bold;
   text-decoration: none;
-  margin: 0 auto 100px;
-  transition: ease 0.3s;
+  font-size: 1.6rem;
+  transition: ease 0.2s;
+  border: 2px solid white;
+  border-radius: 30px;
+  background-color: transparent;
   :hover {
-    background-color: ${({ theme }) => theme.secondary};
   }
 `;
 
+const StyledParagraph = styled(Paragraph)`
+  font-size: ${({ theme }) => theme.fontSize.s};
+`;
+
+const StyledHeading = styled(Heading)`
+  font-size: 7rem;
+  margin-right: 50px;
+  font-weight: ${({ theme }) => theme.regular};
+  text-transform: uppercase;
+`;
+
 const StyledImageItem = styled(ImageItem)`
-  width: 61%;
-  height: 61%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 400px;
+  height: 400px;
 `;
 
 export const Home = () => (
   <>
-    <HeroWrapper>
+    <StyledWrapper>
       <StyledImageItem src={logo} />
+      <StyledHeading as="h1">Szydełko to sposób na życie!</StyledHeading>
+      <StyledParagraph>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ducimus minima voluptate
+        architecto aut pariatur quae accusantium eaque, iste animi voluptatibus facere. Possimus
+        cumque rem sint ab maiores cupiditate assumenda.
+      </StyledParagraph>
       <HeroButton as={NavLink} to="/products">
         Zobacz Moje projecty
       </HeroButton>
-    </HeroWrapper>
-    <ImgWrapper />
+    </StyledWrapper>
   </>
 );
