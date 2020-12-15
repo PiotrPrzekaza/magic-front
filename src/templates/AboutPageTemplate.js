@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import MenuBar from 'components/organisms/MenuBar/MenuBar';
+import { MenuBar } from 'components/organisms/MenuBar/MenuBar';
 import { Footer } from 'components/organisms/Footer/Footer';
 
 const Wrapper = styled.div`
@@ -18,10 +18,10 @@ const StyledGrid = styled.div`
   height: calc(100vh - 250px);
 `;
 
-const AboutPageTemplate = ({ children, pageType }) => (
+export const AboutPageTemplate = ({ children, pageType }) => (
   <>
     <MenuBar />
-    <Wrapper>
+    <Wrapper pageType={pageType}>
       <StyledGrid>{children}</StyledGrid>
       <Footer />
     </Wrapper>
@@ -36,5 +36,3 @@ AboutPageTemplate.propTypes = {
 AboutPageTemplate.defaultProps = {
   pageType: 'about',
 };
-
-export default AboutPageTemplate;

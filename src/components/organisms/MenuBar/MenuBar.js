@@ -1,7 +1,7 @@
 import React from 'react';
-import ImageItem from 'components/atoms/ImageItem/ImageItem';
-import ListItem from 'components/atoms/ListItem/ListItem';
 import styled, { css } from 'styled-components';
+import { ImageItem } from 'components/atoms/ImageItem/ImageItem';
+import { ListItem } from 'components/atoms/ListItem/ListItem';
 import logo from 'assets/icon/Magiczna.png';
 import { NavLink } from 'react-router-dom';
 
@@ -37,7 +37,7 @@ const StyledImageItem = styled(ImageItem)`
   overflow: visible;
 `;
 
-const MenuBar = () => (
+export const MenuBar = () => (
   <Wrapper>
     <StyledImageItem src={logo} alt="Logo magiczna pętelka" />
     <StyledListItem>
@@ -69,5 +69,3 @@ const MenuBar = () => (
     </StyledListItem>
   </Wrapper>
 );
-
-export default MenuBar;

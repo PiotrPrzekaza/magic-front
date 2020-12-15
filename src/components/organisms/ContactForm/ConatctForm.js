@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import Heading from 'components/atoms/Heading/Heading';
+import { Heading } from 'components/atoms/Heading/Heading';
 import { Form } from 'components/molecules/Form/Form';
 
 const StyledWrapper = styled.div`
@@ -17,7 +17,7 @@ const StyledWrapper = styled.div`
   flex-direction: column;
 `;
 
-const ContactForm = ({ typeOfCard }) => (
+export const ContactForm = ({ typeOfCard }) => (
   <StyledWrapper as="form" typeOfCard={typeOfCard}>
     <Heading>Wypełnij i prześlij do mnie</Heading>
     <Form />
@@ -27,5 +27,3 @@ const ContactForm = ({ typeOfCard }) => (
 ContactForm.propTypes = {
   typeOfCard: PropTypes.string.isRequired,
 };
-
-export default ContactForm;

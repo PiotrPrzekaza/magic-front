@@ -2,11 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import FacebookIcon from 'assets/icon/facebook.svg';
 import InstagramIcon from 'assets/icon/instagram.svg';
-import Paragraph from 'components/atoms/Paragraph/Paragraph';
-import ImageItem from 'components/atoms/ImageItem/ImageItem';
+import { Paragraph } from 'components/atoms/Paragraph/Paragraph';
+import { ImageItem } from 'components/atoms/ImageItem/ImageItem';
 import { Anchor } from 'components/atoms/Anchor/Anchor';
-
-import ListItem from 'components/atoms/ListItem/ListItem';
+import { ListItem } from 'components/atoms/ListItem/ListItem';
 
 const FooterWrapper = styled.footer`
   display: flex;
@@ -38,7 +37,7 @@ const StyledParagraph = styled(Paragraph)`
   padding-right: 50px;
 `;
 
-const Footer = () => (
+export const Footer = () => (
   <FooterWrapper>
     <SocialWrapper>
       <StyledParagraph>sociale</StyledParagraph>
@@ -73,5 +72,3 @@ const Footer = () => (
     </CreatorWrapper>
   </FooterWrapper>
 );
-
-export { Footer };

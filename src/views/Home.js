@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Heading from 'components/atoms/Heading/Heading';
 import hero from 'assets/images/szydelko2.jpg';
 import logo from 'assets/icon/Magiczna.png';
-import Button from 'components/atoms/Button/Button';
+import { Button } from 'components/atoms/Button/Button';
 import { NavLink } from 'react-router-dom';
-import ImageItem from 'components/atoms/ImageItem/ImageItem';
+import { ImageItem } from 'components/atoms/ImageItem/ImageItem';
 
 const ImgWrapper = styled.div`
   position: absolute;
@@ -57,7 +56,7 @@ const StyledImageItem = styled(ImageItem)`
   height: 61%;
 `;
 
-const Home = () => (
+export const Home = () => (
   <>
     <HeroWrapper>
       <StyledImageItem src={logo} />
@@ -68,5 +67,3 @@ const Home = () => (
     <ImgWrapper />
   </>
 );
-
-export default Home;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-const ListItem = styled.a`
+export const ListItem = styled.a`
   color: ${({ theme }) => theme.black};
   font-size: ${({ theme }) => theme.fontSize.s};
   text-decoration: none;
@@ -35,5 +35,3 @@ const ListItem = styled.a`
       }
     `}
 `;
-
-export default ListItem;

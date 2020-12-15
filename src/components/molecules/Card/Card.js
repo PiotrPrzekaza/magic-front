@@ -2,10 +2,10 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import imgIcon from 'assets/images/chusta_bg.png';
 import PropTypes from 'prop-types';
-import Heading from 'components/atoms/Heading/Heading';
-import Button from 'components/atoms/Button/Button';
-import ImageItem from 'components/atoms/ImageItem/ImageItem';
-import Paragraph from 'components/atoms/Paragraph/Paragraph';
+import { Heading } from 'components/atoms/Heading/Heading';
+import { Button } from 'components/atoms/Button/Button';
+import { ImageItem } from 'components/atoms/ImageItem/ImageItem';
+import { Paragraph } from 'components/atoms/Paragraph/Paragraph';
 
 const Wrapper = styled.div`
   min-height: 400px;
@@ -89,7 +89,7 @@ const StyledHeading = styled(Heading)`
   font-size: ${({ theme }) => theme.fontSize.l};
 `;
 
-const Card = ({ typeOfCard, title, price, desc, imageUrl, color, createdTime }) => (
+export const Card = ({ typeOfCard, title, price, desc, imageUrl, color, createdTime }) => (
   <>
     {typeOfCard === 'products' && (
       <Wrapper typeOfCard={typeOfCard}>
@@ -155,5 +155,3 @@ Card.defaultProps = {
   color: null,
   createdTime: null,
 };
-
-export default Card;

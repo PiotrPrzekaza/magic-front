@@ -1,11 +1,11 @@
 import React from 'react';
-import productsData from 'data/productsData/productsData';
-import PageTemplate from 'templates/PageTemplate';
-import Card from 'components/molecules/Card/Card';
+import { productsData as data } from 'data/productsData';
+import { PageTemplate } from 'templates/PageTemplate';
+import { Card } from 'components/molecules/Card/Card';
 
-const Products = () => (
+export const Products = () => (
   <PageTemplate pageType="products">
-    {productsData.map((item) => (
+    {data.map((item) => (
       <Card
         typeOfCard="products"
         title={item.title}
@@ -19,5 +19,3 @@ const Products = () => (
     ))}
   </PageTemplate>
 );
-
-export default Products;

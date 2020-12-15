@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Textarea = styled.textarea`
+export const Textarea = styled.textarea`
   margin-top: 10px;
   outline: none;
   resize: none;
@@ -17,5 +17,3 @@ const Textarea = styled.textarea`
     color: ${({ theme }) => theme.grey300};
   }
 `;
-
-export { Textarea };

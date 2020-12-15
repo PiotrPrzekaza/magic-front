@@ -1,4 +1,4 @@
-const knittingData = [
+export const knittingData = [
   {
     title: 'Opaska',
     price: '120 zł',
@@ -40,5 +40,3 @@ const knittingData = [
     createdTime: '15 dni',
   },
 ];
-
-export default knittingData;

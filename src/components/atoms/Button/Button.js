@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-const Button = styled.button`
+export const Button = styled.button`
   background-color: ${({ theme }) => theme.primaryButton};
   border: none;
   width: 200px;
@@ -39,4 +39,3 @@ const Button = styled.button`
       font-size: ${({ theme }) => theme.fontSize.xxs};
     `}
 `;
-export default Button;
