@@ -2,10 +2,10 @@ import { createGlobalStyle, css } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,200;0,300;0,400;1,100;1,500&family=Quicksand:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;300;400;600;700&display=swap');
   
   html {
-    padding-top: 180px;
+    /* padding-top: 180px; */
     font-size: 62.5%;
     box-sizing: border-box;
   }

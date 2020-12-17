@@ -1,37 +1,28 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
-export const ListItem = styled.a`
+export const ListItem = styled(NavLink)`
   color: ${({ theme }) => theme.black};
   font-size: ${({ theme }) => theme.fontSize.s};
   text-decoration: none;
-  display: inline-block;
-  padding: 15px;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
 
-  ${({ navigation }) =>
-    navigation &&
+  ${({ nav }) =>
+    nav &&
     css`
-      color: ${({ theme }) => theme.black};
-      font-size: ${({ theme }) => theme.fontSize.l};
-      text-decoration: none;
       display: inline-block;
-      padding: 15px 50px;
-      position: relative;
-      :after {
-        background: none repeat scroll 0 0 transparent;
-        bottom: 0;
-        content: '';
-        display: block;
-        height: 2px;
-        left: 50%;
-        position: absolute;
-        background: ${({ theme }) => theme.black};
-        transition: width 0.3s ease 0s, left 0.3s ease 0s;
-        width: 0;
-      }
-      :hover:after {
-        width: 100%;
-        left: 0;
+      margin-right: 70px;
+      padding-right: 20px;
+      text-transform: lowercase;
+      -webkit-transition: ease 0.4s;
+      transition: ease 0.4s;
+      color: ${({ theme }) => theme.grey};
+      &.active {
+        color: ${({ theme }) => theme.grey1};
+        font-weight: ${({ theme }) => theme.bold};
+        font-size: ${({ theme }) => theme.fontSize.m};
       }
     `}
 `;

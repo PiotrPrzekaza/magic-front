@@ -2,40 +2,36 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 export const Button = styled.button`
-  background-color: ${({ theme }) => theme.primaryButton};
-  border: none;
-  width: 200px;
-  border: none;
-  height: 50px;
-  color: ${({ theme }) => theme.black};
-  border-radius: 30px;
-  font-size: ${({ theme }) => theme.fontSize.s};
+  width: 300px;
+  padding: 10px 20px;
+  color: white;
+  text-align: center;
   text-transform: lowercase;
+  text-decoration: none;
+  font-size: ${({ theme }) => theme.fontSize.s};
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 3px solid white;
+  border-radius: 30px;
+  background-color: transparent;
 
   ${({ submit }) =>
     submit &&
     css`
       width: 100%;
       text-transform: lowercase;
-      margin-top: 10px;
+      margin-top: 40px;
       font-weight: ${({ theme }) => theme.bold};
-      background-color: ${({ theme }) => theme.primary};
+      background-color: transparent;
       letter-spacing: 1px;
       border-radius: 30px;
-      color: hsl(0, 0%, 0%);
+      color: ${({ theme }) => theme.white};
       :hover {
-        cursor: pointer;
-        background-color: ${({ theme }) => theme.primaryHover};
-        color: ${({ theme }) => theme.white};
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        background-color: ${({ theme }) => theme.grey200};
+        color: ${({ theme }) => theme.black};
       }
-    `}
-
-  ${({ small }) =>
-    small &&
-    css`
-      background-color: ${({ theme }) => theme.primaryHover};
-      width: 100px;
-      height: 30px;
-      font-size: ${({ theme }) => theme.fontSize.xxs};
     `}
 `;

@@ -5,12 +5,12 @@ import InstagramIcon from 'assets/icon/instagram.svg';
 import { Paragraph } from 'components/atoms/Paragraph/Paragraph';
 import { ImageItem } from 'components/atoms/ImageItem/ImageItem';
 import { Anchor } from 'components/atoms/Anchor/Anchor';
-import { ListItem } from 'components/atoms/ListItem/ListItem';
 
 const FooterWrapper = styled.footer`
   display: flex;
   width: 100%;
   height: 5%;
+  border-top: 1px solid black;
   flex-direction: row;
   justify-content: space-between;
   background-color: ${({ theme }) => theme.primaryBg};
@@ -19,6 +19,11 @@ const FooterWrapper = styled.footer`
 const StyledImageItem = styled(ImageItem)`
   width: 25px;
   height: 25px;
+  :hover {
+    --webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
 `;
 
 const SocialWrapper = styled.div`
@@ -41,20 +46,20 @@ export const Footer = () => (
   <FooterWrapper>
     <SocialWrapper>
       <StyledParagraph>sociale</StyledParagraph>
-      <ListItem
+      <Anchor
         target="_blank"
         rel="noopener noreferrer"
         href="https://www.facebook.com/Magiczna_petelka-100294938418180/"
       >
         <StyledImageItem src={FacebookIcon} />
-      </ListItem>
-      <ListItem
+      </Anchor>
+      <Anchor
         target="_blank"
         rel="noopener noreferrer"
         href="https://www.instagram.com/magicznapetelka/"
       >
         <StyledImageItem src={InstagramIcon} />
-      </ListItem>
+      </Anchor>
     </SocialWrapper>
     <CreatorWrapper>
       <StyledParagraph>

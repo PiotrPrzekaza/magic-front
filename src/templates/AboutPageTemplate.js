@@ -15,7 +15,7 @@ const StyledGrid = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: calc(100vh - 250px);
+  height: calc(100vh - 251px);
 `;
 
 export const AboutPageTemplate = ({ children, pageType }) => (

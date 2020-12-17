@@ -3,32 +3,28 @@ import styled, { css } from 'styled-components';
 import { ImageItem } from 'components/atoms/ImageItem/ImageItem';
 import { ListItem } from 'components/atoms/ListItem/ListItem';
 import logo from 'assets/icon/Magiczna.png';
-import { NavLink } from 'react-router-dom';
 
-const Wrapper = styled.nav`
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 130px;
-  background-color: ${({ theme }) => theme.primaryBg};
+const Wrapper = styled.header`
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  box-shadow: -8px 14px 64px 8px #838586;
+  height: 150px;
+  margin-bottom: 50px;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
 `;
 
-const StyledListItem = styled.ul`
+const StyledMenu = styled.ul`
   display: flex;
-  width: 100%;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
+  height: 150px;
+  margin: 0 auto;
+  width: 95vw;
+  justify-content: flex-start;
   list-style: none;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid grey;
 `;
 
 const StyledImageItem = styled(ImageItem)`
-  margin-right: auto;
   position: relative;
   top: 30px;
   left: 0;
@@ -39,33 +35,32 @@ const StyledImageItem = styled(ImageItem)`
 
 export const MenuBar = () => (
   <Wrapper>
-    <StyledImageItem src={logo} alt="Logo magiczna pętelka" />
-    <StyledListItem>
+    <StyledMenu>
       <li>
-        <ListItem navigation as={NavLink} to="/" activeclass="active">
-          Strona Domowa
+        <ListItem nav exact to="/" activeClassName="active">
+          <StyledImageItem src={logo} alt="Logo magiczna pętelka" />
         </ListItem>
       </li>
       <li>
-        <ListItem navigation as={NavLink} to="/products" activeclass="active">
+        <ListItem nav to="/products" activeClassName="active">
           Produkty
         </ListItem>
       </li>
       <li>
-        <ListItem navigation as={NavLink} to="/knitting" activeclass="active">
+        <ListItem nav to="/knitting" activeClassName="active">
           Druty
         </ListItem>
       </li>
       <li>
-        <ListItem navigation as={NavLink} to="/contact" activeclass="active">
+        <ListItem nav to="/contact" activeClassName="active">
           Kontakt
         </ListItem>
       </li>
       <li>
-        <ListItem navigation as={NavLink} to="/about" activeclass="active">
+        <ListItem nav to="/about" activeClassName="active">
           O Mnie
         </ListItem>
       </li>
-    </StyledListItem>
+    </StyledMenu>
   </Wrapper>
 );

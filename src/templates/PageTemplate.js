@@ -9,6 +9,8 @@ import { Footer } from 'components/organisms/Footer/Footer';
 
 const Wrapper = styled.div`
   padding: 10px 30px 20px 30px;
+  margin: 0 auto;
+  width: 95vw;
 `;
 
 const StyledGrid = styled.div`
