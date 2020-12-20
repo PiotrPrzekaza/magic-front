@@ -1,10 +1,10 @@
 import React from 'react';
-import GlobalStyle from 'assets/styles/GlobalStyle';
+import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import { theme } from 'assets/styles/theme';
 import { ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
 
-const BasicTemplate = ({ children }) => (
+export const BasicTemplate = ({ children }) => (
   <>
     <GlobalStyle />
     <ThemeProvider theme={theme}>{children}</ThemeProvider>
@@ -14,5 +14,3 @@ const BasicTemplate = ({ children }) => (
 BasicTemplate.propTypes = {
   children: PropTypes.element.isRequired,
 };
-
-export default BasicTemplate;

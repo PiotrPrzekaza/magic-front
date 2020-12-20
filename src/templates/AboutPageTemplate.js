@@ -1,22 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import MenuBar from 'components/organisms/MenuBar/MenuBar';
+import { MenuBar } from 'components/organisms/MenuBar/MenuBar';
+import { Footer } from 'components/organisms/Footer/Footer';
 
 const Wrapper = styled.div`
-  padding: 70px 30px;
+  display: flex;
+  margin: 17px 0 0 0;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const StyledGrid = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - 251px);
 `;
 
-const AboutPageTemplate = ({ children, pageType }) => (
+export const AboutPageTemplate = ({ children, pageType }) => (
   <>
     <MenuBar />
-    <Wrapper>
+    <Wrapper pageType={pageType}>
       <StyledGrid>{children}</StyledGrid>
+      <Footer />
     </Wrapper>
   </>
 );
@@ -29,5 +36,3 @@ AboutPageTemplate.propTypes = {
 AboutPageTemplate.defaultProps = {
   pageType: 'about',
 };
-
-export default AboutPageTemplate;

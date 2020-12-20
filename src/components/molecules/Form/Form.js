@@ -1,20 +1,17 @@
-import Button from 'components/atoms/Button/Button';
-import Input from 'components/atoms/Input/Input';
-import { Textarea } from 'components/atoms/Textarea/Textarea';
 import React from 'react';
 import styled from 'styled-components';
+import { Button } from 'components/atoms/Button/Button';
+import { Input } from 'components/atoms/Input/Input';
+import { Textarea } from 'components/atoms/Textarea/Textarea';
 
 const StyledForm = styled.form`
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  flex-wrap: nowrap;
-  margin: 20px 0 20px 0;
+  width: 50%;
 `;
 
 const StyledInput = styled(Input)`
-  margin-top: 10px;
+  margin: 30px 0 30px 0;
   background-color: ${({ theme }) => theme.white};
   border-radius: 0;
   ::placeholder {
@@ -22,7 +19,7 @@ const StyledInput = styled(Input)`
   }
 `;
 
-const Form = () => (
+export const Form = () => (
   <StyledForm>
     <Input submit type="text" name="name" placeholder="imię" />
     <StyledInput type="email" name="email" placeholder="email@simple.com" />
@@ -30,5 +27,3 @@ const Form = () => (
     <Button submit>Wyślij</Button>
   </StyledForm>
 );
-
-export { Form };

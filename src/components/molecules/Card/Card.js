@@ -1,11 +1,9 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import imgIcon from 'assets/images/chusta_bg.png';
 import PropTypes from 'prop-types';
-import Heading from 'components/atoms/Heading/Heading';
-import Button from 'components/atoms/Button/Button';
-import ImageItem from 'components/atoms/ImageItem/ImageItem';
-import Paragraph from 'components/atoms/Paragraph/Paragraph';
+import { Heading } from 'components/atoms/Heading/Heading';
+import { Button } from 'components/atoms/Button/Button';
+import { Paragraph } from 'components/atoms/Paragraph/Paragraph';
 
 const Wrapper = styled.div`
   min-height: 400px;
@@ -19,10 +17,14 @@ const Wrapper = styled.div`
 
 const StyledButton = styled(Button)`
   border-radius: 30px;
-  width: 50%;
-  background-color: ${({ theme }) => theme.primaryButton};
+  width: 33%;
+
   :hover {
-    background-color: ${({ theme }) => theme.secondary};
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color: ${({ theme }) => theme.grey400};
+    color: ${({ theme }) => theme.black};
   }
 `;
 
@@ -31,31 +33,28 @@ const StyledParagraph = styled(Paragraph)`
 `;
 
 const AboutStyledWrapper = styled.div`
-  min-height: 50vh;
-  max-width: 50vw;
+  height: 50vh;
+  width: 50vw;
   border-radius: 20px;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   background-color: ${({ theme }) => theme.secondary};
   box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
 `;
 
-const AboutInnerWrapper = styled.div`
-  position: relative;
-  justify-content: space-around;
-  padding: 17px 30px;
-`;
-
-const AboutStyledImage = styled(ImageItem)`
-  width: 200px;
-  height: 200px;
-`;
-
 const AboutStyledParagraph = styled(Paragraph)`
-  font-size: ${({ theme }) => theme.fontSize.s};
+  font-size: ${({ theme }) => theme.fontSize.m};
+`;
+
+const AboutInnerWrapper = styled.article`
+  width: 80%;
+  height: 50%;
 `;
 
 const AboutStyledHeading = styled(Heading)`
-  text-align: center;
+  margin: 50px 0 0 0;
   font-size: ${({ theme }) => theme.fontSize.xl};
 `;
 
@@ -89,7 +88,7 @@ const StyledHeading = styled(Heading)`
   font-size: ${({ theme }) => theme.fontSize.l};
 `;
 
-const Card = ({ typeOfCard, title, price, desc, imageUrl, color, createdTime }) => (
+export const Card = ({ typeOfCard, title, price, desc, imageUrl, color, createdTime }) => (
   <>
     {typeOfCard === 'products' && (
       <Wrapper typeOfCard={typeOfCard}>
@@ -123,9 +122,8 @@ const Card = ({ typeOfCard, title, price, desc, imageUrl, color, createdTime }) 
     )}
     {typeOfCard === 'about' && (
       <AboutStyledWrapper typeOfCard={typeOfCard}>
+        <AboutStyledHeading>O Mnie</AboutStyledHeading>
         <AboutInnerWrapper>
-          {/* <AboutStyledImage src={imgIcon} /> */}
-          <AboutStyledHeading>O Mnie</AboutStyledHeading>
           <StyledParagraph>
             Szydełko to maja pasja. Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Explicabo facere fuga harum minus? Eum vel, autem aliquam temporibus, eius natus in
@@ -155,5 +153,3 @@ Card.defaultProps = {
   color: null,
   createdTime: null,
 };
-
-export default Card;

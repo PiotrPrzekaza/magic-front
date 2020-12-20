@@ -4,7 +4,7 @@ import plecak from 'assets/images/plecak.jpg';
 import torebkaRoz from 'assets/images/torebka-roz.jpg';
 import kocyknos from 'assets/images/kocyknos.jpg';
 
-const productsData = [
+export const productsData = [
   {
     title: 'Kocyk ',
     price: '220 zł',
@@ -46,5 +46,3 @@ const productsData = [
     createdTime: '7 dni',
   },
 ];
-
-export default productsData;

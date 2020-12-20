@@ -1,11 +1,11 @@
 import React from 'react';
-import knittingData from 'data/knittingData/knittingData';
-import PageTemplate from 'templates/PageTemplate';
-import Card from 'components/molecules/Card/Card';
+import { knittingData as data } from 'data/knittingData';
+import { PageTemplate } from 'templates/PageTemplate';
+import { Card } from 'components/molecules/Card/Card';
 
-const Knitting = () => (
+export const Knitting = () => (
   <PageTemplate pageType="knitting">
-    {knittingData.map((item) => (
+    {data.map((item) => (
       <Card
         typeOfCard="knitting"
         title={item.title}
@@ -19,4 +19,3 @@ const Knitting = () => (
     ))}
   </PageTemplate>
 );
-export default Knitting;

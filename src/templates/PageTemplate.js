@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import MenuBar from 'components/organisms/MenuBar/MenuBar';
-import Heading from 'components/atoms/Heading/Heading';
-import Paragraph from 'components/atoms/Paragraph/Paragraph';
-import Input from 'components/atoms/Input/Input';
+import { MenuBar } from 'components/organisms/MenuBar/MenuBar';
+import { Heading } from 'components/atoms/Heading/Heading';
+import { Paragraph } from 'components/atoms/Paragraph/Paragraph';
+import { Input } from 'components/atoms/Input/Input';
+import { Footer } from 'components/organisms/Footer/Footer';
 
 const Wrapper = styled.div`
   padding: 10px 30px 20px 30px;
+  margin: 0 auto;
+  width: 95vw;
 `;
 
 const StyledGrid = styled.div`
@@ -29,7 +32,7 @@ const StyledParagraph = styled(Paragraph)`
   font-weight: ${({ theme }) => theme.bold};
 `;
 
-const PageTemplate = ({ children, pageType }) => (
+export const PageTemplate = ({ children, pageType }) => (
   <>
     <MenuBar />
     <Wrapper pageType={pageType}>
@@ -41,6 +44,7 @@ const PageTemplate = ({ children, pageType }) => (
       </StyledHeader>
       <StyledGrid>{children}</StyledGrid>
     </Wrapper>
+    <Footer />
   </>
 );
 
@@ -52,5 +56,3 @@ PageTemplate.propTypes = {
 PageTemplate.defaultProps = {
   pageType: 'products',
 };
-
-export default PageTemplate;

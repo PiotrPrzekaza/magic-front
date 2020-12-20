@@ -1,14 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Textarea = styled.textarea`
-  margin-top: 10px;
+export const Textarea = styled.textarea`
   outline: none;
   resize: none;
   overflow: auto;
   border: none;
-  min-height: 20%;
-  min-width: 100%;
+  height: 100%;
   ::placeholder {
     padding: 2px;
     text-align: center;
@@ -17,5 +15,3 @@ const Textarea = styled.textarea`
     color: ${({ theme }) => theme.grey300};
   }
 `;
-
-export { Textarea };

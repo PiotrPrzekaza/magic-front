@@ -1,13 +1,14 @@
-/* eslint-disable linebreak-style */
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
 
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,200;0,300;0,400;1,100;1,500&family=Quicksand:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;300;400;600;700&display=swap');
+  
   html {
-    padding-top:200px;
+    /* padding-top: 180px; */
     font-size: 62.5%;
     box-sizing: border-box;
+    background-color:#f5f5f5;
   }
   
   *,
@@ -17,11 +18,12 @@ const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    font-family:'Quicksand', 'Libre Franklin', sans-serif;
+    font-family: 'Libre Franklin','Quicksand' ,sans-serif;
     font-size: 1.6rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
+    
   }
   
   h1, h2, h3, h4, h5, span {
@@ -37,6 +39,5 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
   }
-`;
 
-export default GlobalStyle;
+`;

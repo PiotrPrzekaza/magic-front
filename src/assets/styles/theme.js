@@ -1,21 +1,24 @@
 export const theme = {
   white: 'rgb(255, 255, 255)',
   black: 'rgb(0, 0, 0)',
+  grey: 'rgb(129, 129, 129)',
+  grey1: 'rgb(107, 107, 107)',
   grey100: 'rgb(230, 230, 230)',
-  grey200: 'rgb(204, 204, 204)',
+  grey200: 'rgb(192, 184, 184)',
   grey300: 'rgb(179, 179, 179)',
-  grey400: 'rgb(232, 232, 232)',
-  grey500: 'rgb(247, 247, 247)',
+  grey400: 'rgb(161, 151, 151)',
+  grey500: 'rgb(114, 105, 105)',
   primary: 'rgb(214, 130, 130)',
-  secondary: 'rgb(224, 206, 101)',
+  secondary: 'rgb(243, 235, 188)',
   thirdColor: 'rgb(253, 175, 74)',
-  primaryBg: 'rgb(185, 186, 187)',
-  secondaryBg: 'rgb(117, 190, 216)',
-  thirdColorBg: 'rgb(147, 180, 180)',
+  primaryBg: '##f5f5f5',
+  secondaryBg: '#b0bec5',
+  thirdColorBg: '#c2c2c2',
   primaryHover: 'rgb(243, 76, 76)',
   primaryButton: 'rgb(245, 248, 88)',
   light: 300,
   bold: 600,
+  extraBold: 700,
   fontSize: {
     xxs: '1rem',
     xs: '1.2rem',
@@ -26,5 +29,3 @@ export const theme = {
     xll: '5rem',
   },
 };
-
-export default theme;
