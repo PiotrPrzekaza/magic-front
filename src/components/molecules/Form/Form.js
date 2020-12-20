@@ -6,15 +6,12 @@ import { Textarea } from 'components/atoms/Textarea/Textarea';
 
 const StyledForm = styled.form`
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  flex-wrap: nowrap;
-  margin: 20px 0 20px 0;
+  width: 50%;
 `;
 
 const StyledInput = styled(Input)`
-  margin-top: 10px;
+  margin: 30px 0 30px 0;
   background-color: ${({ theme }) => theme.white};
   border-radius: 0;
   ::placeholder {

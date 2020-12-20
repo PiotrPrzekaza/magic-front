@@ -5,20 +5,19 @@ import { Heading } from 'components/atoms/Heading/Heading';
 import { Form } from 'components/molecules/Form/Form';
 
 const StyledWrapper = styled.div`
-  min-width: 50%;
-  min-height: 40vh;
-  text-align: center;
+  width: 50%;
+  height: 90%;
   border-radius: 20px;
   background-color: ${({ theme }) => theme.thirdColorBg};
   box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-around;
   flex-direction: column;
 `;
 
 export const ContactForm = ({ typeOfCard }) => (
-  <StyledWrapper as="form" typeOfCard={typeOfCard}>
+  <StyledWrapper typeOfCard={typeOfCard}>
     <Heading>Wypełnij i prześlij do mnie</Heading>
     <Form />
   </StyledWrapper>

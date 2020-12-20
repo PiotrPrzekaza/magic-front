@@ -2,13 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 export const Textarea = styled.textarea`
-  margin-top: 10px;
   outline: none;
   resize: none;
   overflow: auto;
   border: none;
-  min-height: 20%;
-  min-width: 100%;
+  height: 100%;
   ::placeholder {
     padding: 2px;
     text-align: center;

@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components';
 export const Heading = styled.h1`
   font-size: ${({ theme }) => theme.fontSize.xl};
   font-weight: ${({ theme }) => theme.bold};
-  font-family: 'Libre Franklin';
 
   ${({ smallHead }) =>
     smallHead &&

@@ -30,7 +30,7 @@ const StyledWrapper = styled.div`
 const HeroButton = styled(Button)`
   margin: 200px;
   width: 400px;
-  border: 5px solid white;
+  border: 3px solid white;
   border-radius: 30px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 
@@ -38,13 +38,14 @@ const HeroButton = styled(Button)`
     --webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
-    background-color: ${({ theme }) => theme.grey200};
+    background-color: ${({ theme }) => theme.grey400};
     color: ${({ theme }) => theme.black};
   }
 `;
 
 const StyledParagraph = styled(Paragraph)`
   font-size: ${({ theme }) => theme.fontSize.s};
+  width: 50%;
 `;
 
 const StyledHeading = styled(Heading)`

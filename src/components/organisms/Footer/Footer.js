@@ -8,8 +8,9 @@ import { Anchor } from 'components/atoms/Anchor/Anchor';
 
 const FooterWrapper = styled.footer`
   display: flex;
-  width: 100%;
-  height: 5%;
+  width: 95vw;
+  height: 5vh;
+  margin: 0 auto;
   border-top: 1px solid black;
   flex-direction: row;
   justify-content: space-between;
@@ -20,9 +21,9 @@ const StyledImageItem = styled(ImageItem)`
   width: 25px;
   height: 25px;
   :hover {
-    --webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
+    --webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
   }
 `;
 
@@ -63,7 +64,7 @@ export const Footer = () => (
     </SocialWrapper>
     <CreatorWrapper>
       <StyledParagraph>
-        powered by
+        powered by{' '}
         <Anchor
           target="_blank"
           rel="noopener noreferrer"
@@ -71,8 +72,8 @@ export const Footer = () => (
         >
           {' '}
           Piotr Przekaza
-        </Anchor>{' '}
-        &copy;2021
+        </Anchor>
+        &copy; {new Date().getFullYear()}
       </StyledParagraph>
     </CreatorWrapper>
   </FooterWrapper>

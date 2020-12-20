@@ -9,8 +9,8 @@ export const Button = styled.button`
   text-transform: lowercase;
   text-decoration: none;
   font-size: ${({ theme }) => theme.fontSize.s};
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
   border: 3px solid white;
   border-radius: 30px;
   background-color: transparent;
@@ -18,9 +18,9 @@ export const Button = styled.button`
   ${({ submit }) =>
     submit &&
     css`
-      width: 100%;
+      width: 50%;
       text-transform: lowercase;
-      margin-top: 40px;
+      margin: 50px auto 0;
       font-weight: ${({ theme }) => theme.bold};
       background-color: transparent;
       letter-spacing: 1px;
@@ -30,7 +30,7 @@ export const Button = styled.button`
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
         transform: scale(1.1);
-        background-color: ${({ theme }) => theme.grey200};
+        background-color: ${({ theme }) => theme.grey400};
         color: ${({ theme }) => theme.black};
       }
     `}

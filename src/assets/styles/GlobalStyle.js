@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     /* padding-top: 180px; */
     font-size: 62.5%;
     box-sizing: border-box;
+    background-color:#f5f5f5;
   }
   
   *,
@@ -17,11 +18,12 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    font-family:'Quicksand', 'Libre Franklin', sans-serif;
+    font-family: 'Libre Franklin','Quicksand' ,sans-serif;
     font-size: 1.6rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
+    
   }
   
   h1, h2, h3, h4, h5, span {
@@ -38,9 +40,4 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
-  ${({ home }) =>
-    home &&
-    css`
-      padding-top: 0;
-    `}
 `;
