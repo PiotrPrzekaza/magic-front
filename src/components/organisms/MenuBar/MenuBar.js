@@ -17,8 +17,8 @@ const StyledMenu = styled.ul`
   height: 150px;
   margin: 0 auto;
   width: 95vw;
-  justify-content: flex-start;
   list-style: none;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
   border-bottom: 1px solid grey;

@@ -4,17 +4,16 @@ import styled, { css } from 'styled-components';
 
 export const ListItem = styled(NavLink)`
   color: ${({ theme }) => theme.black};
-  font-size: ${({ theme }) => theme.fontSize.s};
+  font-size: ${({ theme }) => theme.fontSize.m};
   text-decoration: none;
-  -webkit-transition: ease 0.3s;
-  transition: ease 0.3s;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
 
   ${({ nav }) =>
     nav &&
     css`
       display: inline-block;
-      margin-right: 70px;
-      padding-right: 20px;
+      margin: 0 30px;
       text-transform: lowercase;
       -webkit-transition: ease 0.4s;
       transition: ease 0.4s;
@@ -22,7 +21,12 @@ export const ListItem = styled(NavLink)`
       &.active {
         color: ${({ theme }) => theme.grey1};
         font-weight: ${({ theme }) => theme.bold};
-        font-size: ${({ theme }) => theme.fontSize.m};
+        font-size: ${({ theme }) => theme.fontSize.l};
+      }
+      :hover {
+        color: ${({ theme }) => theme.grey1};
+        font-weight: ${({ theme }) => theme.bold};
+        font-size: ${({ theme }) => theme.fontSize.l};
       }
     `}
 `;

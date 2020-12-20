@@ -112,10 +112,10 @@ export const Card = ({ typeOfCard, title, price, desc, imageUrl, color, createdT
           <StyledHeading>{title}</StyledHeading>
         </InnerWrapper>
         <InnerWrapper flex>
-          <AboutStyledParagraph>Cena {price}</AboutStyledParagraph>
-          <AboutStyledParagraph>{desc}</AboutStyledParagraph>
-          <AboutStyledParagraph>{color}</AboutStyledParagraph>
-          <AboutStyledParagraph>{createdTime}</AboutStyledParagraph>
+          <StyledParagraph>Cena {price}</StyledParagraph>
+          <StyledParagraph>{desc}</StyledParagraph>
+          <StyledParagraph>{color}</StyledParagraph>
+          <StyledParagraph>{createdTime}</StyledParagraph>
           <StyledButton>Zamów</StyledButton>
         </InnerWrapper>
       </Wrapper>
