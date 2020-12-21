@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 
 export const ListItem = styled(NavLink)`
   color: ${({ theme }) => theme.black};
-  font-size: ${({ theme }) => theme.fontSize.m};
+  font-size: ${({ theme }) => theme.fontSize.s};
   text-decoration: none;
   -webkit-transition: ease 0.4s;
   transition: ease 0.4s;
@@ -21,12 +21,12 @@ export const ListItem = styled(NavLink)`
       &.active {
         color: ${({ theme }) => theme.grey1};
         font-weight: ${({ theme }) => theme.bold};
-        font-size: ${({ theme }) => theme.fontSize.l};
+        font-size: ${({ theme }) => theme.fontSize.m};
       }
       :hover {
         color: ${({ theme }) => theme.grey1};
         font-weight: ${({ theme }) => theme.bold};
-        font-size: ${({ theme }) => theme.fontSize.l};
+        font-size: ${({ theme }) => theme.fontSize.m};
       }
     `}
 `;
