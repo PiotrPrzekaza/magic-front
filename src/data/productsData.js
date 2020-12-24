@@ -6,6 +6,7 @@ import kocyknos from 'assets/images/kocyknos.jpg';
 
 export const productsData = [
   {
+    id: 1,
     title: 'Kocyk ',
     price: '220 zł',
     desc: 'Kocyk kolorowy dla maluszka',
@@ -14,6 +15,7 @@ export const productsData = [
     createdTime: '10 dni',
   },
   {
+    id: 2,
     title: 'Plecak',
     price: '40 zł',
     desc: ' Plecak na wakacyjne wypady',
@@ -22,6 +24,7 @@ export const productsData = [
     createdTime: '10 dni',
   },
   {
+    id: 3,
     title: 'Maskotka',
     price: '30 zł',
     desc: ' Kolorowy jednorożec - dziewczynka',
@@ -30,6 +33,7 @@ export const productsData = [
     createdTime: '6 dni',
   },
   {
+    id: 4,
     title: 'Torebka',
     price: '225 zł',
     desc: ' Różowa torebka stylowa',
@@ -38,6 +42,7 @@ export const productsData = [
     createdTime: '5 dni',
   },
   {
+    id: 5,
     title: 'Kocyk - Maskotka',
     price: '220 zł',
     desc: 'Kocyk dla maluszka',

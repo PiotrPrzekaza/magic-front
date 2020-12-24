@@ -89,7 +89,7 @@ const StyledHeading = styled(Heading)`
   font-size: ${({ theme }) => theme.fontSize.l};
 `;
 
-export const Card = ({ typeOfCard, title, price, desc, imageUrl, color, createdTime }) => (
+export const Card = ({ typeOfCard, id, title, price, desc, imageUrl, color, createdTime }) => (
   <>
     {typeOfCard === 'products' && (
       <Wrapper typeOfCard={typeOfCard}>
@@ -146,6 +146,7 @@ Card.propTypes = {
   imageUrl: PropTypes.string,
   color: PropTypes.string,
   createdTime: PropTypes.string,
+  id: PropTypes.number.isRequired,
 };
 
 Card.defaultProps = {
