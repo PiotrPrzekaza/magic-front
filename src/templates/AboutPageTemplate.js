@@ -6,7 +6,7 @@ import { Footer } from 'components/organisms/Footer/Footer';
 
 const Wrapper = styled.div`
   display: flex;
-  margin: 17px 0 0 0;
+  margin-top: 17px;
   flex-direction: column;
   justify-content: space-between;
 `;

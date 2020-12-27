@@ -11,7 +11,7 @@ const StyledForm = styled.form`
 `;
 
 const StyledInput = styled(Input)`
-  margin: 30px 0 30px 0;
+  margin: 30px 0;
   background-color: ${({ theme }) => theme.white};
   border-radius: 0;
   ::placeholder {

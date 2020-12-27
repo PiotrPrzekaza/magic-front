@@ -19,7 +19,7 @@ export const Input = styled.input`
   ${({ submit }) =>
     submit &&
     css`
-      background-color: #fff;
+      background-color: ${({ theme }) => theme.white};
       border-radius: 0;
     `}
 
@@ -28,9 +28,6 @@ export const Input = styled.input`
     css`
       padding: 10px 20px 10px 40px;
       font-size: ${({ theme }) => theme.fontSize.xs};
-      background-image: url(${searchIcon});
-      background-size: 15px;
-      background-position: 15px 50%;
-      background-repeat: no-repeat;
+      background: ${({ theme }) => theme.grey100} 15px 50% / 15px no-repeat url(${searchIcon});
     `}
 `;
