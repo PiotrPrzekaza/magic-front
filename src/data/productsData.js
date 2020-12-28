@@ -10,18 +10,20 @@ export const productsData = [
     title: 'Kocyk ',
     price: '220 zł',
     desc: 'Kocyk kolorowy dla maluszka',
-    color: 'mieszane',
     imageUrl: kocyk,
     createdTime: '10 dni',
+    type: 'Szydełko',
+    category: 'Kocyki',
   },
   {
     id: 2,
     title: 'Plecak',
     price: '40 zł',
     desc: ' Plecak na wakacyjne wypady',
-    color: 'Niebieski',
     imageUrl: plecak,
     createdTime: '10 dni',
+    type: 'Szydełko',
+    category: 'Torebki',
   },
   {
     id: 3,
@@ -31,6 +33,8 @@ export const productsData = [
     color: 'Róż',
     imageUrl: jednorozec,
     createdTime: '6 dni',
+    type: 'Szydełko',
+    category: 'Pluszaki',
   },
   {
     id: 4,
@@ -40,6 +44,8 @@ export const productsData = [
     color: 'Róż',
     imageUrl: torebkaRoz,
     createdTime: '5 dni',
+    type: 'Szydełko',
+    category: 'Torebki',
   },
   {
     id: 5,
@@ -49,5 +55,7 @@ export const productsData = [
     color: 'Róż',
     imageUrl: kocyknos,
     createdTime: '7 dni',
+    type: 'Szydełko',
+    category: 'Kocyki',
   },
 ];

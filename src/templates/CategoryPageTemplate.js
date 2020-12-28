@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { MenuBar } from 'components/organisms/MenuBar/MenuBar';
 import { Heading } from 'components/atoms/Heading/Heading';
 import { Paragraph } from 'components/atoms/Paragraph/Paragraph';
-import { Input } from 'components/atoms/Input/Input';
 import { Footer } from 'components/organisms/Footer/Footer';
 
 const Wrapper = styled.div`
@@ -27,19 +26,12 @@ const StyledHeading = styled(Heading)`
   font-size: ${({ theme }) => theme.fontSize.xxl};
 `;
 
-const StyledParagraph = styled(Paragraph)`
-  font-size: ${({ theme }) => theme.fontSize.s};
-  font-weight: ${({ theme }) => theme.bold};
-`;
-
-export const PageTemplate = ({ children, pageType }) => (
+export const CategoryPageTemplate = ({ children, pageType }) => (
   <>
     <MenuBar />
     <Wrapper pageType={pageType}>
       <StyledHeader>
-        <Input search placeholder="Szukaj" />
-        {pageType === 'products' && <StyledHeading as="h1">Projekty zrealizowane</StyledHeading>}
-        <StyledParagraph> 6 produktów</StyledParagraph>
+        <StyledHeading as="h1">Kategorie</StyledHeading>
       </StyledHeader>
       <StyledGrid>{children}</StyledGrid>
     </Wrapper>
@@ -47,11 +39,11 @@ export const PageTemplate = ({ children, pageType }) => (
   </>
 );
 
-PageTemplate.propTypes = {
+CategoryPageTemplate.propTypes = {
   children: PropTypes.element.isRequired,
-  pageType: PropTypes.oneOf(['products', 'about']),
+  pageType: PropTypes.oneOf(['category']),
 };
 
-PageTemplate.defaultProps = {
-  pageType: 'products',
+CategoryPageTemplate.defaultProps = {
+  pageType: 'category',
 };

@@ -71,7 +71,7 @@ export const Hero = () => (
         architecto aut pariatur quae accusantium eaque, iste animi voluptatibus facere. Possimus
         cumque rem sint ab maiores cupiditate assumenda.
       </StyledParagraph>
-      <HeroButton as={Link} to="/products">
+      <HeroButton as={Link} to="/category">
         Zobacz Moje projekty
       </HeroButton>
     </StyledWrapper>

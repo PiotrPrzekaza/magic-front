@@ -47,11 +47,6 @@ export const MenuBar = () => (
         </ListItem>
       </li>
       <li>
-        <ListItem nav to="/knitting" activeClassName="active">
-          Druty
-        </ListItem>
-      </li>
-      <li>
         <ListItem nav to="/contact" activeClassName="active">
           Kontakt
         </ListItem>

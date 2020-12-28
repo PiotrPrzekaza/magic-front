@@ -89,7 +89,17 @@ const StyledHeading = styled(Heading)`
   font-size: ${({ theme }) => theme.fontSize.l};
 `;
 
-export const Card = ({ typeOfCard, id, title, price, desc, imageUrl, color, createdTime }) => (
+export const Card = ({
+  typeOfCard,
+  id,
+  title,
+  price,
+  desc,
+  imageUrl,
+  category,
+  type,
+  createdTime,
+}) => (
   <>
     {typeOfCard === 'products' && (
       <Wrapper typeOfCard={typeOfCard}>
@@ -100,23 +110,9 @@ export const Card = ({ typeOfCard, id, title, price, desc, imageUrl, color, crea
         <InnerWrapper flex>
           <StyledParagraph>Cena: {price}</StyledParagraph>
           <StyledParagraph>{desc}</StyledParagraph>
-          <StyledParagraph>Kolor: {color}</StyledParagraph>
+          <StyledParagraph>Rodzaj: {category}</StyledParagraph>
+          <StyledParagraph> {type}</StyledParagraph>
           <StyledParagraph>Czas realizacji: {createdTime}</StyledParagraph>
-          <StyledButton>Zamów</StyledButton>
-        </InnerWrapper>
-      </Wrapper>
-    )}
-    {typeOfCard === 'knitting' && (
-      <Wrapper typeOfCard={typeOfCard}>
-        <InnerWrapper>
-          <StyledImage src={imageUrl} alt="me" />
-          <StyledHeading>{title}</StyledHeading>
-        </InnerWrapper>
-        <InnerWrapper flex>
-          <StyledParagraph>Cena {price}</StyledParagraph>
-          <StyledParagraph>{desc}</StyledParagraph>
-          <StyledParagraph>{color}</StyledParagraph>
-          <StyledParagraph>{createdTime}</StyledParagraph>
           <StyledButton>Zamów</StyledButton>
         </InnerWrapper>
       </Wrapper>
@@ -138,13 +134,15 @@ export const Card = ({ typeOfCard, id, title, price, desc, imageUrl, color, crea
     )}
   </>
 );
+
 Card.propTypes = {
-  typeOfCard: PropTypes.oneOf(['products', 'knitting', 'about']),
+  typeOfCard: PropTypes.oneOf(['products', 'about']),
   title: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
   imageUrl: PropTypes.string,
-  color: PropTypes.string,
+  category: PropTypes.string,
+  type: PropTypes.string,
   createdTime: PropTypes.string,
   id: PropTypes.number.isRequired,
 };
@@ -152,6 +150,7 @@ Card.propTypes = {
 Card.defaultProps = {
   typeOfCard: 'products',
   imageUrl: null,
-  color: null,
+  category: null,
+  type: null,
   createdTime: null,
 };
