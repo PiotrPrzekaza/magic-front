@@ -1,5 +1,6 @@
 export const knittingData = [
   {
+    id: 1,
     title: 'Opaska',
     price: '120 zł',
     desc: ' Cienka opaska wsam raz na jesienne wietrzne dni',
@@ -8,6 +9,7 @@ export const knittingData = [
     createdTime: '10 dni',
   },
   {
+    id: 2,
     title: 'Czapka',
     price: '40 zł',
     desc: ' Cienka opaska wsam raz na jesienne wietrzne dni',
@@ -16,6 +18,7 @@ export const knittingData = [
     createdTime: '10 dni',
   },
   {
+    id: 3,
     title: 'Rękawiczki',
     price: '30 zł',
     desc: ' Cienka opaska wsam raz na jesienne wietrzne dni',
@@ -24,6 +27,7 @@ export const knittingData = [
     createdTime: '6 dni',
   },
   {
+    id: 4,
     title: 'Szalik',
     price: '25 zł',
     desc: ' Cienka opaska wsam raz na jesienne wietrzne dni',
@@ -32,6 +36,7 @@ export const knittingData = [
     createdTime: '5 dni',
   },
   {
+    id: 5,
     title: 'Sweter',
     price: '220 zł',
     desc: ' Cienka opaska wsam raz na jesienne wietrzne dni',

@@ -14,7 +14,7 @@ export const Knitting = () => (
         color={item.color}
         imageUrl={item.imageUrl}
         createdTime={item.createdTime}
-        key={item.title}
+        key={item.id}
       />
     ))}
   </PageTemplate>

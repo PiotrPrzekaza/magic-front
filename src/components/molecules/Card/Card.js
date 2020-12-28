@@ -85,10 +85,11 @@ const StyledImage = styled.img`
 
 const StyledHeading = styled(Heading)`
   text-align: center;
+  margin-left: 20px;
   font-size: ${({ theme }) => theme.fontSize.l};
 `;
 
-export const Card = ({ typeOfCard, title, price, desc, imageUrl, color, createdTime }) => (
+export const Card = ({ typeOfCard, id, title, price, desc, imageUrl, color, createdTime }) => (
   <>
     {typeOfCard === 'products' && (
       <Wrapper typeOfCard={typeOfCard}>
@@ -112,10 +113,10 @@ export const Card = ({ typeOfCard, title, price, desc, imageUrl, color, createdT
           <StyledHeading>{title}</StyledHeading>
         </InnerWrapper>
         <InnerWrapper flex>
-          <AboutStyledParagraph>Cena {price}</AboutStyledParagraph>
-          <AboutStyledParagraph>{desc}</AboutStyledParagraph>
-          <AboutStyledParagraph>{color}</AboutStyledParagraph>
-          <AboutStyledParagraph>{createdTime}</AboutStyledParagraph>
+          <StyledParagraph>Cena {price}</StyledParagraph>
+          <StyledParagraph>{desc}</StyledParagraph>
+          <StyledParagraph>{color}</StyledParagraph>
+          <StyledParagraph>{createdTime}</StyledParagraph>
           <StyledButton>Zamów</StyledButton>
         </InnerWrapper>
       </Wrapper>
@@ -124,14 +125,14 @@ export const Card = ({ typeOfCard, title, price, desc, imageUrl, color, createdT
       <AboutStyledWrapper typeOfCard={typeOfCard}>
         <AboutStyledHeading>O Mnie</AboutStyledHeading>
         <AboutInnerWrapper>
-          <StyledParagraph>
+          <AboutStyledParagraph>
             Szydełko to maja pasja. Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Explicabo facere fuga harum minus? Eum vel, autem aliquam temporibus, eius natus in
             voluptas provident laudantium placeat rem sunt quam nostrum at? Lorem ipsum dolor sit
             amet consectetur adipisicing elit. Explicabo facere fuga harum minus? Eum vel, autem
             aliquam temporibus, eius natus in voluptas provident laudantium placeat rem sunt quam
             nostrum at?
-          </StyledParagraph>
+          </AboutStyledParagraph>
         </AboutInnerWrapper>
       </AboutStyledWrapper>
     )}
@@ -145,6 +146,7 @@ Card.propTypes = {
   imageUrl: PropTypes.string,
   color: PropTypes.string,
   createdTime: PropTypes.string,
+  id: PropTypes.number.isRequired,
 };
 
 Card.defaultProps = {

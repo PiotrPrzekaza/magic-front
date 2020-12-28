@@ -20,11 +20,8 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   color: white;
   overflow: hidden;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${hero});
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    center center / cover no-repeat url(${hero});
 `;
 
 const HeroButton = styled(Button)`
