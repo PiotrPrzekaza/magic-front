@@ -12,8 +12,7 @@ export const ListItem = styled(NavLink)`
   ${({ nav }) =>
     nav &&
     css`
-      display: inline-block;
-      margin: 0 30px;
+      padding: 20px;
       text-transform: lowercase;
       -webkit-transition: ease 0.4s;
       transition: ease 0.4s;

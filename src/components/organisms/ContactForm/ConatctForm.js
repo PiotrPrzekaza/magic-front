@@ -7,10 +7,12 @@ import { Form } from 'components/molecules/Form/Form';
 const StyledWrapper = styled.div`
   width: 50%;
   height: 90%;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: ${({ theme }) => theme.thirdColorBg};
+  border: 1px solid ${({ theme }) => theme.grey1};
   box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
   display: flex;
+  color: ${({ theme }) => theme.grey1};
   align-items: center;
   justify-content: space-around;
   flex-direction: column;

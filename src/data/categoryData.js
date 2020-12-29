@@ -1,8 +1,8 @@
 import jednorozec from 'assets/images/jednorozec.png';
 import kocyk from 'assets/images/kocyk.jpg';
-import plecak from 'assets/images/plecak.jpg';
-import torebkaRoz from 'assets/images/torebka-roz.jpg';
-import kocyknos from 'assets/images/kocyknos.jpg';
+import torebki from 'assets/images/torebki.jpg';
+import zestaw from 'assets/images/zestaw.jpg';
+import chusta from 'assets/images/chusta_bg.png';
 
 export const categoryData = [
   {
@@ -12,7 +12,7 @@ export const categoryData = [
   },
   {
     id: 2,
-    imageUrl: plecak,
+    imageUrl: torebki,
     category: 'Torebki',
   },
   {
@@ -22,12 +22,12 @@ export const categoryData = [
   },
   {
     id: 4,
-    imageUrl: torebkaRoz,
+    imageUrl: zestaw,
     category: 'Ubrania',
   },
   {
     id: 5,
-    imageUrl: kocyknos,
+    imageUrl: chusta,
     category: 'Chusty',
   },
 ];

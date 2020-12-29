@@ -5,28 +5,26 @@ import { ListItem } from 'components/atoms/ListItem/ListItem';
 import logo from 'assets/icon/Magiczna.png';
 
 const Wrapper = styled.header`
-  display: flex;
-  height: 150px;
-  margin-bottom: 50px;
-  -webkit-transition: ease 0.3s;
-  transition: ease 0.3s;
+  display: grid;
+  grid-template-columns: repeat(2, 250px 1fr);
+  border-bottom: 1px solid grey;
+  width: 95vw;
+  margin: 0 auto;
+  position: relative;
 `;
 
 const StyledMenu = styled.ul`
-  display: flex;
-  height: 150px;
-  margin: 0 auto;
-  width: 95vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+  grid-gap: 20px;
   list-style: none;
-  justify-content: flex-start;
+  height: 100px;
   align-items: center;
-  position: relative;
-  border-bottom: 1px solid grey;
 `;
 
 const StyledImageItem = styled(ImageItem)`
-  position: relative;
-  top: 30px;
+  position: absolute;
+  top: -20px;
   left: 0;
   width: 250px;
   height: 250px;
@@ -35,12 +33,10 @@ const StyledImageItem = styled(ImageItem)`
 
 export const MenuBar = () => (
   <Wrapper>
+    <ListItem nav exact to="/" activeClassName="active">
+      <StyledImageItem src={logo} alt="Logo magiczna pętelka" />
+    </ListItem>
     <StyledMenu>
-      <li>
-        <ListItem nav exact to="/" activeClassName="active">
-          <StyledImageItem src={logo} alt="Logo magiczna pętelka" />
-        </ListItem>
-      </li>
       <li>
         <ListItem nav to="/products" activeClassName="active">
           Produkty

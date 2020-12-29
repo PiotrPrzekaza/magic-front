@@ -7,8 +7,9 @@ import { Paragraph } from 'components/atoms/Paragraph/Paragraph';
 
 const Wrapper = styled.div`
   min-height: 400px;
-  border-radius: 30px;
-  background-color: ${({ theme }) => theme.secondaryBg};
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: ${({ theme }) => theme.white};
   box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
   position: relative;
   overflow: hidden;
@@ -16,16 +17,31 @@ const Wrapper = styled.div`
 `;
 
 const StyledButton = styled(Button)`
-  border-radius: 30px;
+  border-radius: 5px;
   width: 33%;
-
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid ${({ theme }) => theme.grey1};
+  background-color: transparent;
+  color: ${({ theme }) => theme.grey1};
   :hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-    background-color: ${({ theme }) => theme.grey400};
+    border: 2px solid ${({ theme }) => theme.black};
     color: ${({ theme }) => theme.black};
   }
+`;
+
+const StyledImage = styled.img`
+  border-radius: 10px;
+  margin: 30px 20px;
+  width: 150px;
+  height: 150px;
+`;
+
+const StyledHeading = styled(Heading)`
+  text-align: center;
+  margin: 30px;
+  color: ${({ theme }) => theme.grey1};
+  font-size: ${({ theme }) => theme.fontSize.l};
 `;
 
 const StyledParagraph = styled(Paragraph)`
@@ -35,11 +51,12 @@ const StyledParagraph = styled(Paragraph)`
 const AboutStyledWrapper = styled.div`
   height: 50vh;
   width: 50vw;
-  border-radius: 20px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  border: 1px solid ${({ theme }) => theme.grey1};
   background-color: ${({ theme }) => theme.secondary};
   box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
 `;
@@ -54,39 +71,32 @@ const AboutInnerWrapper = styled.article`
 `;
 
 const AboutStyledHeading = styled(Heading)`
-  margin: 50px 0 0 0;
   font-size: ${({ theme }) => theme.fontSize.xl};
+  width: 90%;
+  text-align: center;
+  color: ${({ theme }) => theme.grey1};
+  padding-bottom: 20px;
+  border-bottom: 1px solid ${({ theme }) => theme.grey1};
 `;
 
 const InnerWrapper = styled.div`
   position: relative;
-  justify-content: space-around;
-  padding: 17px 30px;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  border-bottom: 1px solid ${({ theme }) => theme.gray1};
+  width: 90%;
+  margin: 0 auto;
   ${({ flex }) =>
     flex &&
     css`
+      border-bottom: none;
       align-items: center;
-      margin: 30px 0 0 0;
       display: flex;
+      margin-bottom: 30px;
       flex-direction: column;
       justify-content: space-between;
-    `}
-`;
-
-const StyledImage = styled.img`
-  position: absolute;
-  border-radius: 10px;
-  margin-top: 20px;
-  width: 150px;
-  height: 150px;
-  left: 5%;
-  top: 2%;
-`;
-
-const StyledHeading = styled(Heading)`
-  text-align: center;
-  margin-left: 20px;
-  font-size: ${({ theme }) => theme.fontSize.l};
+    `};
 `;
 
 export const Card = ({

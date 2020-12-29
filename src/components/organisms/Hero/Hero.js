@@ -27,16 +27,17 @@ const StyledWrapper = styled.div`
 const HeroButton = styled(Button)`
   margin: 200px;
   width: 400px;
-  border: 3px solid white;
-  border-radius: 30px;
+  border: 2px solid white;
+  border-radius: 10px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 
   :hover {
     --webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
-    background-color: ${({ theme }) => theme.grey400};
-    color: ${({ theme }) => theme.black};
+    background-color: ${({ theme }) => theme.grey300};
+    color: ${({ theme }) => theme.gray1};
+    border: 2px solid ${({ theme }) => theme.grey1};
   }
 `;
 
