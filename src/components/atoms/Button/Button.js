@@ -2,8 +2,6 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 export const Button = styled.button`
-  width: 300px;
-  padding: 10px 20px;
   color: white;
   text-align: center;
   text-transform: lowercase;
@@ -11,10 +9,13 @@ export const Button = styled.button`
   font-size: ${({ theme }) => theme.fontSize.s};
   -webkit-transition: ease 0.3s;
   transition: ease 0.3s;
-  border: 3px solid white;
-  border-radius: 30px;
+  border-radius: 5px;
+  width: 33%;
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid ${({ theme }) => theme.grey1};
   background-color: transparent;
-
+  color: ${({ theme }) => theme.grey1};
   ${({ submit }) =>
     submit &&
     css`

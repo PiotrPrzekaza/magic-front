@@ -6,31 +6,29 @@ import { Button } from 'components/atoms/Button/Button';
 import { Link } from 'react-router-dom';
 import { Heading } from 'components/atoms/Heading/Heading';
 import { Paragraph } from 'components/atoms/Paragraph/Paragraph';
-import { ImageItem } from 'components/atoms/ImageItem/ImageItem';
 
 const StyledWrapper = styled.div`
-  position: absolute;
+  position: relative;
   left: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: baseline;
   align-items: center;
   flex-direction: column;
   color: white;
   overflow: hidden;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     center center / cover no-repeat url(${hero});
 `;
 
 const HeroButton = styled(Button)`
+  position: relative;
   margin: 200px;
   width: 400px;
   border: 2px solid white;
   border-radius: 10px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-
   :hover {
     --webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
@@ -47,30 +45,42 @@ const StyledParagraph = styled(Paragraph)`
 `;
 
 const StyledHeading = styled(Heading)`
-  margin-top: 200px;
+  position: relative;
+  margin: 30vh;
   font-size: 6rem;
-  margin-right: 50px;
   font-weight: ${({ theme }) => theme.regular};
-  text-transform: uppercase;
+  &:before {
+    content: '';
+    position: absolute;
+    left: -22vw;
+    top: -18vh;
+    width: 50vw;
+    height: 50vh;
+    background-image: url(${logo});
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 `;
 
-const StyledImageItem = styled(ImageItem)`
+const StyledBlock = styled.div`
   position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 400px;
-  height: 400px;
+  width: 50vw;
+  height: 50vh;
+  bottom: -10vh;
+  right: -20vw;
+  transform: rotate(-45deg);
+  background-color: ${({ theme }) => theme.thirdColor};
 `;
 
 export const Hero = () => (
   <>
     <StyledWrapper>
-      <StyledImageItem src={logo} />
+      <StyledBlock />
       <StyledHeading as="h1">Szydełko to sposób na życie!</StyledHeading>
       <StyledParagraph>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ducimus minima voluptate
         architecto aut pariatur quae accusantium eaque, iste animi voluptatibus facere. Possimus
-        cumque rem sint ab maiores cupiditate assumenda.
+        cumque rem sint ab maiores cupiditate assumenda. //{' '}
       </StyledParagraph>
       <HeroButton as={Link} to="/category">
         Zobacz Moje projekty

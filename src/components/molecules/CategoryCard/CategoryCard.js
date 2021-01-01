@@ -15,13 +15,7 @@ const Wrapper = styled.div`
 `;
 
 const StyledButton = styled(Button)`
-  border-radius: 5px;
-  width: 33%;
   margin: 20px 0;
-  padding: 10px;
-  border: 2px solid ${({ theme }) => theme.grey1};
-  background-color: transparent;
-  color: ${({ theme }) => theme.grey1};
   :hover {
     border: 2px solid ${({ theme }) => theme.black};
     color: ${({ theme }) => theme.black};
