@@ -1,13 +1,13 @@
 import React from 'react';
-import { productsData as data } from 'data/productsData';
+import { bagsData as data } from 'data/bagsData';
 import { PageTemplate } from 'templates/PageTemplate';
 import { Card } from 'components/molecules/Card/Card';
 
-export const Products = () => (
-  <PageTemplate pageType="products">
+export const Bags = () => (
+  <PageTemplate pageType="bags">
     {data.map((item) => (
       <Card
-        typeOfCard="products"
+        typeOfCard="bags"
         title={item.title}
         price={item.price}
         desc={item.desc}

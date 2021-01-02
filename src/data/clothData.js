@@ -1,4 +1,4 @@
-export const knittingData = [
+export const clothData = [
   {
     id: 1,
     title: 'Opaska',

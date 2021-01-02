@@ -48,37 +48,6 @@ const StyledParagraph = styled(Paragraph)`
   font-size: ${({ theme }) => theme.fontSize.s};
 `;
 
-const AboutStyledWrapper = styled.div`
-  height: 50vh;
-  width: 50vw;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  border: 1px solid ${({ theme }) => theme.grey1};
-  background-color: ${({ theme }) => theme.secondary};
-  box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
-`;
-
-const AboutStyledParagraph = styled(Paragraph)`
-  font-size: ${({ theme }) => theme.fontSize.m};
-`;
-
-const AboutInnerWrapper = styled.article`
-  width: 80%;
-  height: 50%;
-`;
-
-const AboutStyledHeading = styled(Heading)`
-  font-size: ${({ theme }) => theme.fontSize.xl};
-  width: 90%;
-  text-align: center;
-  color: ${({ theme }) => theme.grey1};
-  padding-bottom: 20px;
-  border-bottom: 1px solid ${({ theme }) => theme.grey1};
-`;
-
 const InnerWrapper = styled.div`
   position: relative;
   justify-content: flex-start;
@@ -99,68 +68,38 @@ const InnerWrapper = styled.div`
     `};
 `;
 
-export const Card = ({
-  typeOfCard,
-  id,
-  title,
-  price,
-  desc,
-  imageUrl,
-  category,
-  type,
-  createdTime,
-}) => (
+export const Card = ({ typeOfCard, id, title, price, desc, imageUrl, type, createdTime }) => (
   <>
-    {typeOfCard === 'products' && (
-      <Wrapper typeOfCard={typeOfCard}>
-        <InnerWrapper>
-          <StyledImage src={imageUrl} alt="" />
-          <StyledHeading>{title}</StyledHeading>
-        </InnerWrapper>
-        <InnerWrapper flex>
-          <StyledParagraph>Cena: {price}</StyledParagraph>
-          <StyledParagraph>{desc}</StyledParagraph>
-          <StyledParagraph>Rodzaj: {category}</StyledParagraph>
-          <StyledParagraph> {type}</StyledParagraph>
-          <StyledParagraph>Czas realizacji: {createdTime}</StyledParagraph>
-          <StyledButton>Zamów</StyledButton>
-        </InnerWrapper>
-      </Wrapper>
-    )}
-    {typeOfCard === 'about' && (
-      <AboutStyledWrapper typeOfCard={typeOfCard}>
-        <AboutStyledHeading>O Mnie</AboutStyledHeading>
-        <AboutInnerWrapper>
-          <AboutStyledParagraph>
-            Szydełko to maja pasja. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Explicabo facere fuga harum minus? Eum vel, autem aliquam temporibus, eius natus in
-            voluptas provident laudantium placeat rem sunt quam nostrum at? Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Explicabo facere fuga harum minus? Eum vel, autem
-            aliquam temporibus, eius natus in voluptas provident laudantium placeat rem sunt quam
-            nostrum at?
-          </AboutStyledParagraph>
-        </AboutInnerWrapper>
-      </AboutStyledWrapper>
-    )}
+    <Wrapper typeOfCard={typeOfCard}>
+      <InnerWrapper>
+        <StyledImage src={imageUrl} alt="" />
+        <StyledHeading>{title}</StyledHeading>
+      </InnerWrapper>
+      <InnerWrapper flex>
+        <StyledParagraph>Cena: {price}</StyledParagraph>
+        <StyledParagraph>{desc}</StyledParagraph>
+        <StyledParagraph> {type}</StyledParagraph>
+        <StyledParagraph>Czas realizacji: {createdTime}</StyledParagraph>
+        <StyledButton>Zamów</StyledButton>
+      </InnerWrapper>
+    </Wrapper>
   </>
 );
 
 Card.propTypes = {
-  typeOfCard: PropTypes.oneOf(['products', 'about']),
+  typeOfCard: PropTypes.oneOf(['bags', 'shawl', 'cloth', 'blanket', 'mascots']),
   title: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
   imageUrl: PropTypes.string,
-  category: PropTypes.string,
   type: PropTypes.string,
   createdTime: PropTypes.string,
   id: PropTypes.number.isRequired,
 };
 
 Card.defaultProps = {
-  typeOfCard: 'products',
+  typeOfCard: 'bags',
   imageUrl: null,
-  category: null,
   type: null,
   createdTime: null,
 };

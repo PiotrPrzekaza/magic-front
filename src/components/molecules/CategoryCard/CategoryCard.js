@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import { Heading } from 'components/atoms/Heading/Heading';
 import { Button } from 'components/atoms/Button/Button';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
   min-height: 400px;
@@ -59,7 +60,31 @@ export const CategoryCard = ({ typeOfCard, category, imageUrl, id }) => (
       </HeaderWrapper>
       <InnerWrapper>
         <StyledImage src={imageUrl} alt="" />
-        <StyledButton>zobacz</StyledButton>
+        {category === 'Torebki' && (
+          <StyledButton as={Link} to="/bags">
+            zobacz
+          </StyledButton>
+        )}{' '}
+        {category === 'Pluszaki' && (
+          <StyledButton as={Link} to="/mascots">
+            zobacz
+          </StyledButton>
+        )}{' '}
+        {category === 'Kocyki' && (
+          <StyledButton as={Link} to="/blanket">
+            zobacz
+          </StyledButton>
+        )}
+        {category === 'Ubrania' && (
+          <StyledButton as={Link} to="/cloth">
+            zobacz
+          </StyledButton>
+        )}
+        {category === 'Chusty' && (
+          <StyledButton as={Link} to="/shawl">
+            zobacz
+          </StyledButton>
+        )}
       </InnerWrapper>
     </Wrapper>
   </>

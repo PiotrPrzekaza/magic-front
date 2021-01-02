@@ -38,8 +38,8 @@ export const MenuBar = () => (
     </ListItem>
     <StyledMenu>
       <li>
-        <ListItem nav to="/products" activeClassName="active">
-          Produkty
+        <ListItem nav to="/category" activeClassName="active">
+          Kategorie
         </ListItem>
       </li>
       <li>

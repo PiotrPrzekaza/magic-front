@@ -25,10 +25,12 @@ const StyledWrapper = styled.div`
 
 const HeroButton = styled(Button)`
   position: relative;
-  margin: 200px;
+  margin-top: 100px;
   width: 400px;
   border: 2px solid white;
   border-radius: 10px;
+  color: ${({ theme }) => theme.white};
+
   :hover {
     --webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
@@ -62,20 +64,9 @@ const StyledHeading = styled(Heading)`
   }
 `;
 
-const StyledBlock = styled.div`
-  position: absolute;
-  width: 50vw;
-  height: 50vh;
-  bottom: -10vh;
-  right: -20vw;
-  transform: rotate(-45deg);
-  background-color: ${({ theme }) => theme.thirdColor};
-`;
-
 export const Hero = () => (
   <>
     <StyledWrapper>
-      <StyledBlock />
       <StyledHeading as="h1">Szydełko to sposób na życie!</StyledHeading>
       <StyledParagraph>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ducimus minima voluptate

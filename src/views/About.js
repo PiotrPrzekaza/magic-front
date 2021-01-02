@@ -1,9 +1,9 @@
 import React from 'react';
 import { AboutPageTemplate } from 'templates/AboutPageTemplate';
-import { Card } from 'components/molecules/Card/Card';
+import { AboutCard } from 'components/molecules/AboutCard/AboutCard';
 
 export const About = () => (
   <AboutPageTemplate pageType="about">
-    <Card typeOfCard="about" />
+    <AboutCard typeOfCard="about" />
   </AboutPageTemplate>
 );

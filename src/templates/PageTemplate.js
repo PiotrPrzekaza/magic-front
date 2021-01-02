@@ -40,7 +40,11 @@ export const PageTemplate = ({ children, pageType }) => (
     <Wrapper pageType={pageType}>
       <StyledHeader>
         <Input search placeholder="Szukaj" />
-        {pageType === 'products' && <StyledHeading as="h1">Projekty zrealizowane</StyledHeading>}
+        {pageType === 'bags' && <StyledHeading as="h1">Torebki</StyledHeading>}
+        {pageType === 'shawl' && <StyledHeading as="h1">Chusty</StyledHeading>}
+        {pageType === 'cloth' && <StyledHeading as="h1">Ubrania</StyledHeading>}
+        {pageType === 'blanket' && <StyledHeading as="h1">Kocyki</StyledHeading>}
+        {pageType === 'mascots' && <StyledHeading as="h1">Pluszaki</StyledHeading>}
         <StyledParagraph> 6 produktów</StyledParagraph>
       </StyledHeader>
       <StyledGrid>{children}</StyledGrid>
@@ -51,9 +55,9 @@ export const PageTemplate = ({ children, pageType }) => (
 
 PageTemplate.propTypes = {
   children: PropTypes.element.isRequired,
-  pageType: PropTypes.oneOf(['products', 'about']),
+  pageType: PropTypes.oneOf(['bags', 'shawl', 'mascots', 'blanket', 'cloth']),
 };
 
 PageTemplate.defaultProps = {
-  pageType: 'products',
+  pageType: 'bags',
 };
