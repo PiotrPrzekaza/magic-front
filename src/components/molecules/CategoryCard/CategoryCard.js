@@ -1,9 +1,9 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Heading } from 'components/atoms/Heading/Heading';
-import { Button } from 'components/atoms/Button/Button';
 import { Link } from 'react-router-dom';
+import { ListItem } from 'components/atoms/ListItem/ListItem';
 
 const Wrapper = styled.div`
   min-height: 400px;
@@ -13,13 +13,9 @@ const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-`;
-
-const StyledButton = styled(Button)`
-  margin: 20px 0;
+  transition: transform 0.4s ease-in;
   :hover {
-    border: 2px solid ${({ theme }) => theme.black};
-    color: ${({ theme }) => theme.black};
+    transform: scale(1.2);
   }
 `;
 
@@ -41,8 +37,8 @@ const InnerWrapper = styled.div`
 const StyledImage = styled.img`
   border-radius: 10px;
   margin-top: 20px;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
 `;
 
 const StyledHeading = styled(Heading)`
@@ -52,53 +48,35 @@ const StyledHeading = styled(Heading)`
   font-size: ${({ theme }) => theme.fontSize.l};
 `;
 
+const StyledListItem = styled(ListItem)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
 export const CategoryCard = ({ typeOfCard, category, imageUrl, id }) => (
   <>
-    <Wrapper typeOfCard={typeOfCard}>
-      <HeaderWrapper>
-        <StyledHeading>{category}</StyledHeading>
-      </HeaderWrapper>
-      <InnerWrapper>
-        <StyledImage src={imageUrl} alt="" />
-        {category === 'Torebki' && (
-          <StyledButton as={Link} to="/bags">
-            zobacz
-          </StyledButton>
-        )}{' '}
-        {category === 'Pluszaki' && (
-          <StyledButton as={Link} to="/mascots">
-            zobacz
-          </StyledButton>
-        )}{' '}
-        {category === 'Kocyki' && (
-          <StyledButton as={Link} to="/blanket">
-            zobacz
-          </StyledButton>
-        )}
-        {category === 'Ubrania' && (
-          <StyledButton as={Link} to="/cloth">
-            zobacz
-          </StyledButton>
-        )}
-        {category === 'Chusty' && (
-          <StyledButton as={Link} to="/shawl">
-            zobacz
-          </StyledButton>
-        )}
-      </InnerWrapper>
+    <Wrapper typeOfCard={typeOfCard} category={category}>
+      <StyledListItem as={Link} to={category}>
+        <HeaderWrapper>
+          <StyledHeading>{category}</StyledHeading>
+        </HeaderWrapper>
+        <InnerWrapper>
+          <StyledImage src={imageUrl} alt="" />
+        </InnerWrapper>
+      </StyledListItem>
     </Wrapper>
   </>
 );
 
 CategoryCard.propTypes = {
-  typeOfCard: PropTypes.oneOf(['category']),
+  typeOfCard: PropTypes.oneOf(['category']).isRequired,
   imageUrl: PropTypes.string,
-  category: PropTypes.string,
+  category: PropTypes.oneOf(['torebki', 'ubrania', 'pluszaki', 'chusty', 'kocyki']).isRequired,
   id: PropTypes.number.isRequired,
 };
 
 CategoryCard.defaultProps = {
-  typeOfCard: 'category',
   imageUrl: null,
-  category: null,
 };

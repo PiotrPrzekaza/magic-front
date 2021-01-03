@@ -9,20 +9,21 @@ import { Footer } from 'components/organisms/Footer/Footer';
 const Wrapper = styled.div`
   padding: 10px 30px 20px 30px;
   margin-top: 50px;
-  width: 95vw;
+
   min-height: calc(100vh - 201px);
 `;
 
 const StyledGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, 300px);
+  height: 100%;
+  grid-template-columns: repeat(auto-fit, 250px);
   grid-gap: 50px;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 `;
 
 const StyledHeader = styled.div`
-  margin: 50px 0 30px 0;
+  margin: 50px 0 50px 0;
 `;
 
 const StyledHeading = styled(Heading)`

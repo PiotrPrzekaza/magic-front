@@ -7,7 +7,7 @@ export const clothData = [
     imageUrl: 'https://picsum.photos/200/300',
     createdTime: '10 dni',
     type: 'Druty',
-    category: 'Ubranie',
+    category: 'ubranie',
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const clothData = [
     imageUrl: 'https://picsum.photos/200/300',
     createdTime: '10 dni',
     type: 'Druty',
-    category: 'Ubranie',
+    category: 'ubranie',
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const clothData = [
     imageUrl: 'https://picsum.photos/200/300',
     createdTime: '6 dni',
     type: 'Druty',
-    category: 'Ubranie',
+    category: 'ubranie',
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const clothData = [
     imageUrl: 'https://picsum.photos/200/300',
     createdTime: '5 dni',
     type: 'Druty',
-    category: 'Ubranie',
+    category: 'ubranie',
   },
   {
     id: 5,
@@ -46,6 +46,6 @@ export const clothData = [
     desc: ' Cienka opaska wsam raz na jesienne wietrzne dni',
     imageUrl: 'https://picsum.photos/200/300',
     createdTime: '15 dni',
-    category: 'Ubranie',
+    category: 'ubranie',
   },
 ];

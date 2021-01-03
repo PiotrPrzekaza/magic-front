@@ -6,16 +6,15 @@ export const ListItem = styled(NavLink)`
   color: ${({ theme }) => theme.black};
   font-size: ${({ theme }) => theme.fontSize.s};
   text-decoration: none;
-  -webkit-transition: ease 0.4s;
-  transition: ease 0.4s;
+  transition: all ease-in 0.3s;
 
   ${({ nav }) =>
     nav &&
     css`
       padding: 20px;
       text-transform: lowercase;
-      -webkit-transition: ease 0.4s;
-      transition: ease 0.4s;
+      transition: all 0.3s ease-in;
+      text-align: center;
       color: ${({ theme }) => theme.grey};
       &.active {
         color: ${({ theme }) => theme.grey1};

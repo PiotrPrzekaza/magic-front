@@ -10,15 +10,16 @@ import { Footer } from 'components/organisms/Footer/Footer';
 const Wrapper = styled.div`
   padding: 10px 30px 20px 30px;
   margin: 50px auto;
-  width: 95vw;
   min-height: calc(100vh - 251px);
 `;
 
 const StyledGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, 400px);
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, 300px);
   grid-gap: 50px;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
 `;
 
 const StyledHeader = styled.div`
@@ -40,11 +41,7 @@ export const PageTemplate = ({ children, pageType }) => (
     <Wrapper pageType={pageType}>
       <StyledHeader>
         <Input search placeholder="Szukaj" />
-        {pageType === 'bags' && <StyledHeading as="h1">Torebki</StyledHeading>}
-        {pageType === 'shawl' && <StyledHeading as="h1">Chusty</StyledHeading>}
-        {pageType === 'cloth' && <StyledHeading as="h1">Ubrania</StyledHeading>}
-        {pageType === 'blanket' && <StyledHeading as="h1">Kocyki</StyledHeading>}
-        {pageType === 'mascots' && <StyledHeading as="h1">Pluszaki</StyledHeading>}
+        <StyledHeading as="h1">{pageType}</StyledHeading>
         <StyledParagraph> 6 produktów</StyledParagraph>
       </StyledHeader>
       <StyledGrid>{children}</StyledGrid>
@@ -55,9 +52,9 @@ export const PageTemplate = ({ children, pageType }) => (
 
 PageTemplate.propTypes = {
   children: PropTypes.element.isRequired,
-  pageType: PropTypes.oneOf(['bags', 'shawl', 'mascots', 'blanket', 'cloth']),
+  pageType: PropTypes.oneOf(['torebki', 'kocyki', 'pluszaki', 'chusty', 'ubrania']),
 };
 
 PageTemplate.defaultProps = {
-  pageType: 'bags',
+  pageType: 'torebki',
 };

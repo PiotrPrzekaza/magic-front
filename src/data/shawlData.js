@@ -9,7 +9,7 @@ export const shawlData = [
     imageUrl: chusta,
     createdTime: '10 dni',
     type: 'Szydełko',
-    category: 'Chusty',
+    category: 'chusty',
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const shawlData = [
     imageUrl: chusta,
     createdTime: '10 dni',
     type: 'Szydełko',
-    category: 'Chusty',
+    category: 'chusty',
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const shawlData = [
     imageUrl: chusta,
     createdTime: '10 dni',
     type: 'Szydełko',
-    category: 'Chusty',
+    category: 'chusty',
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const shawlData = [
     imageUrl: chusta,
     createdTime: '10 dni',
     type: 'Szydełko',
-    category: 'Chusty',
+    category: 'chusty',
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ export const shawlData = [
     imageUrl: chusta,
     createdTime: '10 dni',
     type: 'Szydełko',
-    category: 'Chusty',
+    category: 'chusty',
   },
   {
     id: 6,
@@ -59,7 +59,7 @@ export const shawlData = [
     imageUrl: chusta,
     createdTime: '10 dni',
     type: 'Szydełko',
-    category: 'Chusty',
+    category: 'chusty',
   },
   {
     id: 7,
@@ -69,7 +69,7 @@ export const shawlData = [
     imageUrl: chusta,
     createdTime: '10 dni',
     type: 'Szydełko',
-    category: 'Chusty',
+    category: 'chusty',
   },
   {
     id: 8,
@@ -79,7 +79,7 @@ export const shawlData = [
     imageUrl: chusta,
     createdTime: '10 dni',
     type: 'Szydełko',
-    category: 'Chusty',
+    category: 'chusty',
   },
   {
     id: 9,
@@ -89,6 +89,6 @@ export const shawlData = [
     imageUrl: chusta,
     createdTime: '10 dni',
     type: 'Szydełko',
-    category: 'Chusty',
+    category: 'chusty',
   },
 ];

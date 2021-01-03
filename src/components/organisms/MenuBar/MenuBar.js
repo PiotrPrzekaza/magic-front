@@ -8,17 +8,24 @@ const Wrapper = styled.header`
   display: grid;
   grid-template-columns: repeat(2, 250px 1fr);
   border-bottom: 1px solid grey;
-  width: 95vw;
   margin: 0 auto;
-  position: relative;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  justify-content: start;
+  background-color: #f5f5f5;
 `;
 
 const StyledMenu = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fill, 150px);
-  grid-gap: 20px;
+  grid-template-columns: repeat(3, 150px);
+  grid-gap: 10px;
   list-style: none;
   height: 100px;
+  width: 100%;
+  justify-content: start;
   align-items: center;
 `;
 

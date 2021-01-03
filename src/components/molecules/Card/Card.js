@@ -12,8 +12,12 @@ const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.white};
   box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: grid;
+  transition: transform 0.5s ease-in;
+  :hover {
+    transform: scale(1.1);
+  }
 `;
 
 const StyledButton = styled(Button)`
@@ -32,14 +36,13 @@ const StyledButton = styled(Button)`
 
 const StyledImage = styled.img`
   border-radius: 10px;
-  margin: 30px 20px;
+  margin: 10px;
   width: 150px;
   height: 150px;
 `;
 
 const StyledHeading = styled(Heading)`
   text-align: center;
-  margin: 30px;
   color: ${({ theme }) => theme.grey1};
   font-size: ${({ theme }) => theme.fontSize.l};
 `;
@@ -56,6 +59,7 @@ const InnerWrapper = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.gray1};
   width: 90%;
   margin: 0 auto;
+
   ${({ flex }) =>
     flex &&
     css`
@@ -87,19 +91,20 @@ export const Card = ({ typeOfCard, id, title, price, desc, imageUrl, type, creat
 );
 
 Card.propTypes = {
-  typeOfCard: PropTypes.oneOf(['bags', 'shawl', 'cloth', 'blanket', 'mascots']),
+  typeOfCard: PropTypes.oneOf(['torebki', 'ubrania', 'kocyki', 'pluszaki', 'chusty']),
   title: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
   imageUrl: PropTypes.string,
   type: PropTypes.string,
   createdTime: PropTypes.string,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.number,
 };
 
 Card.defaultProps = {
-  typeOfCard: 'bags',
+  typeOfCard: 'torebki',
   imageUrl: null,
+  id: null,
   type: null,
   createdTime: null,
 };

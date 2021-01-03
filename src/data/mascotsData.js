@@ -6,10 +6,9 @@ export const mascotsData = [
     title: 'Maskotka',
     price: '30 zł',
     desc: ' Kolorowy jednorożec - dziewczynka',
-    color: 'Róż',
     imageUrl: jednorozec,
     createdTime: '6 dni',
     type: 'Szydełko',
-    category: 'Pluszaki',
+    category: 'pluszaki',
   },
 ];

@@ -7,8 +7,6 @@ export const Button = styled.button`
   text-transform: lowercase;
   text-decoration: none;
   font-size: ${({ theme }) => theme.fontSize.s};
-  -webkit-transition: ease 0.3s;
-  transition: ease 0.3s;
   border-radius: 5px;
   width: 33%;
   margin-top: 10px;

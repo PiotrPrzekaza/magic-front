@@ -18,12 +18,12 @@ export const Root = () => (
         <Route exact path="/" component={Home} />
         <Route path="/contact" component={Contact} />
         <Route path="/category" component={Category} />
-        <Route path="/bags" component={Bags} />
+        <Route path="/torebki" component={Bags} />
         <Route path="/about" component={About} />
-        <Route path="/shawl" component={Shawl} />
-        <Route path="/cloth" component={Clothes} />
-        <Route path="/blanket" component={Blanket} />
-        <Route path="/mascots" component={Mascots} />
+        <Route path="/chusty" component={Shawl} />
+        <Route path="/ubrania" component={Clothes} />
+        <Route path="/kocyki" component={Blanket} />
+        <Route path="/pluszaki" component={Mascots} />
       </Switch>
     </BrowserRouter>
   </BasicTemplate>

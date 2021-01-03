@@ -4,10 +4,10 @@ import { PageTemplate } from 'templates/PageTemplate';
 import { Card } from 'components/molecules/Card/Card';
 
 export const Bags = () => (
-  <PageTemplate pageType="bags">
+  <PageTemplate pageType="torebki">
     {data.map((item) => (
       <Card
-        typeOfCard="bags"
+        typeOfCard="torebki"
         title={item.title}
         price={item.price}
         desc={item.desc}

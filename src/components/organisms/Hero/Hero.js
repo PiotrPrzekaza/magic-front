@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import hero from 'assets/images/szydelko2.jpg';
 import logo from 'assets/icon/Magiczna.png';
 import { Button } from 'components/atoms/Button/Button';
@@ -7,12 +7,33 @@ import { Link } from 'react-router-dom';
 import { Heading } from 'components/atoms/Heading/Heading';
 import { Paragraph } from 'components/atoms/Paragraph/Paragraph';
 
+const apper = keyframes`
+0% {
+  opacity: 0;
+ transform: translateX(-22vw);
+}
+100% {
+  opacity: 1;
+  transform: translateX(0vw);
+}
+`;
+
+const sized = keyframes`
+0%{
+  transform: scale(1);
+}
+
+100%{
+transform: scale(1.2);
+}
+`;
+
 const StyledWrapper = styled.div`
   position: relative;
-  left: 0;
+  left: -5vw;
   top: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: baseline;
   align-items: center;
@@ -25,19 +46,36 @@ const StyledWrapper = styled.div`
 
 const HeroButton = styled(Button)`
   position: relative;
-  margin-top: 100px;
-  width: 400px;
+  z-index: 1;
+  overflow: hidden;
+  margin-top: 5vh;
+  width: 10vw;
   border: 2px solid white;
   border-radius: 10px;
   color: ${({ theme }) => theme.white};
 
-  :hover {
-    --webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
+  &:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-color: ${({ theme }) => theme.grey300};
+    top: 0;
+    left: -100%;
     color: ${({ theme }) => theme.gray1};
     border: 2px solid ${({ theme }) => theme.grey1};
+    transition: 0.5s ease-in;
+  }
+
+  :hover::after {
+    transform: translateX(100%);
+  }
+  :hover {
+    animation-name: ${sized};
+    animation-duration: 1s;
+    animation-delay: 0;
+    animation-fill-mode: both;
   }
 `;
 
@@ -53,7 +91,11 @@ const StyledHeading = styled(Heading)`
   font-weight: ${({ theme }) => theme.regular};
   &:before {
     content: '';
+    animation-name: ${apper};
+    animation-duration: 2s;
+    animation-delay: 1s;
     position: absolute;
+    animation-fill-mode: both;
     left: -22vw;
     top: -18vh;
     width: 50vw;

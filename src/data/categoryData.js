@@ -8,26 +8,26 @@ export const categoryData = [
   {
     id: 1,
     imageUrl: kocyk,
-    category: 'Kocyki',
+    category: 'kocyki',
   },
   {
     id: 2,
     imageUrl: torebki,
-    category: 'Torebki',
+    category: 'torebki',
   },
   {
     id: 3,
     imageUrl: jednorozec,
-    category: 'Pluszaki',
+    category: 'pluszaki',
   },
   {
     id: 4,
     imageUrl: zestaw,
-    category: 'Ubrania',
+    category: 'ubrania',
   },
   {
     id: 5,
     imageUrl: chusta,
-    category: 'Chusty',
+    category: 'chusty',
   },
 ];

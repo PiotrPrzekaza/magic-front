@@ -8,7 +8,7 @@ import { Anchor } from 'components/atoms/Anchor/Anchor';
 
 const FooterWrapper = styled.footer`
   display: flex;
-  width: 95vw;
+  width: 90vw;
   height: 5vh;
   margin: 0 auto;
   border-top: 1px solid black;

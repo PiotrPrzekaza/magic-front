@@ -10,7 +10,7 @@ export const bagsData = [
     imageUrl: plecak,
     createdTime: '10 dni',
     type: 'Szydełko',
-    category: 'Torebki',
+    category: 'torebki',
   },
 
   {
@@ -18,22 +18,20 @@ export const bagsData = [
     title: 'Torebka',
     price: '225 zł',
     desc: ' Różowa torebka stylowa',
-    color: 'Róż',
     imageUrl: torebkaRoz,
     createdTime: '5 dni',
     type: 'Szydełko',
-    category: 'Torebki',
+    category: 'torebki',
   },
   {
     id: 3,
     title: 'Torebka',
     price: '225 zł',
     desc: ' Różowa torebka stylowa',
-    color: 'Róż',
     imageUrl: torebkaRoz,
     createdTime: '5 dni',
     type: 'Szydełko',
-    category: 'Torebki',
+    category: 'torebki',
   },
   {
     id: 4,
@@ -43,7 +41,7 @@ export const bagsData = [
     imageUrl: plecak,
     createdTime: '10 dni',
     type: 'Szydełko',
-    category: 'Torebki',
+    category: 'torebki',
   },
   {
     id: 5,
@@ -53,7 +51,7 @@ export const bagsData = [
     imageUrl: plecak,
     createdTime: '10 dni',
     type: 'Szydełko',
-    category: 'Torebki',
+    category: 'torebki',
   },
   {
     id: 6,
@@ -64,6 +62,6 @@ export const bagsData = [
     imageUrl: torebkaRoz,
     createdTime: '5 dni',
     type: 'Szydełko',
-    category: 'Torebki',
+    category: 'torebki',
   },
 ];
