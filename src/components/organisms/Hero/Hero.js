@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { Heading } from 'components/atoms/Heading/Heading';
 import { Paragraph } from 'components/atoms/Paragraph/Paragraph';
 
-const apper = keyframes`
+const appear = keyframes`
 0% {
   opacity: 0;
  transform: translateX(-22vw);
@@ -49,10 +49,10 @@ const HeroButton = styled(Button)`
   z-index: 1;
   overflow: hidden;
   margin-top: 5vh;
-  width: 10vw;
-  border: 2px solid white;
-  border-radius: 10px;
+  width: 15vw;
   color: ${({ theme }) => theme.white};
+  border: none;
+  font-size: ${({ theme }) => theme.fontSize.l};
 
   &:after {
     z-index: -1;
@@ -63,9 +63,7 @@ const HeroButton = styled(Button)`
     background-color: ${({ theme }) => theme.grey300};
     top: 0;
     left: -100%;
-    color: ${({ theme }) => theme.gray1};
-    border: 2px solid ${({ theme }) => theme.grey1};
-    transition: 0.5s ease-in;
+    transition: transform 0.3s ease-in;
   }
 
   :hover::after {
@@ -91,7 +89,7 @@ const StyledHeading = styled(Heading)`
   font-weight: ${({ theme }) => theme.regular};
   &:before {
     content: '';
-    animation-name: ${apper};
+    animation-name: ${appear};
     animation-duration: 2s;
     animation-delay: 1s;
     position: absolute;

@@ -9,18 +9,31 @@ const StyledWrapper = styled.div`
   height: 90%;
   border-radius: 10px;
   background-color: ${({ theme }) => theme.thirdColorBg};
-  border: 1px solid ${({ theme }) => theme.grey1};
   box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
   display: flex;
   color: ${({ theme }) => theme.grey1};
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
+`;
+
+const StyledHeader = styled.header`
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid ${({ theme }) => theme.gray1};
+`;
+
+const StyledHeading = styled(Heading)`
+  margin-bottom: 5%;
 `;
 
 export const ContactForm = ({ typeOfCard }) => (
   <StyledWrapper typeOfCard={typeOfCard}>
-    <Heading>Wypełnij i prześlij do mnie</Heading>
+    <StyledHeader>
+      <StyledHeading>Wypełnij i prześlij do mnie</StyledHeading>
+    </StyledHeader>
     <Form />
   </StyledWrapper>
 );

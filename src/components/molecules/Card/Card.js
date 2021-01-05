@@ -8,11 +8,9 @@ import { Paragraph } from 'components/atoms/Paragraph/Paragraph';
 const Wrapper = styled.div`
   min-height: 400px;
   border-radius: 10px;
-  border: 1px solid black;
   background-color: ${({ theme }) => theme.white};
   box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
   position: relative;
-  /* overflow: hidden; */
   display: grid;
   transition: transform 0.5s ease-in;
   :hover {
@@ -25,12 +23,14 @@ const StyledButton = styled(Button)`
   width: 33%;
   margin-top: 10px;
   padding: 10px;
-  border: 2px solid ${({ theme }) => theme.grey1};
+  border: 1px solid ${({ theme }) => theme.grey1};
   background-color: transparent;
   color: ${({ theme }) => theme.grey1};
+  transition: all 0.3s ease;
   :hover {
-    border: 2px solid ${({ theme }) => theme.black};
+    border: 1px solid ${({ theme }) => theme.black};
     color: ${({ theme }) => theme.black};
+    background-color: ${({ theme }) => theme.primary};
   }
 `;
 

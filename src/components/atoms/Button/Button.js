@@ -11,7 +11,7 @@ export const Button = styled.button`
   width: 33%;
   margin-top: 10px;
   padding: 10px;
-  border: 2px solid ${({ theme }) => theme.grey1};
+  border: 1px solid ${({ theme }) => theme.grey1};
   background-color: transparent;
   color: ${({ theme }) => theme.grey1};
   ${({ submit }) =>
@@ -22,9 +22,8 @@ export const Button = styled.button`
       font-weight: ${({ theme }) => theme.bold};
       letter-spacing: 1px;
       color: ${({ theme }) => theme.white};
+      transition: transform 0.5s ease;
       :hover {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
         transform: scale(1.1);
         background-color: ${({ theme }) => theme.grey400};
         color: ${({ theme }) => theme.black};

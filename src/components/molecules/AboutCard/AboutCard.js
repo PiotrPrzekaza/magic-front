@@ -12,7 +12,6 @@ const AboutStyledWrapper = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid ${({ theme }) => theme.grey1};
   background-color: ${({ theme }) => theme.secondary};
   box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
 `;

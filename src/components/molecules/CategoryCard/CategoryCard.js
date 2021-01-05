@@ -7,7 +7,6 @@ import { ListItem } from 'components/atoms/ListItem/ListItem';
 
 const Wrapper = styled.div`
   min-height: 400px;
-  border: 1px solid black;
   background-color: ${({ theme }) => theme.white};
   box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
   position: relative;
