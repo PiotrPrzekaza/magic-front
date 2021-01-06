@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { Heading } from 'components/atoms/Heading/Heading';
 import { Paragraph } from 'components/atoms/Paragraph/Paragraph';
 
-const AboutStyledWrapper = styled.div`
-  height: 50vh;
-  width: 50vw;
+const StyledWrapper = styled.div`
+  min-height: 60vh;
+  max-width: 50vw;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -16,16 +16,17 @@ const AboutStyledWrapper = styled.div`
   box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
 `;
 
-const AboutStyledParagraph = styled(Paragraph)`
+const StyledParagraph = styled(Paragraph)`
   font-size: ${({ theme }) => theme.fontSize.m};
 `;
 
-const AboutInnerWrapper = styled.article`
+const InnerWrapper = styled.article`
+  display: flex;
   width: 80%;
-  height: 50%;
+  height: 100%;
 `;
 
-const AboutStyledHeading = styled(Heading)`
+const StyledHeading = styled(Heading)`
   font-size: ${({ theme }) => theme.fontSize.xl};
   width: 90%;
   text-align: center;
@@ -36,18 +37,18 @@ const AboutStyledHeading = styled(Heading)`
 
 export const AboutCard = ({ typeOfCard }) => (
   <>
-    <AboutStyledWrapper typeOfCard={typeOfCard}>
-      <AboutStyledHeading>O Mnie</AboutStyledHeading>
-      <AboutInnerWrapper>
-        <AboutStyledParagraph>
+    <StyledWrapper typeOfCard={typeOfCard}>
+      <StyledHeading>O Mnie</StyledHeading>
+      <InnerWrapper>
+        <StyledParagraph>
           Szydełko to maja pasja. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
           facere fuga harum minus? Eum vel, autem aliquam temporibus, eius natus in voluptas
           provident laudantium placeat rem sunt quam nostrum at? Lorem ipsum dolor sit amet
           consectetur adipisicing elit. Explicabo facere fuga harum minus? Eum vel, autem aliquam
           temporibus, eius natus in voluptas provident laudantium placeat rem sunt quam nostrum at?
-        </AboutStyledParagraph>
-      </AboutInnerWrapper>
-    </AboutStyledWrapper>
+        </StyledParagraph>
+      </InnerWrapper>
+    </StyledWrapper>
   </>
 );
 

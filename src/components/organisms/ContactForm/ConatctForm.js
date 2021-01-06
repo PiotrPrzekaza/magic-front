@@ -5,8 +5,8 @@ import { Heading } from 'components/atoms/Heading/Heading';
 import { Form } from 'components/molecules/Form/Form';
 
 const StyledWrapper = styled.div`
-  width: 50%;
-  height: 90%;
+  min-width: 50vw;
+  min-height: 60vh;
   border-radius: 10px;
   background-color: ${({ theme }) => theme.thirdColorBg};
   box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);

@@ -24,7 +24,7 @@ export const Button = styled.button`
       color: ${({ theme }) => theme.white};
       transition: transform 0.5s ease;
       :hover {
-        transform: scale(1.1);
+        transform: scale(1.2);
         background-color: ${({ theme }) => theme.grey400};
         color: ${({ theme }) => theme.black};
       }
