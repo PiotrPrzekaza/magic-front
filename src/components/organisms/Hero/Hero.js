@@ -45,35 +45,20 @@ const StyledWrapper = styled.div`
 `;
 
 const HeroButton = styled(Button)`
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  margin-top: 5vh;
-  width: 15vw;
-  color: ${({ theme }) => theme.white};
-  border: none;
+  border-radius: 10px;
+  width: 20%;
+  margin-top: 10px;
+  padding: 10px;
   font-size: ${({ theme }) => theme.fontSize.l};
-
-  &:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: ${({ theme }) => theme.grey300};
-    top: 0;
-    left: -100%;
-    transition: transform 0.3s ease-in;
-  }
-
-  :hover::after {
-    transform: translateX(100%);
-  }
+  border: 1px solid ${({ theme }) => theme.grey1};
+  background-color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.grey1};
+  transition: all 0.4s ease;
   :hover {
-    animation-name: ${sized};
-    animation-duration: 1s;
-    animation-delay: 0;
-    animation-fill-mode: both;
+    transform: scale(1.3);
+    border: 1px solid ${({ theme }) => theme.black};
+    color: ${({ theme }) => theme.black};
+    background-color: ${({ theme }) => theme.primary};
   }
 `;
 

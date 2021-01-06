@@ -17,13 +17,13 @@ export const Root = () => (
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/contact" component={Contact} />
-        <Route path="/category" component={Category} />
-        <Route path="/torebki" component={Bags} />
+        <Route exact path="/category" component={Category} />
+        <Route path="/category/torebki" component={Bags} />
         <Route path="/about" component={About} />
-        <Route path="/chusty" component={Shawl} />
-        <Route path="/ubrania" component={Clothes} />
-        <Route path="/kocyki" component={Blanket} />
-        <Route path="/pluszaki" component={Mascots} />
+        <Route path="/category/chusty" component={Shawl} />
+        <Route path="/category/ubrania" component={Clothes} />
+        <Route path="/category/kocyki" component={Blanket} />
+        <Route path="/category/pluszaki" component={Mascots} />
       </Switch>
     </BrowserRouter>
   </BasicTemplate>

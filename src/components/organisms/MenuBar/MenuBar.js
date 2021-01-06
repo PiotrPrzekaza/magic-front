@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { ImageItem } from 'components/atoms/ImageItem/ImageItem';
-import { ListItem } from 'components/atoms/ListItem/ListItem';
+import { NavItem } from 'components/atoms/NavItem/NavItem';
 import logo from 'assets/icon/Magiczna.png';
 
 const Wrapper = styled.header`
@@ -40,24 +40,24 @@ const StyledImageItem = styled(ImageItem)`
 
 export const MenuBar = () => (
   <Wrapper>
-    <ListItem nav exact to="/" activeClassName="active">
+    <NavItem exact to="/" activeClassName="active">
       <StyledImageItem src={logo} alt="Logo magiczna pętelka" />
-    </ListItem>
+    </NavItem>
     <StyledMenu>
       <li>
-        <ListItem nav to="/category" activeClassName="active">
+        <NavItem to="/category" activeClassName="active">
           Kategorie
-        </ListItem>
+        </NavItem>
       </li>
       <li>
-        <ListItem nav to="/contact" activeClassName="active">
+        <NavItem to="/contact" activeClassName="active">
           Kontakt
-        </ListItem>
+        </NavItem>
       </li>
       <li>
-        <ListItem nav to="/about" activeClassName="active">
+        <NavItem to="/about" activeClassName="active">
           O Mnie
-        </ListItem>
+        </NavItem>
       </li>
     </StyledMenu>
   </Wrapper>

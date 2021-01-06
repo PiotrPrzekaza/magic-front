@@ -11,7 +11,6 @@ export const Textarea = styled.textarea`
     padding: 2px;
     text-align: center;
     text-transform: lowercase;
-    letter-spacing: 1px;
     color: ${({ theme }) => theme.grey300};
   }
 `;

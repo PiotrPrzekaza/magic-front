@@ -57,7 +57,7 @@ const StyledListItem = styled(ListItem)`
 export const CategoryCard = ({ typeOfCard, category, imageUrl, id }) => (
   <>
     <Wrapper typeOfCard={typeOfCard} category={category}>
-      <StyledListItem as={Link} to={category}>
+      <StyledListItem as={Link} to={`category/${category}`}>
         <HeaderWrapper>
           <StyledHeading>{category}</StyledHeading>
         </HeaderWrapper>
@@ -73,9 +73,10 @@ CategoryCard.propTypes = {
   typeOfCard: PropTypes.oneOf(['category']).isRequired,
   imageUrl: PropTypes.string,
   category: PropTypes.oneOf(['torebki', 'ubrania', 'pluszaki', 'chusty', 'kocyki']).isRequired,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.number,
 };
 
 CategoryCard.defaultProps = {
   imageUrl: null,
+  id: null,
 };

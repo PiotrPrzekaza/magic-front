@@ -35,7 +35,7 @@ const StyledParagraph = styled(Paragraph)`
   font-weight: ${({ theme }) => theme.bold};
 `;
 
-export const PageTemplate = ({ children, pageType }) => (
+export const PageTemplate = ({ children, pageType, id }) => (
   <>
     <MenuBar />
     <Wrapper pageType={pageType}>
@@ -51,10 +51,12 @@ export const PageTemplate = ({ children, pageType }) => (
 );
 
 PageTemplate.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.instanceOf(Array).isRequired,
   pageType: PropTypes.oneOf(['torebki', 'kocyki', 'pluszaki', 'chusty', 'ubrania']),
+  id: PropTypes.number,
 };
 
 PageTemplate.defaultProps = {
   pageType: 'torebki',
+  id: null,
 };
