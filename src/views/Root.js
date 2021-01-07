@@ -10,20 +10,21 @@ import { Shawl } from './Shawl';
 import { Clothes } from './Clothes';
 import { Blanket } from './Blanket';
 import { Mascots } from './Mascots';
+import { routes } from '../routes/index';
 
 export const Root = () => (
   <BasicTemplate>
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/contact" component={Contact} />
-        <Route exact path="/category" component={Category} />
-        <Route path="/category/torebki" component={Bags} />
-        <Route path="/about" component={About} />
-        <Route path="/category/chusty" component={Shawl} />
-        <Route path="/category/ubrania" component={Clothes} />
-        <Route path="/category/kocyki" component={Blanket} />
-        <Route path="/category/pluszaki" component={Mascots} />
+        <Route exact path={routes.home} component={Home} />
+        <Route path={routes.contact} component={Contact} />
+        <Route exact path={routes.category} component={Category} />
+        <Route path={routes.about} component={About} />
+        <Route path={routes.torebki} component={Bags} />
+        <Route path={routes.chusty} component={Shawl} />
+        <Route path={routes.ubrania} component={Clothes} />
+        <Route path={routes.kocyki} component={Blanket} />
+        <Route path={routes.pluszaki} component={Mascots} />
       </Switch>
     </BrowserRouter>
   </BasicTemplate>
