@@ -2,19 +2,18 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 export const Button = styled.button`
-  width: 300px;
-  padding: 10px 20px;
   color: white;
   text-align: center;
   text-transform: lowercase;
   text-decoration: none;
   font-size: ${({ theme }) => theme.fontSize.s};
-  -webkit-transition: ease 0.3s;
-  transition: ease 0.3s;
-  border: 3px solid white;
-  border-radius: 30px;
+  border-radius: 5px;
+  width: 33%;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid ${({ theme }) => theme.grey1};
   background-color: transparent;
-
+  color: ${({ theme }) => theme.grey1};
   ${({ submit }) =>
     submit &&
     css`
@@ -23,10 +22,9 @@ export const Button = styled.button`
       font-weight: ${({ theme }) => theme.bold};
       letter-spacing: 1px;
       color: ${({ theme }) => theme.white};
+      transition: transform 0.5s ease;
       :hover {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
+        transform: scale(1.2);
         background-color: ${({ theme }) => theme.grey400};
         color: ${({ theme }) => theme.black};
       }

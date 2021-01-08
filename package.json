@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/eslint-parser": "^7.12.1",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.2.2",
@@ -43,13 +44,14 @@
     ]
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.0.0",
-    "husky": "^4.3.0",
+    "husky": "^4.3.6",
     "lint-staged": "^10.5.1",
     "prettier": "^2.2.0"
   },
@@ -63,6 +65,7 @@
       "prettier --config .prettierrc --write",
       "eslint --fix",
       "git add"
-    ]
+    ],
+    "*.{js,css,md}": "prettier --write"
   }
 }

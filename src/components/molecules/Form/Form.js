@@ -14,9 +14,6 @@ const StyledInput = styled(Input)`
   margin: 30px 0;
   background-color: ${({ theme }) => theme.white};
   border-radius: 0;
-  ::placeholder {
-    text-transform: lowercase;
-  }
 `;
 
 export const Form = () => (

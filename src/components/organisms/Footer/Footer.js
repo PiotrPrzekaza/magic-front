@@ -8,8 +8,8 @@ import { Anchor } from 'components/atoms/Anchor/Anchor';
 
 const FooterWrapper = styled.footer`
   display: flex;
-  width: 95vw;
-  height: 5vh;
+  min-width: 90vw;
+  min-height: 5vh;
   margin: 0 auto;
   border-top: 1px solid black;
   flex-direction: row;
@@ -20,9 +20,8 @@ const FooterWrapper = styled.footer`
 const StyledImageItem = styled(ImageItem)`
   width: 25px;
   height: 25px;
+  transition: transform 0.5s ease;
   :hover {
-    --webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
     transform: scale(1.1);
   }
 `;

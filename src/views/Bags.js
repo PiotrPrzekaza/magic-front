@@ -1,17 +1,18 @@
 import React from 'react';
-import { knittingData as data } from 'data/knittingData';
+import { torebki as data } from 'data/data';
 import { PageTemplate } from 'templates/PageTemplate';
 import { Card } from 'components/molecules/Card/Card';
 
-export const Knitting = () => (
-  <PageTemplate pageType="knitting">
+export const Bags = () => (
+  <PageTemplate pageType="torebki">
     {data.map((item) => (
       <Card
-        typeOfCard="knitting"
+        typeOfCard="torebki"
         title={item.title}
         price={item.price}
         desc={item.desc}
-        color={item.color}
+        color={item.category}
+        type={item.type}
         imageUrl={item.imageUrl}
         createdTime={item.createdTime}
         key={item.id}

@@ -6,7 +6,7 @@ import { Footer } from 'components/organisms/Footer/Footer';
 
 const Wrapper = styled.div`
   display: flex;
-  margin-top: 17px;
+  margin-top: 80px;
   flex-direction: column;
   justify-content: space-between;
 `;
@@ -15,7 +15,8 @@ const StyledGrid = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: calc(100vh - 251px);
+  min-height: calc(100vh - 231px);
+  padding-bottom: 3%;
 `;
 
 export const AboutPageTemplate = ({ children, pageType }) => (
