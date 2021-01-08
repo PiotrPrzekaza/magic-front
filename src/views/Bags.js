@@ -1,5 +1,5 @@
 import React from 'react';
-import { bagsData as data } from 'data/bagsData';
+import { torebki as data } from 'data/data';
 import { PageTemplate } from 'templates/PageTemplate';
 import { Card } from 'components/molecules/Card/Card';
 

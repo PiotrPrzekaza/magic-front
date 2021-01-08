@@ -1,5 +1,5 @@
 import React from 'react';
-import { clothData as data } from 'data/clothData';
+import { ubrania as data } from 'data/data';
 import { PageTemplate } from 'templates/PageTemplate';
 import { Card } from 'components/molecules/Card/Card';
 

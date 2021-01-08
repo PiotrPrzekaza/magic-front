@@ -1,5 +1,5 @@
 import React from 'react';
-import { mascotsData as data } from 'data/mascotsData';
+import { pluszaki as data } from 'data/data';
 import { PageTemplate } from 'templates/PageTemplate';
 import { Card } from 'components/molecules/Card/Card';
 

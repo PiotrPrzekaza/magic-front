@@ -1,5 +1,5 @@
 import React from 'react';
-import { blanketsData as data } from 'data/blanketsData';
+import { kocyki as data } from 'data/data';
 import { PageTemplate } from 'templates/PageTemplate';
 import { Card } from 'components/molecules/Card/Card';
 

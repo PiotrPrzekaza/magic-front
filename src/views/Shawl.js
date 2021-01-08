@@ -1,5 +1,5 @@
 import React from 'react';
-import { shawlData as data } from 'data/shawlData';
+import { chusty as data } from 'data/data';
 import { PageTemplate } from 'templates/PageTemplate';
 import { Card } from 'components/molecules/Card/Card';
 
