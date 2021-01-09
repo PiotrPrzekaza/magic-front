@@ -22,7 +22,7 @@ export const Button = styled.button`
       font-weight: ${({ theme }) => theme.bold};
       letter-spacing: 1px;
       color: ${({ theme }) => theme.white};
-      transition: transform 0.5s ease;
+      transition: all 0.5s cubic-bezier(0.45, 0.01, 0.24, 1);
       :hover {
         transform: scale(1.2);
         background-color: ${({ theme }) => theme.grey400};

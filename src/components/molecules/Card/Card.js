@@ -9,12 +9,14 @@ const Wrapper = styled.div`
   min-height: 400px;
   border-radius: 10px;
   background-color: ${({ theme }) => theme.white};
-  box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
+  box-shadow: 0 5px 15px 0 hsla(0, 2%, 49%, 0.14);
+
   position: relative;
   display: grid;
-  transition: transform 0.5s ease-in;
+  transition: all 0.5s cubic-bezier(0.45, 0.01, 0.24, 1);
   :hover {
     transform: scale(1.1);
+    box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
   }
 `;
 
@@ -26,7 +28,7 @@ const StyledButton = styled(Button)`
   border: 1px solid ${({ theme }) => theme.grey1};
   background-color: transparent;
   color: ${({ theme }) => theme.grey1};
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.45, 0.01, 0.24, 1);
   :hover {
     border: 1px solid ${({ theme }) => theme.black};
     color: ${({ theme }) => theme.black};

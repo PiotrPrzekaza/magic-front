@@ -8,13 +8,16 @@ import { ListItem } from 'components/atoms/ListItem/ListItem';
 const Wrapper = styled.div`
   min-height: 400px;
   background-color: ${({ theme }) => theme.white};
-  box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
+
+  box-shadow: 0 5px 15px 0 hsla(0, 2%, 49%, 0.14);
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  transition: transform 0.4s ease-in;
+  transition: all 0.4s cubic-bezier(0.45, 0.01, 0.24, 1);
   :hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    transform-origin: 50% 50%;
+    box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
   }
 `;
 
