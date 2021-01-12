@@ -24,19 +24,21 @@ const StyledGrid = styled.div`
 
 const StyledHeader = styled.div`
   margin: 50px 0;
-  border-bottom: 1px solid ${({ theme }) => theme.black};
+  border-bottom: 1px solid ${({ theme }) => theme.grey};
   width: 30%;
 `;
 
 const StyledHeading = styled(Heading)`
   font-size: ${({ theme }) => theme.fontSize.xxl};
   padding: 0 0 5px 10px;
+  color: ${({ theme }) => theme.grey1};
 `;
 
 const StyledParagraph = styled(Paragraph)`
   font-size: ${({ theme }) => theme.fontSize.s};
   font-weight: ${({ theme }) => theme.bold};
   padding: 0 0 5px 10px;
+  color: ${({ theme }) => theme.grey1};
 `;
 
 export const PageTemplate = ({ children, pageType, id }) => (

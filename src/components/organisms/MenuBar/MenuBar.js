@@ -1,13 +1,13 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
-import { ImageItem } from 'components/atoms/ImageItem/ImageItem';
+import styled from 'styled-components';
+
 import { NavItem } from 'components/atoms/NavItem/NavItem';
 import logo from 'assets/icon/Magiczna.png';
 
 const Wrapper = styled.header`
   display: grid;
   grid-template-columns: repeat(2, 250px 1fr);
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid ${({ theme }) => theme.grey};
   margin: 0 auto;
   position: sticky;
   width: 100%;
@@ -29,7 +29,7 @@ const StyledMenu = styled.ul`
   align-items: center;
 `;
 
-const StyledImageItem = styled(ImageItem)`
+const StyledImageItem = styled.img`
   position: absolute;
   top: -20px;
   left: 0;

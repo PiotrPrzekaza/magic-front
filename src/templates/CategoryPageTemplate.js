@@ -3,13 +3,11 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { MenuBar } from 'components/organisms/MenuBar/MenuBar';
 import { Heading } from 'components/atoms/Heading/Heading';
-import { Paragraph } from 'components/atoms/Paragraph/Paragraph';
 import { Footer } from 'components/organisms/Footer/Footer';
 
 const Wrapper = styled.div`
   padding: 10px 30px 20px 30px;
   margin-top: 50px;
-
   min-height: calc(100vh - 201px);
 `;
 
@@ -27,12 +25,13 @@ const StyledHeader = styled.div`
   margin: 50px 0 50px 0;
   padding-bottom: 20px;
   width: 30%;
-  border-bottom: 1px solid ${({ theme }) => theme.black};
+  border-bottom: 1px solid ${({ theme }) => theme.grey};
 `;
 
 const StyledHeading = styled(Heading)`
   font-size: ${({ theme }) => theme.fontSize.xxl};
   padding-left: 20px;
+  color: ${({ theme }) => theme.grey1};
 `;
 
 export const CategoryPageTemplate = ({ children, pageType }) => (

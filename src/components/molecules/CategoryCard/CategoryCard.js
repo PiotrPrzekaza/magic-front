@@ -23,14 +23,14 @@ const Wrapper = styled.div`
 
 const HeaderWrapper = styled.div`
   padding: 30px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid ${({ theme }) => theme.black};
   width: 90%;
   margin: 0 auto;
 `;
 
 const InnerWrapper = styled.div`
   align-items: center;
-  margin: 30px 0 0 0;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
