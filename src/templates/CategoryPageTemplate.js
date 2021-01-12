@@ -23,11 +23,16 @@ const StyledGrid = styled.div`
 `;
 
 const StyledHeader = styled.div`
+  position: relative;
   margin: 50px 0 50px 0;
+  padding-bottom: 20px;
+  width: 30%;
+  border-bottom: 1px solid ${({ theme }) => theme.black};
 `;
 
 const StyledHeading = styled(Heading)`
   font-size: ${({ theme }) => theme.fontSize.xxl};
+  padding-left: 20px;
 `;
 
 export const CategoryPageTemplate = ({ children, pageType }) => (
@@ -35,7 +40,7 @@ export const CategoryPageTemplate = ({ children, pageType }) => (
     <MenuBar />
     <Wrapper pageType={pageType}>
       <StyledHeader>
-        <StyledHeading as="h1">Kategorie</StyledHeading>
+        <StyledHeading as="h1">kategorie</StyledHeading>
       </StyledHeader>
       <StyledGrid>{children}</StyledGrid>
     </Wrapper>

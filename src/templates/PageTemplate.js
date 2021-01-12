@@ -23,16 +23,20 @@ const StyledGrid = styled.div`
 `;
 
 const StyledHeader = styled.div`
-  margin: 50px 0 30px 0;
+  margin: 50px 0;
+  border-bottom: 1px solid ${({ theme }) => theme.black};
+  width: 30%;
 `;
 
 const StyledHeading = styled(Heading)`
   font-size: ${({ theme }) => theme.fontSize.xxl};
+  padding: 0 0 5px 10px;
 `;
 
 const StyledParagraph = styled(Paragraph)`
   font-size: ${({ theme }) => theme.fontSize.s};
   font-weight: ${({ theme }) => theme.bold};
+  padding: 0 0 5px 10px;
 `;
 
 export const PageTemplate = ({ children, pageType, id }) => (
