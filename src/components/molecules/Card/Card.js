@@ -39,7 +39,8 @@ const StyledImage = styled.img`
   position: relative;
   padding: 10px;
   margin: 0 auto;
-  width: 95%;
+  width: 200px;
+  height: 200px;
 `;
 
 const StyledHeading = styled(Heading)`
