@@ -20,7 +20,7 @@ const Wrapper = styled.header`
 
 const StyledMenu = styled.ul`
   display: grid;
-  grid-template-columns: 150px 150px 150px;
+  grid-template-columns: repeat(3, 150px);
   grid-gap: 10px;
   list-style: none;
   height: 100px;
@@ -38,6 +38,27 @@ const StyledImageItem = styled.img`
   overflow: visible;
 `;
 
+const StyledNavItem = styled(NavItem)`
+  border-bottom: 1px solid ${({ theme }) => theme.grey1};
+
+  &.active {
+    color: ${({ theme }) => theme.grey1};
+    font-weight: ${({ theme }) => theme.bold};
+    font-size: ${({ theme }) => theme.fontSize.m};
+    background-color: ${({ theme }) => theme.primary};
+    border: 1px solid ${({ theme }) => theme.grey1};
+    border-radius: 5px;
+  }
+  :hover {
+    color: ${({ theme }) => theme.grey1};
+    font-weight: ${({ theme }) => theme.bold};
+    font-size: ${({ theme }) => theme.fontSize.m};
+    background-color: ${({ theme }) => theme.primary};
+    border: 1px solid ${({ theme }) => theme.grey1};
+    border-radius: 5px;
+  }
+`;
+
 export const MenuBar = () => (
   <Wrapper>
     <NavItem exact to="/" activeClassName="active">
@@ -45,19 +66,19 @@ export const MenuBar = () => (
     </NavItem>
     <StyledMenu>
       <li>
-        <NavItem to="/category" activeClassName="active">
+        <StyledNavItem to="/category" activeClassName="active">
           Kategorie
-        </NavItem>
+        </StyledNavItem>
       </li>
       <li>
-        <NavItem to="/contact" activeClassName="active">
+        <StyledNavItem to="/contact" activeClassName="active">
           Kontakt
-        </NavItem>
+        </StyledNavItem>
       </li>
       <li>
-        <NavItem to="/about" activeClassName="active">
+        <StyledNavItem to="/about" activeClassName="active">
           O Mnie
-        </NavItem>
+        </StyledNavItem>
       </li>
     </StyledMenu>
   </Wrapper>

@@ -6,7 +6,7 @@ export const NavItem = styled(NavLink)`
   position: relative;
   font-size: ${({ theme }) => theme.fontSize.s};
   text-decoration: none;
-  padding: 20px;
+  padding: 15px;
   text-transform: lowercase;
   transition-property: all;
   transition-duration: 0.3s;
@@ -14,14 +14,4 @@ export const NavItem = styled(NavLink)`
   transition-delay: 0s;
   text-align: center;
   color: ${({ theme }) => theme.grey};
-  &.active {
-    color: ${({ theme }) => theme.grey1};
-    font-weight: ${({ theme }) => theme.bold};
-    font-size: ${({ theme }) => theme.fontSize.m};
-  }
-  :hover {
-    color: ${({ theme }) => theme.grey1};
-    font-weight: ${({ theme }) => theme.bold};
-    font-size: ${({ theme }) => theme.fontSize.m};
-  }
 `;
