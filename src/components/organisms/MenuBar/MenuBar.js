@@ -39,23 +39,45 @@ const StyledImageItem = styled.img`
 `;
 
 const StyledNavItem = styled(NavItem)`
-  border-bottom: 1px solid ${({ theme }) => theme.grey1};
-
+  padding: 1.5rem 2.6rem;
+  border-radius: 0;
+  margin-top: 2rem;
+  text-decoration: none;
+  position: relative;
   &.active {
     color: ${({ theme }) => theme.grey1};
-    font-weight: ${({ theme }) => theme.bold};
-    font-size: ${({ theme }) => theme.fontSize.m};
-    background-color: ${({ theme }) => theme.primary};
-    border: 1px solid ${({ theme }) => theme.grey1};
-    border-radius: 5px;
+    &:before,
+    &:after {
+      transform: translateX(0) translateY(0);
+      background-color: ${({ theme }) => theme.primary};
+    }
   }
-  :hover {
-    color: ${({ theme }) => theme.grey1};
-    font-weight: ${({ theme }) => theme.bold};
-    font-size: ${({ theme }) => theme.fontSize.m};
-    background-color: ${({ theme }) => theme.primary};
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     border: 1px solid ${({ theme }) => theme.grey1};
-    border-radius: 5px;
+    transition: 0.5s;
+  }
+  &:before {
+    transform: translateX(-0.4rem) translateY(0.4rem);
+  }
+  &:after {
+    transform: translateX(0.4rem) translateY(-0.4rem);
+  }
+
+  &:hover {
+    color: ${({ theme }) => theme.grey1};
+    &:before,
+    &:after {
+      transform: translateX(0) translateY(0);
+      background-color: ${({ theme }) => theme.primary};
+    }
   }
 `;
 

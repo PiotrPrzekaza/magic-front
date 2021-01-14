@@ -45,7 +45,7 @@ const StyledWrapper = styled.div`
 `;
 
 const HeroButton = styled(Button)`
-  border-radius: 10px;
+  border-radius: 5px;
   width: 20%;
   margin-top: 10px;
   padding: 10px;

@@ -6,16 +6,18 @@ import { Heading } from 'components/atoms/Heading/Heading';
 import { Footer } from 'components/organisms/Footer/Footer';
 
 const Wrapper = styled.div`
-  padding: 10px 30px 20px 30px;
-  margin-top: 50px;
-  min-height: calc(100vh - 201px);
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  margin: 50px auto;
+  min-height: 100%;
 `;
 
 const StyledGrid = styled.div`
   display: grid;
   height: 100%;
   grid-template-columns: repeat(auto-fit, 250px);
-  grid-gap: 50px;
+  grid-gap: 20px;
   justify-content: space-evenly;
   align-items: center;
 `;
