@@ -9,8 +9,7 @@ import { Footer } from 'components/organisms/Footer/Footer';
 
 const Wrapper = styled.div`
   padding: 10px 30px 20px 30px;
-  margin: 50px auto;
-  min-height: calc(100vh - 251px);
+  margin: 50px auto 70px auto;
 `;
 
 const StyledGrid = styled.div`
@@ -23,16 +22,22 @@ const StyledGrid = styled.div`
 `;
 
 const StyledHeader = styled.div`
-  margin: 50px 0 30px 0;
+  margin: 50px 0;
+  border-bottom: 1px solid ${({ theme }) => theme.grey};
+  width: 30%;
 `;
 
 const StyledHeading = styled(Heading)`
   font-size: ${({ theme }) => theme.fontSize.xxl};
+  padding: 0 0 5px 10px;
+  color: ${({ theme }) => theme.grey1};
 `;
 
 const StyledParagraph = styled(Paragraph)`
   font-size: ${({ theme }) => theme.fontSize.s};
   font-weight: ${({ theme }) => theme.bold};
+  padding: 0 0 5px 10px;
+  color: ${({ theme }) => theme.grey1};
 `;
 
 export const PageTemplate = ({ children, pageType, id }) => (

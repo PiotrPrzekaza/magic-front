@@ -6,28 +6,31 @@ import { Link } from 'react-router-dom';
 import { ListItem } from 'components/atoms/ListItem/ListItem';
 
 const Wrapper = styled.div`
-  min-height: 400px;
+  min-height: 300px;
   background-color: ${({ theme }) => theme.white};
-  box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
+  box-shadow: 0 5px 15px 0 hsla(0, 2%, 49%, 0.14);
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  transition: transform 0.4s ease-in;
+  margin-bottom: 15vh;
+  transition: all 0.4s cubic-bezier(0.45, 0.01, 0.24, 1);
   :hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    transform-origin: 50% 50%;
+    box-shadow: -5px 3px 42px -16px rgba(0, 0, 0, 1);
   }
 `;
 
 const HeaderWrapper = styled.div`
-  padding: 30px;
-  border-bottom: 1px solid black;
+  padding: 20px;
+  border-bottom: 1px solid ${({ theme }) => theme.black};
   width: 90%;
   margin: 0 auto;
 `;
 
 const InnerWrapper = styled.div`
   align-items: center;
-  margin: 30px 0 0 0;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,8 +39,8 @@ const InnerWrapper = styled.div`
 const StyledImage = styled.img`
   border-radius: 10px;
   margin-top: 20px;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 `;
 
 const StyledHeading = styled(Heading)`

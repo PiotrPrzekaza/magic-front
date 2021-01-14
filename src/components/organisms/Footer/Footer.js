@@ -3,21 +3,23 @@ import styled from 'styled-components';
 import FacebookIcon from 'assets/icon/facebook.svg';
 import InstagramIcon from 'assets/icon/instagram.svg';
 import { Paragraph } from 'components/atoms/Paragraph/Paragraph';
-import { ImageItem } from 'components/atoms/ImageItem/ImageItem';
 import { Anchor } from 'components/atoms/Anchor/Anchor';
+import logo from 'assets/icon/Magiczna.png';
 
 const FooterWrapper = styled.footer`
+  position: relative;
+  margin-top: 5vh;
+  height: 10vh;
   display: flex;
   min-width: 90vw;
-  min-height: 5vh;
-  margin: 0 auto;
-  border-top: 1px solid black;
+  border-top: 1px solid ${({ theme }) => theme.grey};
+  color: ${({ theme }) => theme.gray};
   flex-direction: row;
   justify-content: space-between;
   background-color: ${({ theme }) => theme.primaryBg};
 `;
 
-const StyledImageItem = styled(ImageItem)`
+const StyledImageItem = styled.img`
   width: 25px;
   height: 25px;
   transition: transform 0.5s ease;
@@ -39,7 +41,7 @@ const CreatorWrapper = styled.div`
 
 const StyledParagraph = styled(Paragraph)`
   font-size: ${({ theme }) => theme.fontSize.s};
-  padding-right: 50px;
+  margin-right: 20px;
 `;
 
 export const Footer = () => (
