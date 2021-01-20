@@ -24,7 +24,6 @@ Bags.propTypes = {
   torebki: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      typeOfCard: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       price: PropTypes.string.isRequired,
       desc: PropTypes.string.isRequired,
