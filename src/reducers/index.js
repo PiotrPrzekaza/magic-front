@@ -171,7 +171,7 @@ const initialState = {
       imageUrl: 'https://picsum.photos/200/300',
       createdTime: '10 dni',
       type: 'Druty',
-      category: 'ubranie',
+      category: 'ubrania',
     },
     {
       id: 2,
@@ -181,7 +181,7 @@ const initialState = {
       imageUrl: 'https://picsum.photos/200/300',
       createdTime: '10 dni',
       type: 'Druty',
-      category: 'ubranie',
+      category: 'ubrania',
     },
     {
       id: 3,
@@ -191,7 +191,7 @@ const initialState = {
       imageUrl: 'https://picsum.photos/200/300',
       createdTime: '6 dni',
       type: 'Druty',
-      category: 'ubranie',
+      category: 'ubrania',
     },
     {
       id: 4,
@@ -201,7 +201,7 @@ const initialState = {
       imageUrl: 'https://picsum.photos/200/300',
       createdTime: '5 dni',
       type: 'Druty',
-      category: 'ubranie',
+      category: 'ubrania',
     },
     {
       id: 5,
@@ -210,7 +210,8 @@ const initialState = {
       desc: ' Cienka opaska wsam raz na jesienne wietrzne dni',
       imageUrl: 'https://picsum.photos/200/300',
       createdTime: '15 dni',
-      category: 'ubranie',
+      type: 'Druty',
+      category: 'ubrania',
     },
   ],
   pluszaki: [

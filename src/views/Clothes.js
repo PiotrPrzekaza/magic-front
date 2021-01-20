@@ -26,7 +26,7 @@ Clothes.propTypes = {
       title: PropTypes.string.isRequired,
       price: PropTypes.string.isRequired,
       desc: PropTypes.string.isRequired,
-      type: PropTypes.string.isRequired,
+      type: PropTypes.oneOf(['Szydełko', 'Druty']).isRequired,
       imageUrl: PropTypes.string.isRequired,
       createdTime: PropTypes.string.isRequired,
     }),

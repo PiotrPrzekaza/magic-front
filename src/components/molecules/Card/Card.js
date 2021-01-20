@@ -98,7 +98,7 @@ Card.propTypes = {
   price: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
   imageUrl: PropTypes.string,
-  type: PropTypes.string,
+  type: PropTypes.oneOf(['Szydełko', 'Druty']).isRequired,
   createdTime: PropTypes.string,
   id: PropTypes.number,
 };
@@ -107,6 +107,5 @@ Card.defaultProps = {
   typeOfCard: 'torebki',
   imageUrl: null,
   id: null,
-  type: null,
   createdTime: null,
 };
