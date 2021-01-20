@@ -79,8 +79,5 @@ const initialState = {
 };
 
 export const rootReducer = (state = initialState, action) => {
-  // eslint-disable-next-line no-console
-  console.log(action);
-
   return state;
 };

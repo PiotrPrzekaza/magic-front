@@ -9,7 +9,7 @@ import { Footer } from 'components/organisms/Footer/Footer';
 
 const Wrapper = styled.div`
   padding: 10px 30px 20px 30px;
-  margin: 50px auto 70px auto;
+  margin: 30px auto 50px auto;
 `;
 
 const StyledGrid = styled.div`
@@ -22,7 +22,7 @@ const StyledGrid = styled.div`
 `;
 
 const StyledHeader = styled.div`
-  margin: 50px 0;
+  margin: 50px 0 40px 0;
   border-bottom: 1px solid ${({ theme }) => theme.grey};
   width: 30%;
 `;
@@ -45,8 +45,8 @@ export const PageTemplate = ({ children, pageType, id }) => (
     <MenuBar />
     <Wrapper pageType={pageType}>
       <StyledHeader>
-        <Input search placeholder="Szukaj" />
         <StyledHeading as="h1">{pageType}</StyledHeading>
+        <Input search placeholder="Szukaj" />
         <StyledParagraph> 6 produktów</StyledParagraph>
       </StyledHeader>
       <StyledGrid>{children}</StyledGrid>

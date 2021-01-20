@@ -21,9 +21,10 @@ const Wrapper = styled.div`
 
 const StyledButton = styled(Button)`
   border-radius: 5px;
-  width: 33%;
+  width: 40%;
+  text-align: left;
   margin-top: 10px;
-  padding: 10px;
+  padding: 10px 10px 10px 20px;
   border: 1px solid ${({ theme }) => theme.grey1};
   background-color: transparent;
   color: ${({ theme }) => theme.grey1};
@@ -85,7 +86,7 @@ export const Card = ({ typeOfCard, id, title, price, desc, imageUrl, type, creat
         <StyledParagraph>{desc}</StyledParagraph>
         <StyledParagraph> {type}</StyledParagraph>
         <StyledParagraph>Czas realizacji: {createdTime}</StyledParagraph>
-        <StyledButton>Zamów</StyledButton>
+        <StyledButton shop>Zamów </StyledButton>
       </InnerWrapper>
     </Wrapper>
   </>

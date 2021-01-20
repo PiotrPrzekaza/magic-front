@@ -1,4 +1,4 @@
-import React from 'react';
+import shopIcon from 'assets/images/shoping.svg';
 import styled, { css } from 'styled-components';
 
 export const Button = styled.button`
@@ -17,7 +17,7 @@ export const Button = styled.button`
   ${({ submit }) =>
     submit &&
     css`
-      width: 50%;
+      width: 40%;
       margin: 50px auto 0;
       font-weight: ${({ theme }) => theme.bold};
       letter-spacing: 1px;
@@ -28,5 +28,11 @@ export const Button = styled.button`
         background-color: ${({ theme }) => theme.grey400};
         color: ${({ theme }) => theme.black};
       }
+    `}
+
+  ${({ shop }) =>
+    shop &&
+    css`
+      background: ${({ theme }) => theme.grey100} 85% 50% / 18px no-repeat url(${shopIcon});
     `}
 `;

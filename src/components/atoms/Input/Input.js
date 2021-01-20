@@ -26,7 +26,7 @@ export const Input = styled.input`
   ${({ search }) =>
     search &&
     css`
-      margin-bottom: 5px;
+      margin: 5px 0;
       padding: 10px 20px 10px 40px;
       font-size: ${({ theme }) => theme.fontSize.xs};
       background: ${({ theme }) => theme.grey100} 15px 50% / 15px no-repeat url(${searchIcon});
