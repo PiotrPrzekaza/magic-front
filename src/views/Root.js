@@ -8,10 +8,10 @@ import { Contact } from 'views/Contact';
 import Bags from 'views/Bags';
 import { About } from './About';
 import { Category } from './Category';
-import { Shawl } from './Shawl';
-import { Clothes } from './Clothes';
-import { Blanket } from './Blanket';
-import { Mascots } from './Mascots';
+import Shawl from './Shawl';
+import Clothes from './Clothes';
+import Blanket from './Blanket';
+import Mascots from './Mascots';
 import { routes } from '../routes/index';
 
 export const Root = () => (

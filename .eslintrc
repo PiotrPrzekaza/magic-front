@@ -16,6 +16,7 @@
     }
   },
   "globals": {
+    "window": true,
     "document": true
   },
   "rules": {

@@ -1,22 +1,46 @@
-import React from 'react';
-import { chusty as data } from 'data/data';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { PageTemplate } from 'templates/PageTemplate';
 import { Card } from 'components/molecules/Card/Card';
 
-export const Shawl = () => (
+const Shawl = ({ chusty }) => (
   <PageTemplate pageType="chusty">
-    {data.map((item) => (
+    {chusty.map(({ title, price, desc, type, imageUrl, createdTime, id }) => (
       <Card
         typeOfCard="chusty"
-        title={item.title}
-        price={item.price}
-        desc={item.desc}
-        color={item.category}
-        type={item.type}
-        imageUrl={item.imageUrl}
-        createdTime={item.createdTime}
-        key={item.id}
+        title={title}
+        price={price}
+        desc={desc}
+        type={type}
+        imageUrl={imageUrl}
+        createdTime={createdTime}
+        key={id}
       />
     ))}
   </PageTemplate>
 );
+Shawl.propTypes = {
+  chusty: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      typeOfCard: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      price: PropTypes.string.isRequired,
+      desc: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      imageUrl: PropTypes.string.isRequired,
+      createdTime: PropTypes.string.isRequired,
+    }),
+  ),
+};
+
+Shawl.defaultProps = {
+  chusty: [],
+};
+
+const mapStateToProps = (state) => {
+  const { chusty } = state;
+  return state;
+};
+
+export default connect(mapStateToProps)(Shawl);

@@ -1,22 +1,47 @@
-import React from 'react';
-import { pluszaki as data } from 'data/data';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { PageTemplate } from 'templates/PageTemplate';
 import { Card } from 'components/molecules/Card/Card';
 
-export const Mascots = () => (
+const Mascots = ({ pluszaki }) => (
   <PageTemplate pageType="pluszaki">
-    {data.map((item) => (
+    {pluszaki.map(({ title, price, desc, type, imageUrl, createdTime, id }) => (
       <Card
         typeOfCard="pluszaki"
-        title={item.title}
-        price={item.price}
-        desc={item.desc}
-        color={item.category}
-        type={item.type}
-        imageUrl={item.imageUrl}
-        createdTime={item.createdTime}
-        key={item.id}
+        title={title}
+        price={price}
+        desc={desc}
+        type={type}
+        imageUrl={imageUrl}
+        createdTime={createdTime}
+        key={id}
       />
     ))}
   </PageTemplate>
 );
+
+Mascots.propTypes = {
+  pluszaki: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      typeOfCard: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      price: PropTypes.string.isRequired,
+      desc: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      imageUrl: PropTypes.string.isRequired,
+      createdTime: PropTypes.string.isRequired,
+    }),
+  ),
+};
+
+Mascots.defaultProps = {
+  pluszaki: [],
+};
+
+const mapStateToProps = (state) => {
+  const { pluszaki } = state;
+  return state;
+};
+
+export default connect(mapStateToProps)(Mascots);
