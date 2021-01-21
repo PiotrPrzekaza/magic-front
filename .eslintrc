@@ -21,6 +21,8 @@
   },
   "rules": {
     "no-unused-vars": 0,
+    "react/no-unused-state": 0,
+    "react/state-in-constructor": 0,
     "import/prefer-default-export": 0,
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
