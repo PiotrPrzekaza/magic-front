@@ -63,8 +63,11 @@ const HeroButton = styled(Button)`
 `;
 
 const StyledParagraph = styled(Paragraph)`
-  font-size: ${({ theme }) => theme.fontSize.s};
+  font-size: ${({ theme }) => theme.fontSize.m};
   width: 50%;
+  margin-bottom: 2em;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
 `;
 
 const StyledHeading = styled(Heading)`
@@ -93,11 +96,7 @@ export const Hero = () => (
   <>
     <StyledWrapper>
       <StyledHeading as="h1">Szydełko to sposób na życie!</StyledHeading>
-      <StyledParagraph>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ducimus minima voluptate
-        architecto aut pariatur quae accusantium eaque, iste animi voluptatibus facere. Possimus
-        cumque rem sint ab maiores cupiditate assumenda. //{' '}
-      </StyledParagraph>
+      <StyledParagraph>Szukasz czegoś zrobionego od serca? Zapraszam!!!</StyledParagraph>
       <HeroButton as={Link} to="/category">
         Zobacz Moje projekty
       </HeroButton>

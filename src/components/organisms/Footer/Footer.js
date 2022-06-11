@@ -58,7 +58,7 @@ export const Footer = () => (
       <Anchor
         target="_blank"
         rel="noopener noreferrer"
-        href="https://www.instagram.com/magicznapetelka/"
+        href="https://www.instagram.com/magiczna_petelka/"
       >
         <StyledImageItem src={InstagramIcon} />
       </Anchor>

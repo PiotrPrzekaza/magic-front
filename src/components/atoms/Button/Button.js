@@ -1,4 +1,4 @@
-import shopIcon from 'assets/images/shoping.svg';
+import shopIcon from 'assets/icon/addCard.svg';
 import styled, { css } from 'styled-components';
 
 export const Button = styled.button`
