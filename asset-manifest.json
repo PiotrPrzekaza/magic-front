@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.js": "/magiczna_petelka/static/js/main.6cefcf32.js",
+    "static/js/377.09e39871.chunk.js": "/magiczna_petelka/static/js/377.09e39871.chunk.js",
+    "static/media/kocyk.jpg": "/magiczna_petelka/static/media/kocyk.3b254b5ae62e836dfd9f.jpg",
+    "static/media/chusta_bg.png": "/magiczna_petelka/static/media/chusta_bg.fe541d2b513f67cc0c12.png",
+    "static/media/jednorozec.png": "/magiczna_petelka/static/media/jednorozec.b5e5e152b06e2b588d87.png",
+    "static/media/zestaw.jpg": "/magiczna_petelka/static/media/zestaw.437774c9bc8c9c36323e.jpg",
+    "static/media/plecak.jpg": "/magiczna_petelka/static/media/plecak.8137d8a1b7f7cc1c3913.jpg",
+    "static/media/torebka-roz.jpg": "/magiczna_petelka/static/media/torebka-roz.c9317414719be87b6695.jpg",
+    "static/media/torebki.jpg": "/magiczna_petelka/static/media/torebki.20322a4d13549dfdbfe1.jpg",
+    "static/media/kocyknos.jpg": "/magiczna_petelka/static/media/kocyknos.21531d8e709342493cf4.jpg",
+    "static/media/szydelko2.jpg": "/magiczna_petelka/static/media/szydelko2.dc03cf8a99a2ed0b566f.jpg",
+    "static/media/Magiczna.png": "/magiczna_petelka/static/media/Magiczna.3ddc30b723596c4d7aa9.png",
+    "static/media/instagram.svg": "/magiczna_petelka/static/media/instagram.53626cb1d58830c4b697c6b88a6c9d1b.svg",
+    "index.html": "/magiczna_petelka/index.html",
+    "static/media/addCard.svg": "/magiczna_petelka/static/media/addCard.51834e9885d7a133875efc602aa0c357.svg",
+    "static/media/searchIcon.svg": "/magiczna_petelka/static/media/searchIcon.f4215dbca417cc4fb4f8a6d95995a9f7.svg",
+    "static/media/facebook.svg": "/magiczna_petelka/static/media/facebook.9d8980817d35c2617cf1ebb5a833369a.svg",
+    "main.6cefcf32.js.map": "/magiczna_petelka/static/js/main.6cefcf32.js.map",
+    "377.09e39871.chunk.js.map": "/magiczna_petelka/static/js/377.09e39871.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.6cefcf32.js"
+  ]
+}
