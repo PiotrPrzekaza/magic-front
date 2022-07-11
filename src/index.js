@@ -3,8 +3,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Root } from 'views/Root';
-import { reportWebVitals } from './reportWebVitals';
+import { reportWebVitals } from 'reportWebVitals';
+import { Root } from './views/Root';
 
 ReactDOM.render(
   <React.StrictMode>

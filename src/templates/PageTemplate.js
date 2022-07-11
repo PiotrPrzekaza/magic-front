@@ -56,6 +56,7 @@ export const PageTemplate = ({ children, pageType, id }) => (
 );
 
 PageTemplate.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
   children: PropTypes.arrayOf(PropTypes.object).isRequired,
   pageType: PropTypes.oneOf(['torebki', 'kocyki', 'pluszaki', 'chusty', 'ubrania']),
   id: PropTypes.number,

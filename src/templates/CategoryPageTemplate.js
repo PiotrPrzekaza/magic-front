@@ -50,6 +50,7 @@ export const CategoryPageTemplate = ({ children, pageType }) => (
 );
 
 CategoryPageTemplate.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
   children: PropTypes.arrayOf(PropTypes.object).isRequired,
   pageType: PropTypes.oneOf(['category', 'torebki', 'kocyki', 'pluszaki', 'chusty', 'ubrania'])
     .isRequired,
