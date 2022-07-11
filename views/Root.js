@@ -11,7 +11,7 @@ import Shawl from './Shawl';
 import Clothes from './Clothes';
 import Blanket from './Blanket';
 import Mascots from './Mascots';
-import { routes } from '../routes';
+import { routes } from '../src/routes';
 
 export const Root = () => (
   <Provider store={store}>
