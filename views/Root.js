@@ -2,16 +2,16 @@ import { Provider } from 'react-redux';
 import { store } from 'store/index';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import BasicTemplate from 'templates/BasicTemplate';
-import { Home } from 'views/Home';
-import { Contact } from 'views/Contact';
-import Bags from 'views/Bags';
+import { Home } from './Home';
+import { Contact } from './Contact';
+import Bags from './Bags';
 import { About } from './About';
 import { Category } from './Category';
 import Shawl from './Shawl';
 import Clothes from './Clothes';
 import Blanket from './Blanket';
 import Mascots from './Mascots';
-import { routes } from '../routes/index';
+import { routes } from '../src/routes';
 
 export const Root = () => (
   <Provider store={store}>
