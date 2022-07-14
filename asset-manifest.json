@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/magic-front/static/js/main.d42a4a81.js",
+    "main.js": "/magic-front/static/js/main.e1b118ed.js",
     "static/js/377.09e39871.chunk.js": "/magic-front/static/js/377.09e39871.chunk.js",
     "static/media/kocyk.jpg": "/magic-front/static/media/kocyk.3b254b5ae62e836dfd9f.jpg",
     "static/media/chusta_bg.png": "/magic-front/static/media/chusta_bg.fe541d2b513f67cc0c12.png",
@@ -17,10 +17,10 @@
     "static/media/addCard.svg": "/magic-front/static/media/addCard.51834e9885d7a133875efc602aa0c357.svg",
     "static/media/searchIcon.svg": "/magic-front/static/media/searchIcon.f4215dbca417cc4fb4f8a6d95995a9f7.svg",
     "static/media/facebook.svg": "/magic-front/static/media/facebook.9d8980817d35c2617cf1ebb5a833369a.svg",
-    "main.d42a4a81.js.map": "/magic-front/static/js/main.d42a4a81.js.map",
+    "main.e1b118ed.js.map": "/magic-front/static/js/main.e1b118ed.js.map",
     "377.09e39871.chunk.js.map": "/magic-front/static/js/377.09e39871.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.d42a4a81.js"
+    "static/js/main.e1b118ed.js"
   ]
 }
