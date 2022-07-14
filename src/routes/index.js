@@ -1,5 +1,5 @@
 export const routes = {
-  home: '/',
+  home: '/magic-front',
   contact: '/contact',
   about: '/about',
   category: '/category',
