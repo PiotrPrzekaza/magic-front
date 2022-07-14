@@ -83,7 +83,7 @@ const StyledNavItem = styled(NavItem)`
 
 export const MenuBar = () => (
   <Wrapper>
-    <NavItem exact to="/" activeClassName="active">
+    <NavItem exact to="/magic-front" activeClassName="active">
       <StyledImageItem src={logo} alt="Logo magiczna pętelka" />
     </NavItem>
     <StyledMenu>
