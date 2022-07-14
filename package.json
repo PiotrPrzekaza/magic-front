@@ -1,8 +1,7 @@
 {
   "name": "magic-front",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://piotrprzekaza.github.io/magiczna_petelka/",
+  "private": false,
   "dependencies": {
     "@babel/eslint-parser": "^7.12.1",
     "@testing-library/jest-dom": "^5.11.6",
