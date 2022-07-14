@@ -50,7 +50,7 @@ export const CategoryPageTemplate = ({ children, pageType }) => (
 );
 
 CategoryPageTemplate.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.object).isRequired,
+  children: PropTypes.arrayOf().isRequired,
   pageType: PropTypes.oneOf(['category', 'torebki', 'kocyki', 'pluszaki', 'chusty', 'ubrania'])
     .isRequired,
 };

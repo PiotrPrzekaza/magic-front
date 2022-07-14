@@ -56,7 +56,7 @@ export const PageTemplate = ({ children, pageType, id }) => (
 );
 
 PageTemplate.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.object).isRequired,
+  children: PropTypes.arrayOf().isRequired,
   pageType: PropTypes.oneOf(['torebki', 'kocyki', 'pluszaki', 'chusty', 'ubrania']),
   id: PropTypes.number,
 };
